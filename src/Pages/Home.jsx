@@ -5,7 +5,7 @@ import Whyfertility from '../Components/Whyfertility'
 const Home = () => {
   return (
     <div >
-        {/* <Header /> */}
+        <Header />
         <Whyfertility />
         <Whyfertility />
         <Whyfertility />
