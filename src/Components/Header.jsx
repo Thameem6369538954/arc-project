@@ -63,7 +63,7 @@ export default function Header() {
       {/* Centered Text with Glassmorphism Effect */}
       <div className="relative  min-h-[90vh] w-[100%] border border-red-400 bg-white/20 backdrop-blur border border-white/30 rounded-2xl shadow-xl flex items-center justify-center p-6">
       <div
-      className="relative min-h-[550px] w-[80%] border border-white/30 rounded-2xl shadow-xl flex flex-col md:flex-row items-center justify-around p-6 bg-cover bg-center"
+      className="relative min-h-[550px] md:w-[80%] w-[100%] border border-white/30 rounded-2xl shadow-xl flex flex-col md:flex-row items-center justify-around p-6 bg-cover bg-center"
       style={{ backgroundImage: `url(${home})` }}
     >
       {/* Left Side: Doctor Image */}
