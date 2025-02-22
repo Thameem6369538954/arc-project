@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { SlArrowDown } from "react-icons/sl";
+import { FiMenu, FiX } from "react-icons/fi"; // Mobile icons
 import arclogo from "../Images/arclogo.png";
 import HeaderImg from "../Images/HeaderImg.png";
 
@@ -50,6 +51,17 @@ const menuItems = [
 ];
 
 const Navbar = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const toggleDropdown = (index) => {
+    setActiveDropdown(activeDropdown === index ? null : index);
+  };
+
   return (
     <div className="font-[MyCustomFont]">
       <motion.nav
@@ -122,10 +134,68 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={toggleMobileMenu}
+          className="lg:hidden text-2xl text-black focus:outline-none"
+        >
+          {mobileMenuOpen ? <FiX /> : <FiMenu />}
+        </button>
       </motion.nav>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            className="lg:hidden bg-white shadow-md w-full absolute left-0 top-16 z-50"
+          >
+            <ul className="flex flex-col">
+              {menuItems.map((menu, index) => (
+                <li key={index} className="border-b border-gray-200">
+                  <button
+                    onClick={() => toggleDropdown(index)}
+                    className="w-full text-left px-6 py-4 flex justify-between items-center"
+                  >
+                    {menu.title}
+                    {menu.submenu && (
+                      <SlArrowDown
+                        className={`ml-1 transition-transform ${
+                          activeDropdown === index ? "rotate-180" : ""
+                        }`}
+                      />
+                    )}
+                  </button>
+
+                  {/* Mobile Submenu */}
+                  {menu.submenu && activeDropdown === index && (
+                    <motion.ul
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      className="bg-gray-100 pl-8 py-2"
+                    >
+                      {menu.submenu.map((sub, subIndex) => (
+                        <li key={subIndex} className="py-2">
+                          <Link to={sub.link} className="text-black">
+                            {sub.title}
+                          </Link>
+                        </li>
+                      ))}
+                    </motion.ul>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
 
 export default Navbar;
- 
