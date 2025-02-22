@@ -1,78 +1,133 @@
-import { motion } from "framer-motion";
-import Kid from "../Images/Kid.jpg";
+import React, { useState, useEffect } from "react";
+import Egg from "../Images/Egg.png";
+import Downarrow from "../Images/Downarrow.png";
+import Baby from "../Images/Baby.png";
+import { motion, useAnimation } from "framer-motion";
+import { Play, Pause } from "lucide-react";
 
-const IVFSection = () => {
+const videoLinks = [
+  "https://www.youtube.com/embed/dQw4w9WgXcQ",
+  "https://www.youtube.com/embed/3JZ_D3ELwOQ",
+  "https://www.youtube.com/embed/tgbNymZ7vqY",
+  "https://www.youtube.com/embed/kJQP7kiw5Fk",
+  "https://www.youtube.com/embed/L_jWHffIx5E",
+  "https://www.youtube.com/embed/CevxZvSJLk8",
+  "https://www.youtube.com/embed/9bZkp7q19f0",
+  "https://www.youtube.com/embed/YlUKcNNmywk",
+  "https://www.youtube.com/embed/VbfpW0pbvaU",
+  "https://www.youtube.com/embed/2Vv-BfVoq4g",
+];
+
+const Ivfsection = () => {
+  const [playing, setPlaying] = useState(Array(videoLinks.length).fill(false));
+  const [isHovered, setIsHovered] = useState(false);
+  const controls = useAnimation();
+
+  const isAnyVideoPlaying = playing.some((status) => status);
+
+  // Function to start/stop scrolling
+  const startScrolling = () => {
+    controls.start({
+      x: ["0%", "-100%"],
+      transition: { duration: 40, repeat: Infinity, ease: "linear" },
+    });
+  };
+
+  const stopScrolling = () => {
+    controls.stop();
+  };
+
+  useEffect(() => {
+    if (!isHovered && !isAnyVideoPlaying) {
+      startScrolling();
+    } else {
+      stopScrolling();
+    }
+  }, [isHovered, isAnyVideoPlaying]);
+
+  const togglePlay = (index) => {
+    setPlaying((prev) => {
+      const newPlaying = [...prev];
+      newPlaying[index] = !newPlaying[index];
+      return newPlaying;
+    });
+  };
+
   return (
-    <section className="container mx-auto px-6 py-12 flex flex-col-reverse md:flex-row items-center gap-10 relative">
-      {/* Text Section */}
-      <div className="md:w-1/2 space-y-6 relative z-10">
-        <motion.h2
-          className="text-4xl font-[Heading] md:text-6xl text-gray-900"
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: false }} // Ensures animation works every time it enters viewport
-        >
-          Why Opt For In-Vitro Fertilization (IVF)?
-        </motion.h2>
+    <div className="w-full min-h-screen flex items-center justify-center p-5 relative">
+    
+    <img
+  src={Baby}
+  className="absolute -top-10 right-1 md:top-10 md:right-25 w-[180px] sm:w-[220px] md:w-[250px] lg:w-[300px]"
+  alt="Baby"
+/>
 
-        <motion.p
-          className="text-gray-700 font-[MyCustomFont]"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1.2 }}
-          viewport={{ once: false }}
-        >
-          In-Vitro fertilization (IVF) is the most effective fertility treatment available today. IVF treatments at NIF offer the highest success rates and quickest time-to-pregnancy in India.
-        </motion.p>
+      <div className="w-[90%] min-h-[650px] bg-[#e1f4fb] rounded-xl shadow-lg">
+        {/* Heading */}
+        <h1 className="font-[Belli] text-7xl mt-5 px-5 text-black">
+          Our <span className="text-pink-400">Success</span> Stories
+        </h1>
+        <div className="flex items-center justify-around w-[100%] md:w-[70%] px-5">
+          <p className="font-[choco] text-2xl">
+            Our pioneering approach has consistently delivered double the
+            national success rates for IVF and ICSI per cycle started, helping
+            tens of thousands of patients have babies even after unsuccessful
+            treatment elsewhere.
+          </p>
+          <div>
+            <img
+              src={Downarrow}
+              alt="Egg Illustration"
+              className="w-[150px] md:w-[200px]"
+            />
+          </div>
+        </div>
 
-        <motion.h3
-          className="text-4xl font-[Heading] md:text-6xl text-gray-900"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: false }}
-        >
-         Reasons for taking IVF may include:
-        </motion.h3>
+        {/* Marquee Video Section */}
+        <div className="w-full overflow-hidden bg-[#e1f4fb] py-10 mt-5 flex justify-center">
+          <motion.div
+            className="flex space-x-10"
+            animate={controls}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            {videoLinks.map((link, index) => (
+              <div
+                key={index}
+                className="relative flex-shrink-0 w-[320px] sm:w-[380px] md:w-[420px] bg-white p-5 rounded-xl shadow-lg border-4 border-white text-center transform rotate-2"
+              >
+                <iframe
+                  width="100%"
+                  height="230"
+                  src={`${link}?autoplay=${playing[index] ? 1 : 0}&mute=1&loop=1&playlist=${
+                    link.split("/embed/")[1]
+                  }`}
+                  title={`YouTube Video ${index + 1}`}
+                  frameBorder="0"
+                  allow="autoplay; encrypted-media"
+                  allowFullScreen
+                  className="rounded-xl"
+                ></iframe>
 
-        <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {[
-            "Low sperm count",
-            "Poor egg quality",
-            "Uterus or Fallopian tube issues",
-            "Ovulation problems",
-            "Unidentified infertility issues",
-          ].map((reason, index) => (
-            <motion.li
-              key={index}
-              className="flex items-center space-x-2 text-gray-700 font-[MyCustomFont]"
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              viewport={{ once: false }}
-            >
-              <span className="text-pink-500 text-lg">✔</span>
-              <span>{reason}</span>
-            </motion.li>
-          ))}
-        </ul>
+                {/* Play/Pause Button */}
+                <button
+                  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full"
+                  onClick={() => togglePlay(index)}
+                >
+                  {playing[index] ? <Pause size={24} /> : <Play size={24} />}
+                </button>
+
+                {/* Video Title */}
+                {/* <h3 className="mt-4 font-bold text-lg">Video {index + 1}</h3>
+                <p className="text-gray-600">Published: 2024</p> */}
+                <div className="p-5"></div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
       </div>
-
-      {/* Image Section */}
-      <div className="md:w-1/2 flex justify-center relative">
-        <motion.img
-          src={Kid}
-          alt="Mother and Baby"
-          className="w-full max-w-xs md:max-w-xl rounded-lg shadow-lg"
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: false }}
-        />
-      </div>
-    </section>
+    </div>
   );
 };
 
-export default IVFSection;
+export default Ivfsection;
