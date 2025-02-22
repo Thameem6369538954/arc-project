@@ -5,7 +5,7 @@ import NumberRolling from "./NumberRolling";
 
 const IVFSection = () => {
   return (
-    <div className='bg-[#fadadd]  w-full min-h-[120vh]'>
+    <div className='bg-[#fadadd]  w-full min-h-[150vh]'>
     <section className="flex flex-col lg:flex-row items-center justify-between px-8 lg:px-20 py-16 ">
       {/* Left Side - Text Content */}
       <motion.div
@@ -15,11 +15,11 @@ const IVFSection = () => {
         viewport={{ once: false, amount: 0.3 }}
         className="lg:w-1/2 text-left"
       >
-        <h1 className="text-6xl font-[Belli] text-gray-900">
-          Why Opt For <span className="text-white">In-Vitro Fertilization (IVF)?</span>
+        <h1 className="text-6xl font-[Belli] text-gray-900 tracking-wide">
+          Why Opt For <span className="text-[#1c97c8]">In-Vitro Fertilization (IVF)?</span>
         </h1>
 
-        <h2 className="text-2xl font-[Heading] text-gray-800 mt-6">Vitro Fertilization</h2>
+        <h2 className=" text-2xl font-[Heading] text-gray-800 mt-6">Vitro Fertilization</h2>
         <div className="w-16 h-1 bg-pink-500 my-2"></div>
 
         <p className="text-gray-600 font-[choco] mt-4">

@@ -64,11 +64,11 @@ const Ivfsection = () => {
 
       <div className="w-[90%] min-h-[650px] bg-[#e1f4fb] rounded-xl shadow-lg">
         {/* Heading */}
-        <h1 className="font-[Belli] text-7xl mt-5 px-5 text-black">
+        <h1 className="font-[Belli] text-7xl mt-5 px-5 text-black tracking-wide">
           Our <span className="text-pink-400">Success</span> Stories
         </h1>
         <div className="flex items-center justify-around w-[100%] md:w-[70%] px-5">
-          <p className="font-[choco] text-2xl">
+          <p className="font-[choco] text-3xl ">
             Our pioneering approach has consistently delivered double the
             national success rates for IVF and ICSI per cycle started, helping
             tens of thousands of patients have babies even after unsuccessful

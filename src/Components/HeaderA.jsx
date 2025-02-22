@@ -56,11 +56,11 @@ const HeaderA = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 1 }}
                 >
-                    <h1 className="font-[Belli] text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl p-3 text-black leading-tight">
+                    <h1 className="font-[Belli] text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl p-3 text-black leading-tight tracking-wide">
                         <span className="text-[#1c97c8]">We take care of your dreams</span>{" "}
                         <span className="text-pink-400">&</span> turn them into families
                     </h1>
-                    <p className="font-[choco] text-xl sm:text-2xl md:text-3xl lg:text-4xl p-3 ">
+                    <p className="tracking-wide font-[choco] text-xl sm:text-2xl md:text-3xl lg:text-4xl p-3 ">
                         "Building bonds, creating love, and making dreams come true."
                     </p>
                     <motion.button

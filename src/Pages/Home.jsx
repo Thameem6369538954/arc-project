@@ -6,17 +6,24 @@ import IVFSection from '../Components/Ivfsection'
 import OurServices from '../Components/OurServices'
 import HeaderA from '../Components/HeaderA'
 import VitroFertilization from '../Components/VitroFertilization'
+import Team from '../Components/Team'
+import ContactForm from '../Components/ContactForm'
+import ScrollToTop from '../Components/ScrollToTop'
 
 const Home = () => {
   return (
     <div >
         {/* <Header /> */}
+        <ScrollToTop />
         <HeaderA />
         <IVFSection />
         {/* <NumberRolling /> */}
         <VitroFertilization />
         <OurServices />
-        {/* <Whyfertility /> */}
+        <Whyfertility />
+        <Team />
+        <ContactForm />
+
     </div>
   )
 }
