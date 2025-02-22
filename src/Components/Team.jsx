@@ -3,31 +3,35 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
+import Maha from "../Images/Maha.jpg"
+import Arun from "../Images/Arun.png"
+import Avanti from "../Images/Avanti.png"
+import last from "../Images/last.png"
 
 const teamMembers = [
   {
-    name: "Dr. John Doe",
-    education: "MD, Fertility Specialist",
-    position: "Head of IVF Department",
-    image: "https://via.placeholder.com/200",
+    name: "Dr.Mahalakshmi",
+    education: "MBBS. DGO.FRM.DRM (Germany) Ph.D.",
+    position: "FOUNDER & CHAIRPERSON",
+    image: Maha,
   },
   {
-    name: "Dr. Jane Smith",
-    education: "PhD, Reproductive Science",
-    position: "Senior Embryologist",
-    image: "https://via.placeholder.com/200",
+    name: "Dr.Arun Poornesh",
+    education: "M.B.B.S.,M.S.(Obst.& Gynae.)Lap Surgeon",
+    position: "GYNAECOLOGIST",
+    image: Arun,
   },
   {
-    name: "Dr. Mark Lee",
-    education: "MBBS, MS (Gynaecology)",
-    position: "Fertility Consultant",
-    image: "https://via.placeholder.com/200",
+    name: "Dr.Avanti SL",
+    education: "MBBS,MS,PGDME,FCLS,FRM",
+    position: "GYNAECOLOGIST",
+    image: Avanti,
   },
   {
-    name: "Dr. Alice Brown",
-    education: "MD, Obstetrics & Gynaecology",
-    position: "IVF Specialist",
-    image: "https://via.placeholder.com/200",
+    name: "Dr.Divyasree B",
+    education: "MBBS,MSOG,FMAS,FRM",
+    position: "GYNAECOLOGIST",
+    image: last,
   },
 ];
 
