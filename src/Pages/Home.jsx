@@ -9,6 +9,7 @@ import VitroFertilization from '../Components/VitroFertilization'
 import Team from '../Components/Team'
 import ContactForm from '../Components/ContactForm'
 import ScrollToTop from '../Components/ScrollToTop'
+import FAQ from '../Components/Faq'
 
 const Home = () => {
   return (
@@ -17,11 +18,13 @@ const Home = () => {
         <ScrollToTop />
         <HeaderA />
         <IVFSection />
-        {/* <NumberRolling /> */}
+        <NumberRolling />
         <VitroFertilization />
         <OurServices />
         <Whyfertility />
-        <Team />
+
+        <Team />  
+        <FAQ />
         <ContactForm />
 
     </div>

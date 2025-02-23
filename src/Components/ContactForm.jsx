@@ -76,9 +76,7 @@ const ContactForm = () => {
 
       {/* Right Side Image */}
       <motion.div 
-        initial={{ opacity: 0, x: 50 }} 
-        whileInView={{ opacity: 1, x: 0 }} 
-        transition={{ duration: 0.8 }}
+       
         className="w-full md:w-1/2 flex justify-center mt-6 md:mt-0"
       >
         <img src={appointment} alt="Contact Us" className="w-[80%] md:w-[90%] rounded-lg " />

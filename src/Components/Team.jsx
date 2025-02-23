@@ -37,7 +37,7 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <div className="w-full min-h-[60vh] bg-[#e1f4fb]  py-10">
+    <div className="w-full min-h-[80vh] bg-[#e1f4fb]  py-10">
       {/* Heading */}
       <h2 className="text-6xl font-[Belli]  text-gray-800 m-10">
         Meet Our <span className="text-blue-500">Expert Team</span>
