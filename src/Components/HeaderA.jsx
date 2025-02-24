@@ -43,7 +43,7 @@ const HeaderA = () => {
             >
                 <motion.img
                     src={Fart}
-                    className="absolute w-[100px] sm:w-[120px] md:w-[150px] top-5 sm:top-10 right-5 sm:right-10 animate-bounce"
+                    className="absolute w-[50px] sm:w-[120px] md:w-[150px] top-5 sm:top-10 top-45  right-5 sm:right-10 animate-bounce"
                     alt="Decoration"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -56,16 +56,16 @@ const HeaderA = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 1 }}
                 >
-                    <h1 className="font-[Belli] text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl p-3 text-black leading-tight tracking-wide">
+                    <h1 className="font-[Belli] text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl p-3 text-black  tracking-wide">
                         <span className="text-[#1c97c8]">We take care of your dreams</span>{" "}
                         <span className="text-pink-400">&</span> turn them into families
                     </h1>
-                    <p className="tracking-wide font-[choco] text-xl sm:text-2xl md:text-3xl lg:text-4xl p-3 ">
+                    <p className="tracking-wide font-[choco] text-xl sm:text-2xl md:text-3xl lg:text-3xl p-3 ">
                         "Building bonds, creating love, and making dreams come true."
                     </p>
                     <motion.button
                         onClick={() => setIsFormOpen(true)}
-                        className="mt-5 px-6 py-4 sm:py-5 md:py-6 bg-[#1c97c8] font-[choco] text-2xl sm:text-3xl text-white rounded-lg shadow-lg transition-all"
+                        className="mt-5 px-6 py-4 sm:py-5 md:py-6 bg-[#1c97c8] font-[choco] text-1xl sm:text-3xl text-white rounded-lg shadow-lg transition-all"
                         whileHover={{
                             scale: 1.1,
                             backgroundColor: "#147a9d",

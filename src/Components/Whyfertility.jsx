@@ -26,14 +26,14 @@ const Whyfertility = () => {
   return (
     <div className="w-full min-h-screen flex items-center justify-center px-4 md:px-0">
       <div className="w-full max-w-7xl min-h-[500px] bg-[#fed9c9] bg-opacity-5 rounded-xl  relative p-6 md:p-10">
-        <div className="absolute top-0 left-0 w-[30%] max-w-[200px] md:max-w-[300px]">
+        <div className="absolute -top-10 md:top-0 -left-5 z-10 left-0 w-[30%] max-w-[250px] md:max-w-[300px]">
           <Lottie animationData={Ani} loop={true} />
         </div>
-        <h1 className="font-[Belli] text-4xl md:text-6xl mt-5 px-5 text-black tracking-wide text-center">
+        <h1 className="font-[Belli] text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl mt-5 px-5 text-black tracking-wide text-center">
           Why <span className='text-pink-400'>ARC</span> Fertility
         </h1>
-        <div className="flex justify-center text-center w-full p-5 font-[choco] text-lg">
-          <p className="max-w-3xl">
+        <div className="flex justify-center text-center w-full md:p-5 p-1 font-[choco] text-lg">
+          <p className="max-w-3xl text-1xl md:text-3xl">
             ARC Fertility is equipped with advanced and world-class facilities, offering quality services to its patients. At ARC, we care for our patients with years of experience, benefiting thousands to conceive through essential treatment.
           </p>
         </div>

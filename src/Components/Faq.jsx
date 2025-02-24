@@ -122,7 +122,7 @@ const FAQ = () => {
 
   return (
     <div className="mx-auto px-6 py-12 min-h-[100vh] bg-[#f5f4f1]">
-      <h2 className="text-5xl md:text-7xl font-[Belli] text-black p-5">Frequently Asked Questions</h2>
+      <h2 className="text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl font-[Belli] text-black p-5">Frequently Asked Questions</h2>
       <div className="flex justify-center">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center min-h-[80vh]">
           
@@ -145,7 +145,7 @@ const FAQ = () => {
                     className="w-full flex justify-between items-center p-4 bg-[#fff8ef] hover:bg-[#ffe4c4] transition duration-300"
                     onClick={() => toggleFAQ(index)}
                   >
-                    <span className="text-lg font-[choco]">{faq.question}</span>
+                    <span className=" font-[choco] text-1xl md:text-3xl ">{faq.question}</span>
                     <motion.div
                       animate={{ rotate: openIndex === index ? 180 : 0 }}
                       transition={{ duration: 0.3 }}
@@ -157,7 +157,7 @@ const FAQ = () => {
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: openIndex === index ? "auto" : 0, opacity: openIndex === index ? 1 : 0 }}
                     transition={{ duration: 0.4, ease: "easeInOut" }}
-                    className="overflow-hidden bg-white px-4"
+                    className="overflow-hidden bg-white px-4 text-1xl md:text-3xl" 
                   >
                     <div className="py-3 text-gray-700 font-[choco]">{faq.answer}</div>
                   </motion.div>

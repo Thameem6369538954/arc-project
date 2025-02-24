@@ -15,21 +15,21 @@ const IVFSection = () => {
         viewport={{ once: false, amount: 0.3 }}
         className="lg:w-full text-left"
       >
-        <h1 className="text-6xl font-[Belli] text-gray-900 tracking-wide">
+        <h1 className="text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl font-[Belli] text-gray-900 tracking-wide">
           Why Opt For <span className="text-[#1c97c8]">In-Vitro Fertilization (IVF)?</span>
         </h1>
 
         <h2 className=" text-2xl font-[Heading] text-gray-800 mt-6">Vitro Fertilization</h2>
         <div className="w-16 h-1 bg-pink-500 my-2"></div>
 
-        <p className="text-gray-600 font-[choco] mt-4">
+        <p className="text-gray-600 font-[choco] text-1xl md:text-3xl mt-4">
           In-Vitro fertilization (IVF) is the most effective fertility treatment available today.
           IVF treatments at NIF offer the highest success rates and quickest time-to-pregnancy in India.
           We’re one of the top IVF clinics in the world, after all!.
         </p>
 
         <h3 className="text-xl font-[Heading] text-gray-900 mt-6">Reasons for taking IVF may include:</h3>
-        <ul className="mt-4 space-y-2 font-[choco]">
+        <ul className="mt-4 space-y-2 font-[choco] text-1xl md:text-3xl">
           {[
             "Low sperm count",
             "Poor egg quality",

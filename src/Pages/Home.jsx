@@ -19,7 +19,7 @@ const Home = () => {
         <ScrollToTop />
         <HeaderA />
         <IVFSection />
-        <NumberRolling />
+        {/* <NumberRolling /> */}
         <VitroFertilization />
         <OurServices />
         <Whyfertility />

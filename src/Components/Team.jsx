@@ -39,7 +39,7 @@ const Team = () => {
   return (
     <div className="w-full min-h-[80vh] bg-[#e1f4fb]  py-10">
       {/* Heading */}
-      <h2 className="text-6xl font-[Belli]  text-gray-800 m-10">
+      <h2 className="text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl font-[Belli]  text-gray-800 m-10">
         Meet Our <span className="text-blue-500">Expert Team</span>
       </h2>
 

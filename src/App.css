@@ -1,9 +1,9 @@
-@font-face{
+/* @font-face{
     font-family: 'MyCustomFont';
     src: url('../public/Fonts/Poppins-ExtraLight.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-}
+} */
 @font-face{
     font-family: "Heading";
     src:url('../public//Fonts/BebasNeue-Regular.ttf') format('truetype');
@@ -12,13 +12,13 @@
 }
 @font-face{
     font-family: "Belli";
-    src:url('../public/Fonts/BellavoirDelight_PERSONAL_USE_ONLY.ttf') format('truetype');
+    src:url('../public/Fonts/SourGummy_SemiExpanded-ExtraLight.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face{
     font-family: "choco";
-    src:url('../public/Fonts/TT\ Chocolates\ Trial\ ExtraLight.ttf') format('truetype');
+    src:url('../public/Fonts/Poppins-ExtraLight.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

@@ -18,7 +18,7 @@ const ImageGallery = () => {
 
   return (
     <div>
-      <h2 className="text-6xl font-[Belli] p-5">Awards & Recognitions</h2>
+      <h2 className="text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl font-[Belli] p-5">Awards & Recognitions</h2>
 
     <div className="p-6 bg-gray-100 min-h-[70vh]">
 
