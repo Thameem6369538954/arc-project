@@ -10,6 +10,7 @@ import Team from '../Components/Team'
 import ContactForm from '../Components/ContactForm'
 import ScrollToTop from '../Components/ScrollToTop'
 import FAQ from '../Components/Faq'
+import Gallery from '../Components/Gallery'
 
 const Home = () => {
   return (
@@ -24,6 +25,7 @@ const Home = () => {
         <Whyfertility />
 
         <Team />  
+        <Gallery />
         <FAQ />
         <ContactForm />
 

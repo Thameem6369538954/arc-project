@@ -13,7 +13,7 @@ const IVFSection = () => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: false, amount: 0.3 }}
-        className="lg:w-1/2 text-left"
+        className="lg:w-full text-left"
       >
         <h1 className="text-6xl font-[Belli] text-gray-900 tracking-wide">
           Why Opt For <span className="text-[#1c97c8]">In-Vitro Fertilization (IVF)?</span>

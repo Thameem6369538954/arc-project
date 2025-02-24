@@ -6,16 +6,13 @@ import { motion, useAnimation } from "framer-motion";
 import { Play, Pause } from "lucide-react";
 
 const videoLinks = [
-  "https://www.youtube.com/embed/dQw4w9WgXcQ",
-  "https://www.youtube.com/embed/3JZ_D3ELwOQ",
-  "https://www.youtube.com/embed/tgbNymZ7vqY",
-  "https://www.youtube.com/embed/kJQP7kiw5Fk",
-  "https://www.youtube.com/embed/L_jWHffIx5E",
-  "https://www.youtube.com/embed/CevxZvSJLk8",
-  "https://www.youtube.com/embed/9bZkp7q19f0",
-  "https://www.youtube.com/embed/YlUKcNNmywk",
-  "https://www.youtube.com/embed/VbfpW0pbvaU",
-  "https://www.youtube.com/embed/2Vv-BfVoq4g",
+  'https://www.youtube.com/embed/f6nC2tGyLw0?si=zKTtr16wTVJDmA0W',
+  'https://www.youtube.com/embed/f6nC2tGyLw0?si=zKTtr16wTVJDmA0W',
+  'https://www.youtube.com/embed/f6nC2tGyLw0?si=zKTtr16wTVJDmA0W',
+  'https://www.youtube.com/embed/f6nC2tGyLw0?si=zKTtr16wTVJDmA0W',
+  'https://www.youtube.com/embed/f6nC2tGyLw0?si=zKTtr16wTVJDmA0W',
+  'https://www.youtube.com/embed/f6nC2tGyLw0?si=zKTtr16wTVJDmA0W',
+  
 ];
 
 const Ivfsection = () => {

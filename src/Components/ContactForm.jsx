@@ -38,9 +38,9 @@ const ContactForm = () => {
   return (
     <div className="bg-[#fadadd] w-full min-h-[100vh] ">
       <div className="p-5">
-        <h1 className="font-[Belli] text-5xl">We Are Always Ready to Help You. Book An Appointment</h1>
-        <p className="font-[choco] text-2xl">"Get Flat 100% Off On investigation"</p>
-        <p className="font-[choco] text-1xl" >First-Time-Visit</p>
+        <h1 className="font-[Belli] text-5xl  p-2">We Are Always Ready to Help You. Book An Appointment</h1>
+        <p className="font-[choco] text-2xl  p-2">"Get Flat 100% Off On investigation"</p>
+        <p className="font-[choco] text-1xl  p-2" >First-Time-Visit</p>
       </div>
 <div className="flex flex-col md:flex-row items-center justify-center min-h-[600px] p-5">
       {/* Form Section */}
