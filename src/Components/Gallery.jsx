@@ -21,7 +21,7 @@ const images = [A, B, C, D, E, F, G, H, I];
 const ImageGallery = () => {
   return (
     <div>
-<div className="w-full h-screen bg-gray-100 flex items-center justify-center">
+<div className="w-full min-h-[50vh] bg-gray-100 flex items-center justify-center">
       <Swiper
         modules={[Navigation, Pagination]}
         navigation

@@ -4,13 +4,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { SlArrowDown } from "react-icons/sl";
 import { FiMenu, FiX } from "react-icons/fi";
 import arclogo from "../Images/arclogo.png";
-import HeaderImg from "../Images/HeaderImg.png";
 
 const menuItems = [
   { title: "About Us", link: "/About_arc", submenu: [
       { title: "About Arc", link: "/About_arc" },
-      { title: "Leadership Team", link: "/OurTeam " },
-      // { title: "Why Choose Us", link: "/about/history" },
+      { title: "Leadership Team", link: "/OurTeam" },
       { title: "Media Gallery", link: "/about/careers" },
       { title: "Virtual Tour", link: "/about/contact" },
       { title: "FAQ", link: "/about/contact" },
@@ -21,12 +19,12 @@ const menuItems = [
       { title: "Blog", link: "/success/case-studies" },
       { title: "Live", link: "/success/case-studies" },
     ]},
-    { title: "Academics", link: "/academics", submenu: [
+  { title: "Academics", link: "/academics", submenu: [
       { title: "PG Programs", link: "/academics/programs" },
       { title: "Fellowship Programs", link: "/academics/programs" },
     ]},
-    { title: "Services & Treatment", link: "Services_and_Treatment",},
-    { title: "Our Experts", link: "/experts" },
+  { title: "Services & Treatment", link: "/Services_and_Treatment" },
+  { title: "Our Experts", link: "/experts" },
   { title: "Awards", link: "/Awards" },
   { title: "Our Facilities", link: "/facilities" },
 ];
@@ -36,12 +34,20 @@ const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
 
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
-  const toggleDropdown = (index) => setActiveDropdown(activeDropdown === index ? null : index);
+
+  const toggleDropdown = (index) => {
+    setActiveDropdown(activeDropdown === index ? null : index);
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+    setActiveDropdown(null);
+  };
 
   return (
-    <div className="font-sans">
+    <div className="font-sans relative">
       <motion.nav className="bg-[#fff8ef] text-black px-6 py-4 flex justify-between items-center shadow-md">
-        <Link to="/">
+        <Link to="/" onClick={closeMobileMenu}>
           <img src={arclogo} alt="Logo" className="h-12" />
         </Link>
         <ul className="hidden lg:flex space-x-6">
@@ -52,11 +58,10 @@ const Navbar = () => {
               </Link>
               {menu.submenu && (
                 <AnimatePresence>
-                  <motion.ul className={`absolute left-0 top-full hidden group-hover:block bg-white shadow-lg z-50 p-4 w-max rounded-lg ${menu.title === "Services & Treatment" ? "w-[85vw] grid grid-row-3 gap-4" : "grid grid-row-1"}`}>
+                  <motion.ul className="absolute left-0 top-full hidden group-hover:block bg-white shadow-lg z-50 p-4 w-max rounded-lg">
                     {menu.submenu.map((sub, subIndex) => (
-                      <motion.li key={subIndex} className="p-3 hover:bg-pink-100 rounded-lg transition flex flex-col items-center">
-                        {sub.Image && <img src={sub.Image} alt={sub.title} className="w-24 h-auto mx-auto mb-2 rounded-md shadow-md" />}
-                        <Link to={sub.link} className="text-black text-base">{sub.title}</Link>
+                      <motion.li key={subIndex} className="p-3 hover:bg-pink-100 rounded-lg transition">
+                        <Link to={sub.link} className="text-black text-base" onClick={closeMobileMenu}>{sub.title}</Link>
                       </motion.li>
                     ))}
                   </motion.ul>
@@ -69,6 +74,7 @@ const Navbar = () => {
           {mobileMenuOpen ? <FiX /> : <FiMenu />}
         </button>
       </motion.nav>
+
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div className="lg:hidden bg-white shadow-md w-full absolute left-0 top-16 z-50">
@@ -82,7 +88,7 @@ const Navbar = () => {
                     <motion.ul className="bg-gray-100 pl-8 py-2">
                       {menu.submenu.map((sub, subIndex) => (
                         <li key={subIndex} className="py-2">
-                          <Link to={sub.link} className="text-black">{sub.title}</Link>
+                          <Link to={sub.link} className="text-black" onClick={closeMobileMenu}>{sub.title}</Link>
                         </li>
                       ))}
                     </motion.ul>
