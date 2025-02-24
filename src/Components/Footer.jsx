@@ -85,7 +85,7 @@ const Footer = () => {
       className="w-full px-4 py-3 rounded-lg text-black border border-white"
     />
     <button className="absolute right-2 top-2 p-2 bg-[#d25c78] text-white rounded-full hover:scale-110 transition-all border border-white">
-      ✈️
+      Submit
     </button>
   </div>
 </div>

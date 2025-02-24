@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Lottie from "lottie-react";
+import Abt from '../Animations/Abt.json'
 
 const AboutUs = () => {
   return (
@@ -13,9 +15,15 @@ const AboutUs = () => {
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-[Belli] text-gray-900 tracking-wide">
           About <span className="text-[#1c97c8]">Us</span>
         </h1>
-        <p className="text-gray-700 text-lg md:text-2xl font-[choco] mt-4">
-        ARC International Fertility & Research Center is a provider of advanced assisted reproductive treatment services at affordable costs and has successfully catered to the childless needs of 55,000+ couples since its inception in 2004. ARC has 30 branches across India in Tamil Nadu, Pondicherry, Andhra Pradesh, Telangana, Kerala, and West Bengal as well an international centre in Srilanka. ARC Fertility prides itself in being equipped with advanced and world class facilities offering quality services to its patients.
-        </p>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 p-4">
+  <p className="text-gray-700 text-lg md:text-2xl font-[choco] mt-4 md:mt-0 w-full md:w-[70%] text-center md:text-left">
+    ARC International Fertility & Research Center is a provider of advanced assisted reproductive treatment services at affordable costs and has successfully catered to the childless needs of 55,000+ couples since its inception in 2004. ARC has 30 branches across India in Tamil Nadu, Pondicherry, Andhra Pradesh, Telangana, Kerala, and West Bengal as well as an international centre in Sri Lanka. ARC Fertility prides itself in being equipped with advanced and world-class facilities offering quality services to its patients.
+  </p>
+  <div className="w-full md:w-[30%] flex justify-center">
+    <Lottie animationData={Abt} className="max-w-[300px] md:max-w-full" />
+  </div>
+</div>
+
       </motion.div>
 
       {/* Mission, Vision & Values */}

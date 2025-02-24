@@ -7,10 +7,10 @@ import arclogo from "../Images/arclogo.png";
 import HeaderImg from "../Images/HeaderImg.png";
 
 const menuItems = [
-  { title: "About Us", link: "/about", submenu: [
+  { title: "About Us", link: "/About_arc", submenu: [
       { title: "About Arc", link: "/About_arc" },
-      { title: "Leadership Team", link: "/about/team" },
-      { title: "Why Choose Us", link: "/about/history" },
+      { title: "Leadership Team", link: "/OurTeam " },
+      // { title: "Why Choose Us", link: "/about/history" },
       { title: "Media Gallery", link: "/about/careers" },
       { title: "Virtual Tour", link: "/about/contact" },
       { title: "FAQ", link: "/about/contact" },
