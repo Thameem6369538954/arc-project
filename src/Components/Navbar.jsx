@@ -8,7 +8,7 @@ import HeaderImg from "../Images/HeaderImg.png";
 
 const menuItems = [
   { title: "About Us", link: "/about", submenu: [
-      { title: "About Arc", link: "/about/mission" },
+      { title: "About Arc", link: "/About_arc" },
       { title: "Leadership Team", link: "/about/team" },
       { title: "Why Choose Us", link: "/about/history" },
       { title: "Media Gallery", link: "/about/careers" },
