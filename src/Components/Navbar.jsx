@@ -9,13 +9,13 @@ const menuItems = [
   { title: "About Us", link: "/About_arc", submenu: [
       { title: "About Arc", link: "/About_arc" },
       { title: "Leadership Team", link: "/OurTeam" },
-      { title: "Media Gallery", link: "/about/careers" },
+      { title: "Our Experts", link: "/about/careers" },
       { title: "Virtual Tour", link: "/about/contact" },
-      { title: "FAQ", link: "/about/contact" },
+      // { title: "FAQ", link: "/about/contact" },
     ]},
   { title: "Success Stories", link: "/success-stories", submenu: [
-      { title: "Awards & Recognitions", link: "/success/reviews" },
-      { title: "Testimonials", link: "/success/case-studies" },
+      { title: "Awards & Recognitions", link: "/Awards" },
+      { title: "Testimonials", link: "/Testimonial" },
       { title: "Blog", link: "/success/case-studies" },
       { title: "Live", link: "/success/case-studies" },
     ]},
@@ -24,9 +24,10 @@ const menuItems = [
       { title: "Fellowship Programs", link: "/academics/programs" },
     ]},
   { title: "Services & Treatment", link: "/Services_and_Treatment" },
-  { title: "Our Experts", link: "/experts" },
-  { title: "Awards", link: "/Awards" },
-  { title: "Our Facilities", link: "/facilities" },
+  // { title: "Our Experts", link: "/experts" },
+  { title: "Our Centers", link: "/experts" },
+  // { title: "Awards", link: "/Awards" },
+  { title: "Our Facilities", link: "/OurFacilities" },
 ];
 
 const Navbar = () => {
@@ -45,15 +46,15 @@ const Navbar = () => {
   };
 
   return (
-    <div className="font-sans relative">
+    <div className="font-[choco] relative">
       <motion.nav className="bg-[#fff8ef] text-black px-6 py-4 flex justify-between items-center shadow-md">
         <Link to="/" onClick={closeMobileMenu}>
-          <img src={arclogo} alt="Logo" className="h-12" />
+          <img src={arclogo} alt="Logo" className="h-13 md:h-23" />
         </Link>
         <ul className="hidden lg:flex space-x-6">
           {menuItems.map((menu, index) => (
             <li key={index} className="relative group">
-              <Link to={menu.link} className="hover:text-pink-500 px-4 py-2 flex items-center">
+              <Link to={menu.link} className="hover:text-pink-500 px-2 py-2 flex items-center">
                 {menu.title} {menu.submenu && <SlArrowDown className="ml-1" />}
               </Link>
               {menu.submenu && (

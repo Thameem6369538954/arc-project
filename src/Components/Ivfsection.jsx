@@ -55,7 +55,7 @@ const Ivfsection = () => {
     
     <img
   src={Baby}
-  className="absolute -top-10 right-1 md:top-10 md:right-25 w-[180px] sm:w-[220px] md:w-[250px] lg:w-[300px]"
+  className="absolute top-80 right-10 md:top-10 md:right-25 w-[180px] sm:w-[220px] md:w-[250px] lg:w-[300px]"
   alt="Baby"
 />
 

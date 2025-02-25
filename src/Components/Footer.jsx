@@ -79,15 +79,15 @@ const Footer = () => {
     Subscribe to our online consultation in your inbox.
   </p>
   <div className="relative w-full">
-    <input
-      type="email"
-      placeholder="Email Address"
-      className="w-full px-4 py-3 rounded-lg text-black border border-white"
-    />
-    <button className="absolute right-2 top-2 p-2 bg-[#d25c78] text-white rounded-full hover:scale-110 transition-all border border-white">
-      Submit
-    </button>
-  </div>
+  <input
+    type="email"
+    placeholder="Email Address"
+    className="w-full px-4 py-3 pr-14 rounded-lg text-white border border-white"
+  />
+  <button className="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 bg-[white] text-[#d25c78] rounded-full hover:scale-110 transition-all border border-[#d25c78]">
+    Submit
+  </button>
+</div>
 </div>
 
       </div>

@@ -16,7 +16,6 @@ import IVF from "../SerImg/Tret/IVF.jpg";
 import cancer from "../SerImg/Tret/cancer.jpg";
 import UN from "../SerImg/Tret/UN.jpg";
 import Ind from "../SerImg/Tret/Ind.jpg";
-import BBBG from "../SerImg/Tret/BBBG.jpg";
 
 const ServicesAndTreatment = () => {
   const [activeTab, setActiveTab] = useState("services");
@@ -24,25 +23,21 @@ const ServicesAndTreatment = () => {
   const data = {
     services: [
       { title: "Extending the biological clock", image: Clock, link: "/services/consulting" },
-      { title: "Life style and conceptoon advice", image: Adice, link: "/services/support" },
+      { title: "Lifestyle and conception advice", image: Adice, link: "/services/support" },
       { title: "Therapeutic activity for patients", image: Yoh, link: "/services/planning" },
-      { title: "Counsellings", image: Conselt, link: "/services/planning" },
+      { title: "Counselling", image: Conselt, link: "/services/planning" },
       { title: "Fertility tools", image: Tools, link: "/services/planning" },
       { title: "Corporate social responsibility", image: Social, link: "/services/planning" },
       { title: "Sexual dysfunction Clinic", image: Clinic, link: "/services/planning" },
-      { title: "Gynaecologics surgery", image: Surgery, link: "/services/planning" },
+      { title: "Gynaecologic surgery", image: Surgery, link: "/services/planning" },
       { title: "Stem cell banking", image: Bank, link: "/services/planning" },
     ],
     treatment: [
       { title: "Controlled Ovarian stimulation", image: ooci, link: "/treatment/skin-therapy" },
       { title: "Intrauterine insemination", image: Consul, link: "/treatment/physiotherapy" },
-      { title: "In vitro fertilization(IVF) For Fertility", image: IVF, link: "/treatment/mental-wellness" },
+      { title: "In vitro fertilization (IVF) For Fertility", image: IVF, link: "/treatment/mental-wellness" },
       { title: "Fertility preservation for cancer patients", image: cancer, link: "/treatment/mental-wellness" },
       { title: "Unexplained infertility", image: UN, link: "/treatment/mental-wellness" },
-      { title: "Ovalation induction", image: "https://source.unsplash.com/300x200/?meditation", link: "/treatment/mental-wellness" },
-      { title: "Ovalation induction", image: "https://source.unsplash.com/300x200/?meditation", link: "/treatment/mental-wellness" },
-      { title: "Donor and gestational carrier", image: "https://source.unsplash.com/300x200/?meditation", link: "/treatment/mental-wellness" },
-      { title: "The Healthiest Embryo", image: "https://source.unsplash.com/300x200/?meditation", link: "/treatment/mental-wellness" },
     ],
     packages: [
       { title: "India", image: Ind, link: "/packages/basic" },
@@ -51,16 +46,15 @@ const ServicesAndTreatment = () => {
   };
 
   return (
-    <div
-      className="w-full min-h-screen bg-cover bg-center flex items-center justify-center p-6 bg-[#fed9c9]"
-    >
-      <div className="w-full max-w-4xl bg-white/10 backdrop-blur-md p-6 text-center">
-        {/* Responsive Tabs */}
+    <div className="w-full min-h-screen bg-[#fed9c9] flex items-center justify-center py-12 px-4">
+      <div className="w-[100%] max-w-6xl bg-white/10  p-6  text-center">
+        
+        {/* Tabs Section */}
         <div className="flex flex-wrap justify-center gap-4 mb-6">
           {["services", "treatment", "packages"].map((tab) => (
             <button
               key={tab}
-              className={`px-6 py-2 font-semibold rounded-full transition-all ${
+              className={`px-6 py-2 font-[Heading] rounded-full transition-all ${
                 activeTab === tab
                   ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-md"
                   : "bg-gray-300 text-gray-700 hover:bg-gray-400"
@@ -72,14 +66,14 @@ const ServicesAndTreatment = () => {
           ))}
         </div>
 
-        {/* Animated Content Boxes */}
+        {/* Animated Cards */}
         <motion.div
           key={activeTab}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.4 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-4"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {data[activeTab].map((item, index) => (
             <motion.div
@@ -88,9 +82,9 @@ const ServicesAndTreatment = () => {
               className="p-4 bg-white/20 backdrop-blur-lg rounded-xl shadow-lg text-lg font-semibold text-gray-900 flex flex-col items-center"
             >
               <img src={item.image} alt={item.title} className="w-full h-40 object-cover rounded-lg mb-3" />
-              <h3 className="text-lg font-bold">{item.title}</h3>
+              <h3 className="text-md font-[Belli]">{item.title}</h3>
               <a href={item.link}>
-                <button className="mt-3 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full shadow-md transition hover:shadow-lg">
+                <button className="mt-3 font-[choco] px-4 py-2 bg-gradient-to-r text-[12px] from-blue-500 to-purple-500 text-white rounded-full shadow-md transition hover:shadow-lg">
                   Learn More
                 </button>
               </a>
