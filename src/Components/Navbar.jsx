@@ -13,21 +13,22 @@ const menuItems = [
       { title: "Virtual Tour", link: "/about/contact" },
       // { title: "FAQ", link: "/about/contact" },
     ]},
+    { title: "Services & Treatment", link: "/Services_and_Treatment" },
   { title: "Success Stories", link: "/success-stories", submenu: [
       { title: "Awards & Recognitions", link: "/Awards" },
       { title: "Testimonials", link: "/Testimonial" },
       { title: "Blog", link: "/success/case-studies" },
       { title: "Live", link: "/success/case-studies" },
     ]},
-  { title: "Academics", link: "/academics", submenu: [
-      { title: "PG Programs", link: "/academics/programs" },
-      { title: "Fellowship Programs", link: "/academics/programs" },
-    ]},
-  { title: "Services & Treatment", link: "/Services_and_Treatment" },
-  // { title: "Our Experts", link: "/experts" },
-  { title: "Our Centers", link: "/experts" },
-  // { title: "Awards", link: "/Awards" },
-  { title: "Our Facilities", link: "/OurFacilities" },
+    // { title: "Our Experts", link: "/experts" },
+    { title: "Our Centers", link: "/experts" },
+    // { title: "Awards", link: "/Awards" },
+    { title: "Academics", link: "/academics", submenu: [
+        { title: "PG Programs", link: "/academics/programs" },
+        { title: "Fellowship Programs", link: "/academics/programs" },
+      ]},
+    { title: "Our Facilities", link: "/OurFacilities" },
+    { title: "Contact", link: "/Contactus" },
 ];
 
 const Navbar = () => {

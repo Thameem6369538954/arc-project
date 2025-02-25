@@ -8,6 +8,7 @@ import TeamMemberProfile from "../Components/TeamMemberProfile.jsx"
 import OurFacilities from '../Pages/OurFacilities.jsx'
 import Testimonial from '../Pages/Testimonial.jsx'
 import Awards from '../Pages/Awards.jsx'
+import Contactus from '../Pages/Contactus.jsx'
 
 const AllRouter = () => {
   return (
@@ -21,6 +22,7 @@ const AllRouter = () => {
             <Route path="/team/:name" element={<TeamMemberProfile />} />
             <Route path="/Awards" element={<Awards />} />
             <Route path="/Testimonial" element={<Testimonial />} />
+            <Route path="/Contactus" element={<Contactus />} />
         </Routes>
     </div>
   )
