@@ -55,7 +55,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full fixed top-0 z-50 bg-[#fff8ef] shadow-md">
+    <div className="w-full fixed top-0 z-50 bg-[#fff8ef] shadow-md font-[choco]">
       <nav className="flex justify-between items-center px-6 py-4">
         <Link to="/" onClick={closeMenu}>
           <img src={arclogo} alt="Logo" className="h-14 md:h-20" />
