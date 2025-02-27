@@ -1,11 +1,11 @@
 const Footer = () => {
   return (
-    <footer className="min-h-[60vh] font-[choco] bg-[#d25c78] text-white flex items-center justify-center px-10 py-16">
+    <footer className="min-h-[60vh] font-[choco] bg-[#fadadd] text-black flex items-center justify-center px-10 py-16">
       <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* About Us Section */}
         <div>
-          <h3 className="text-xl font-bold mb-3 border-b border-white inline-block">About Us</h3>
-          <p className="mb-5 text-sm leading-relaxed">
+          <h3 className="text-3xl font-bold mb-3 border-b border-black inline-block">About Us</h3>
+          <p className="mb-5 text-md  leading-relaxed">
             Lorem ipsum dolor sit amet consectetur adipisicing elit do eiusmod tempor incididunt ut labore dolore magna.
           </p>
           <div className="flex space-x-4">
@@ -22,9 +22,9 @@ const Footer = () => {
         </div>
 
         <div>
-  <h3 className="text-xl font-bold mb-3 border-b border-white inline-block">Our IVF Centres</h3>
+  <h3 className="text-3xl font-bold mb-3 border-b border-black inline-block">Our IVF Centres</h3>
   <div className="grid grid-cols-2 gap-x-8">
-    <ul className="space-y-2 text-sm">
+    <ul className="space-y-2 text-md ">
       {[
         "Ariyar", "Bengaluru", "Coimbatore", "Dindigul", "Hyderabad",
         "Kochi", "Kolkata", "Kovilpatti", "Sri Lanka", "Madurai"
@@ -34,7 +34,7 @@ const Footer = () => {
         </li>
       ))}
     </ul>
-    <ul className="space-y-2 text-sm">
+    <ul className="space-y-2 text-md ">
       {[
         "Nagercoil", "Nellore", "Ongole", "Reddiyarpalayam", "Trichy",
         "Ambattur", "Tiruvannamalai", "Tirunelveli", "Tirupathi", "Tiruppur",
@@ -51,8 +51,8 @@ const Footer = () => {
 
         {/* Services List */}
         <div>
-          <h3 className="text-xl font-bold mb-3 border-b border-white inline-block">Our IVF Centres</h3>
-          <ul className="space-y-2 text-sm">
+          <h3 className="text-3xl font-bold mb-3 border-b border-black inline-block">Our IVF Centres</h3>
+          <ul className="space-y-2 text-md ">
             {[
               "Extending The Biological Clock",
               "Life Style And Conception Advice",
@@ -71,20 +71,20 @@ const Footer = () => {
         </div>
 
         {/* Online Subscription */}
-<div className="p-4 rounded-lg text-white">
-  <h3 className="text-xl font-bold mb-3 border-b border-white inline-block">
+<div className="p-4 rounded-lg text-black">
+  <h3 className="text-3xl font-bold mb-3 border-b border-black inline-block">
     Online
   </h3>
-  <p className="mb-3 text-sm leading-relaxed">
+  <p className="mb-3 text-md  leading-relaxed">
     Subscribe to our online consultation in your inbox.
   </p>
   <div className="relative w-full">
   <input
     type="email"
     placeholder="Email Address"
-    className="w-full px-4 py-3 pr-14 rounded-lg text-white border border-white"
+    className="w-full px-4 py-3 pr-14 rounded-lg text-black border border-black"
   />
-  <button className="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 bg-[white] text-[#d25c78] rounded-full hover:scale-110 transition-all border border-[#d25c78]">
+  <button className="absolute right-2 top-1/2 transform -translate-y-1/2 p-2  text-[#000] rounded-full hover:scale-110 transition-all border border-[#000]">
     Submit
   </button>
 </div>

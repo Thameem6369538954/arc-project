@@ -5,7 +5,7 @@ import NumberRolling from "./NumberRolling";
 
 const IVFSection = () => {
   return (
-    <div className='bg-[#fadadd]  w-full min-h-[150vh]'>
+    <div className='bg-[#f4d1ff]  w-full min-h-[150vh]'>
     <section className="flex flex-col lg:flex-row items-center justify-between px-8 lg:px-20 py-16 ">
       {/* Left Side - Text Content */}
       <motion.div
@@ -68,7 +68,7 @@ const IVFSection = () => {
 
     </section>
 
-  <NumberRolling />
+  {/* <NumberRolling /> */}
     <div className="grid place-items-center relative w-full">
     <div  className="absolute" >
 </div>

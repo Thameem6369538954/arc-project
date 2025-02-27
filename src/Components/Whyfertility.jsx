@@ -24,8 +24,8 @@ const Whyfertility = () => {
   ];
 
   return (
-    <div className="w-full min-h-screen flex items-center justify-center px-4 md:px-0">
-      <div className="w-full max-w-7xl min-h-[500px] bg-[#fed9c9] bg-opacity-5 rounded-xl  relative p-6 md:p-10">
+    <div className="w-full min-h-screen flex items-center justify-center px-4 md:px-0 bg-[#ffc9d7]">
+      <div className="w-full max-w-7xl min-h-[600px]  bg-opacity-5 rounded-xl  relative p-6 md:p-10">
         <div className="absolute -top-10 md:top-0 -left-5 z-10 left-0 w-[30%] max-w-[250px] md:max-w-[300px]">
           <Lottie animationData={Ani} loop={true} />
         </div>

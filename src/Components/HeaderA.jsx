@@ -36,14 +36,14 @@ const HeaderA = () => {
         <div>
             {/* Header Section */}
             <motion.div
-                className="w-full min-h-[100vh] bg-[#fff8ef] flex flex-col md:flex-row items-center justify-center p-5 md:p-10 relative text-center md:text-left"
+                className="w-full md:min-h-[130vh] min-h-[160vh] bg-[#fff8ef] flex flex-col md:flex-row items-center justify-center p-5 md:p-10 relative text-center md:text-left"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
             >
                 <motion.img
                     src={Fart}
-                    className="absolute w-[50px] sm:w-[120px] md:w-[150px] top-5 sm:top-10 top-45  right-5 sm:right-10 animate-bounce"
+                    className="absolute w-[50px] sm:w-[120px] md:w-[150px]  sm:top-40  top-5  right-5 sm:right-10 animate-bounce"
                     alt="Decoration"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -77,7 +77,7 @@ const HeaderA = () => {
                     </motion.button>
                 </motion.div>
                 <motion.div
-                    className="bg-[#ffb6c6] p-4 rounded-lg shadow-lg w-full md:w-[60%] lg:w-1/2 mx-auto mt-10 md:mt-0"
+                    className="bg-[#ffb6c6] p-1  rounded-lg shadow-lg w-full md:w-[60%] lg:w-1/2 mx-auto mt-10 md:mt-0"
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
@@ -90,62 +90,63 @@ const HeaderA = () => {
             {/* Appointment Form (Popup) */}
             {isFormOpen && (
                 <motion.div
-                    className="fixed inset-0 flex items-center justify-center p-4 bg-black bg-opacity-50"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
+                className="fixed inset-0 top-0 z-20 flex items-center justify-center p-4 bg-white/30 backdrop-blur-lg"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+            >
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.8 }}
+                    className="relative bg-white/20 backdrop-blur-xl rounded-lg shadow-2xl p-6 w-full max-w-md border border-white/30"
                 >
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0.8 }}
-                        className="relative bg-white rounded-lg shadow-2xl p-6 w-full max-w-md"
+                    {/* Close Button */}
+                    <button
+                        onClick={() => setIsFormOpen(false)}
+                        className="absolute top-4 right-4 text-black text-2xl hover:text-gray-600 transition-all"
                     >
-                        {/* Close Button */}
-                        <button
-                            onClick={() => setIsFormOpen(false)}
-                            className="absolute top-4 right-4 text-black text-2xl hover:text-gray-600 transition-all"
+                        <FaTimes />
+                    </button>
+            
+                    <h2 className="text-2xl sm:text-3xl font-semibold text-black mb-4">Book an Appointment</h2>
+                    <form onSubmit={handleSubmit} className="space-y-4">
+                        <motion.input
+                            type="text"
+                            name="fullName"
+                            placeholder="Full Name"
+                            value={formData.fullName}
+                            onChange={handleChange}
+                            className="w-full p-3 bg-white/50 backdrop-blur-md rounded-lg border border-gray-300 text-black placeholder-gray-500 focus:outline-none text-lg"
+                            required
+                            whileFocus={{ scale: 1.05, borderColor: "#1c97c8" }}
+                        />
+                        <motion.input
+                            type="tel"
+                            name="phone"
+                            placeholder="Phone Number"
+                            value={formData.phone}
+                            onChange={handleChange}
+                            className="w-full p-3 bg-white/50 backdrop-blur-md rounded-lg border border-gray-300 text-black placeholder-gray-500 focus:outline-none text-lg"
+                            required
+                            whileFocus={{ scale: 1.05, borderColor: "#1c97c8" }}
+                        />
+                        <motion.button
+                            type="submit"
+                            className="w-full bg-[#1c97c8] text-white py-3 text-lg rounded-lg shadow-lg transition-all"
+                            whileHover={{
+                                scale: 1.05,
+                                backgroundColor: "#147a9d",
+                                boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)",
+                            }}
+                            whileTap={{ scale: 0.95 }}
                         >
-                            <FaTimes />
-                        </button>
-
-                        <h2 className="text-2xl sm:text-3xl font-semibold text-black mb-4">Book an Appointment</h2>
-                        <form onSubmit={handleSubmit} className="space-y-4">
-                            <motion.input
-                                type="text"
-                                name="fullName"
-                                placeholder="Full Name"
-                                value={formData.fullName}
-                                onChange={handleChange}
-                                className="w-full p-3 bg-gray-100 rounded-lg border border-gray-300 text-black placeholder-gray-500 focus:outline-none text-lg"
-                                required
-                                whileFocus={{ scale: 1.05, borderColor: "#1c97c8" }}
-                            />
-                            <motion.input
-                                type="tel"
-                                name="phone"
-                                placeholder="Phone Number"
-                                value={formData.phone}
-                                onChange={handleChange}
-                                className="w-full p-3 bg-gray-100 rounded-lg border border-gray-300 text-black placeholder-gray-500 focus:outline-none text-lg"
-                                required
-                                whileFocus={{ scale: 1.05, borderColor: "#1c97c8" }}
-                            />
-                            <motion.button
-                                type="submit"
-                                className="w-full bg-[#1c97c8] text-white py-3 text-lg rounded-lg shadow-lg transition-all"
-                                whileHover={{
-                                    scale: 1.05,
-                                    backgroundColor: "#147a9d",
-                                    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)",
-                                }}
-                                whileTap={{ scale: 0.95 }}
-                            >
-                                {submitted ? "Submitting..." : "Submit"}
-                            </motion.button>
-                        </form>
-                    </motion.div>
+                            {submitted ? "Submitting..." : "Submit"}
+                        </motion.button>
+                    </form>
                 </motion.div>
+            </motion.div>
+            
             )}
 
             {/* Success Message Popup */}

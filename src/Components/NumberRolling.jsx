@@ -19,9 +19,9 @@ const NumberRolling = () => {
 
   return (
     <div className="flex items-center justify-center">
- <div ref={ref} className="flex flex-col md:flex-row justify-around items-center gap-8 p-10 m-2 rounded-lg bg-[#fd95a4] shadow-md w-[80%]">
+ <div ref={ref} className="flex flex-col md:flex-row justify-around items-center gap-8 p-10 m-2 rounded-lg bg-[#d6d4ac] shadow-md w-[80%]">
       {stats.map((stat, index) => (
-        <div key={index} className="flex flex-col items-center">
+        <div key={index} className="flex flex-col items-center font-[choco] ">
           <div className="text-white">{stat.icon}</div>
           {inView ? (
             <CountUp
@@ -33,7 +33,7 @@ const NumberRolling = () => {
               className="text-4xl font-bold text-white"
             />
           ) : (
-            <span className="text-4xl font-bold text-white">0+</span> // Placeholder when out of view
+            <span className="text-4xl font-bold text-white ">0+</span> // Placeholder when out of view
           )}
           <p className="text-lg font-semibold text-white mt-1">{stat.label}</p>
         </div>

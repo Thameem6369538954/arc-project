@@ -51,7 +51,7 @@ const Ivfsection = () => {
   };
 
   return (
-    <div className="w-full min-h-screen flex items-center justify-center p-5 relative">
+    <div className="w-full min-h-screen flex items-center justify-center p-5 relative bg-[#e1f4fb]">
     
     <img
   src={Baby}
@@ -59,7 +59,7 @@ const Ivfsection = () => {
   alt="Baby"
 />
 
-      <div className="w-[90%] min-h-[650px] bg-[#e1f4fb] rounded-xl shadow-lg">
+      <div className="w-[90%] min-h-[650px]  rounded-xl shadow-lg bg-[#f9f3aa]">
         {/* Heading */}
         <h1 className="font-[Belli] text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl mt-5 px-5 text-black tracking-wide">
           Our <span className="text-pink-400">Success</span> Stories
@@ -81,7 +81,7 @@ const Ivfsection = () => {
         </div>
 
         {/* Marquee Video Section */}
-        <div className="w-full overflow-hidden bg-[#e1f4fb] py-10 mt-5 flex justify-center">
+        <div className="w-full overflow-hidden  py-10 mt-5 flex justify-center">
           <motion.div
             className="flex space-x-10"
             animate={controls}

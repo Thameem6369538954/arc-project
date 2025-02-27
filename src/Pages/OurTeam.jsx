@@ -8,14 +8,14 @@ const OurTeam = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="py-12 bg-[#fff8ef]">
+    <section className="py-12 bg-[#fff8ef] mt-15 md:mt-25 ">
       <div className="container mx-auto px-4">
         <h2 className="text-center text-3xl md:text-4xl font-[Belli] text-pink-600 mb-6">Meet Our Team</h2>
         <div className="grid place-items-center">
           <p className="text-center text-gray-700 max-w-3xl mx-auto mb-12 font-[choco]">
             Meet our esteemed team of professionals dedicated to excellence in reproductive medicine and healthcare.
           </p>
-          <Lottie animationData={Doctor} className="max-w-[300px] md:max-w-1/2" />
+          {/* <Lottie animationData={Doctor} className="max-w-[300px] md:max-w-1/2" /> */}
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
@@ -23,7 +23,7 @@ const OurTeam = () => {
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-42 h-42 object-cover rounded-full mx-auto border-4 border-pink-500"
+                className="w-42 h-42 object-cover rounded-full mx-auto border-2 border-pink-500"
               />
               <h3 className="text-xl font-[Heading] text-gray-900 mt-4">{member.name}</h3>
               <p className="text-pink-500 font-[choco] font-medium text-sm">{member.role}</p>

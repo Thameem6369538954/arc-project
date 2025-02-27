@@ -23,7 +23,7 @@ const ServiceCard = ({ image, title, description }) => {
       <img src={image} alt={title} className="w-full h-full object-cover" />
 
       {/* Content Box */}
-      <div className="absolute bottom-0 left-0 w-full h-1/3 bg-black/80 flex flex-col items-center justify-center p-6">
+      <div className="absolute bottom-0 left-0 w-full h-1/4 bg-black/80 flex flex-col items-center justify-center p-6">
         <h2 className="text-2xl font-[Heading] text-white">{title}</h2>
         <p className="text-white/80 font-[choco] mt-2 text-center">{description}</p>
       </div>

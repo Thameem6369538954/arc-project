@@ -17,9 +17,9 @@ const images = [A, B, C, D, E, F, G, H, I];
 
 const ImageGallery = () => {
   return (
-    <div className="w-full min-h-[70vh] bg-[#fed9c9] flex flex-col items-center">
-      <h1 className="font-[Belli] text-3xl p-5 sm:text-4xl lg:text-5xl xl:text-6xl mt-5 px-5 text-black tracking-wide text-center">
-        Awards <span className="text-pink-400">&</span> Recognitions
+    <div className="w-full min-h-[70vh] bg-[#8bd2f1] flex flex-col items-center">
+      <h1 className="font-[Belli] text-3xl p-5 sm:text-4xl lg:text-5xl xl:text-6xl mt-5 px-5 text-white tracking-wide text-center">
+        Awards <span className="text-black">&</span> Recognitions
       </h1>
 
       <div className="w-full flex flex-col items-center">
@@ -59,7 +59,7 @@ const ImageGallery = () => {
 
       <div className="p-5">
         <button className="group relative inline-flex overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-          <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600"></span>
+          <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-gradient-to-r from-pink-600 via-[#1c97c8]to-white"></span>
           <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-8 py-3 text-sm font-medium backdrop-blur-3xl transition-all duration-300 group-hover:bg-slate-950/90">
             <svg
               stroke="currentColor"

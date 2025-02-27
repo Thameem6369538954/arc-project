@@ -7,4 +7,10 @@ export default defineConfig({
   plugins: [react(),
     tailwindcss()
   ],
+  resolve: {
+    alias: {
+      '@': '/src', // ✅ This makes @/ point to src folder
+    },
+  },
+  
 })

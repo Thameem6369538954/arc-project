@@ -18,15 +18,15 @@ const Home = () => {
         {/* <Header /> */}
         <ScrollToTop />
         <HeaderA />
-        <IVFSection />
-        {/* <NumberRolling /> */}
-        <VitroFertilization />
-        <OurServices />
         <Whyfertility />
-
+        <NumberRolling />
+        <VitroFertilization />
         <Team />  
         <Gallery />
-        <FAQ />
+        <OurServices />
+        <IVFSection />
+
+        {/* <FAQ /> */}
         <ContactForm />
 
     </div>

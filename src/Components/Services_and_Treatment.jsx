@@ -46,7 +46,7 @@ const ServicesAndTreatment = () => {
   };
 
   return (
-    <div className="w-full min-h-screen bg-[#fed9c9] flex items-center justify-center py-12 px-4">
+    <div className="w-full min-h-screen bg-[#fed9c9] flex items-center justify-center py-12 px-4 mt-15 md:mt-32 ">
       <div className="w-[100%] max-w-6xl bg-white/10  p-6  text-center">
         
         {/* Tabs Section */}

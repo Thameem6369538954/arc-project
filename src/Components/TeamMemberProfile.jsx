@@ -21,11 +21,11 @@ const TeamMemberProfile = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center md:items-start justify-center gap-8">
+      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center md:items-start justify-center gap-8 mt-15 md:mt-25">
         
         {/* Image and Name Section */}
         <motion.div 
-          className="w-full md:w-1/3 flex flex-col items-center text-center"
+          className="w-full md:w-1/2 flex flex-col items-center text-center"
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.2 }}
@@ -33,7 +33,7 @@ const TeamMemberProfile = () => {
           <motion.img
             src={member.image}
             alt={member.name}
-            className="w-40 h-40 sm:w-48 sm:h-48 object-cover rounded-full border-4 border-pink-500"
+            className="w-40 h-40 sm:w-48 sm:h-48 object-cover rounded-full border-2 border-pink-500"
             whileHover={{ scale: 1.1, rotate: 3 }}
             transition={{ type: "spring", stiffness: 200 }}
           />
@@ -47,7 +47,7 @@ const TeamMemberProfile = () => {
 
         {/* Achievements Section */}
         <motion.div 
-          className="w-full md:w-2/3"
+          className="w-full md:w-1/2"
           initial={{ x: 50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.4 }}
@@ -66,7 +66,7 @@ const TeamMemberProfile = () => {
                 {member.achievements.map((achievement, index) => (
                   <motion.li 
                     key={index} 
-                    className="flex items-center gap-2 text-gray-700 mb-1 p-2 text-sm"
+                    className="flex items-center gap-2 text-gray-700 mb-1 p-2 "
                     whileHover={{ scale: 1.05, x: 5 }}
                     transition={{ type: "spring", stiffness: 150 }}
                   >
