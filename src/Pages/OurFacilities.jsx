@@ -34,7 +34,7 @@ export default function ServicesPage() {
   };
 
   return (
-    <div className="p-4 md:p-10 mt-10 md:mt-25 w-full min-h-[100vh] bg-[#d6d4ac]">
+    <div className="p-4 md:p-10 mt-10 md:mt-25 w-full min-h-[100vh] bg-[#f5f4f1]">
       <h1 className="text-2xl md:text-3xl font-bold text-center text-pink-600">Counselling Services</h1>
       <div className="flex flex-col md:flex-row gap-6 md:gap-10 mt-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full md:w-1/2 h-[600px] md:h-[800px] overflow-y-scroll scrollbar-hide">
