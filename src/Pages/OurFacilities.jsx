@@ -9,6 +9,7 @@ import lifestyle from '../FecImg/lifestyle.jpg'
 import therapautic from '../FecImg/therapautic.jpg'
 import counselling from '../FecImg/counselling.jpg'
 import corporate from '../FecImg/corporate.jpg'
+import Downarrow from "../Images/Downarrow.png"
 
 const services = [
   { title: 'Emotional Considerations', content: 'Content for Emotional Considerations...', image: ExtA, list: [{ image: eggfreezing, title: 'Egg Freezing' }, { image: fertilitypreservation, title: 'Fertility Preservation ' }, { image: eggbanking, title: 'Egg Banking Calculator' }], },
@@ -34,10 +35,13 @@ export default function ServicesPage() {
   };
 
   return (
-    <div className="p-4 md:p-10 mt-10 md:mt-25 w-full min-h-[100vh] bg-[#f5f4f1]">
-      <h1 className="text-2xl md:text-3xl font-bold text-center text-pink-600">Counselling Services</h1>
+    <div className="p-4 md:p-10 mt-10 md:mt-25 w-full min-h-[100vh] bg-[#f5f4f1] ">
+      <h1 className="text-2xl md:text-6xl font-bold text-center font-[belli] text-pink-600">Counselling Services</h1>
       <div className="flex flex-col md:flex-row gap-6 md:gap-10 mt-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full md:w-1/2 h-[600px] md:h-[800px] overflow-y-scroll scrollbar-hide">
+      <h1 className="text-2xl md:text-5xl grid place-items-center font-bold text-center font-[belli] text-pink-600 border-1  border-black rounded">Our Services
+        <span ><img className='w-45 h-45' src={Downarrow}  alt="" /></span>
+      </h1>
           {services.map((service, index) => (
             <div key={index} className={`p-3 cursor-pointer border rounded-lg shadow-md w-full text-center transition-transform transform hover:scale-105 ${activeService?.title === service.title ? 'bg-pink-100' : ''}`} onClick={() => handleServiceClick(service)}>
               <img src={service.image} alt={service.title} className="rounded w-full h-40 object-cover mb-2" />
@@ -48,11 +52,11 @@ export default function ServicesPage() {
         {activeService && (
           <div className="border rounded bg-pink-50 p-6 w-full md:w-1/2 shadow-lg">
             <img src={activeService.image} alt={activeService.title} className="rounded mb-4 w-full h-60 md:h-[400px] object-cover" />
-            <h1 className="text-xl md:text-2xl font-bold text-pink-600 mb-4">{activeService.title}</h1>
-            <p>{activeService.content}</p>
-            <ul className="mt-4">
+            <h1 className="text-xl md:text-2xl font-bold text-pink-600 mb-4 font-[choco]">{activeService.title}</h1>
+            <p className='font-[choco]'>{activeService.content}</p>
+            <ul className="mt-4 font-[choco] ">
               {activeService.list.map((item, idx) => (
-                <li key={idx} className="flex items-center gap-4 mb-3">
+                <li key={idx} className="flex items-center gap-4 mb-3 border-2 border-pink-400 p-5 rounded-xl ">
                   <img src={item.image} alt={item.title} className="w-10 h-10 md:w-12 md:h-12 rounded object-cover" />
                   <span className="text-md md:text-lg font-semibold">{item.title}</span>
                 </li>
@@ -62,8 +66,8 @@ export default function ServicesPage() {
         )}
       </div>
       <div className="mt-12 bg-pink-100 p-6 md:p-10 rounded shadow">
-        <h3 className="text-xl md:text-2xl font-bold text-center text-pink-600">World Class Fertility Treatment</h3>
-        <form className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+        <h3 className="text-xl md:text-2xl font-bold text-center text-pink-600 font-[belli]">World Class Fertility Treatment</h3>
+        <form className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 font-[choco]">
           <input type="text" placeholder="Select Doctor" className="p-2 border rounded" />
           <input type="text" placeholder="Name" className="p-2 border rounded" />
           <input type="email" placeholder="Email" className="p-2 border rounded" />
