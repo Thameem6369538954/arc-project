@@ -103,8 +103,8 @@ const ContactUs = () => {
               animate={{ opacity: 1, y: 0 }}
               className="bg-white p-5 rounded-lg shadow-lg border"
             >
-              <h3 className="text-lg font-bold mb-2 font-[Heading] tracking-wide">{loc.name}</h3>
-              <h3 className="text-lg font-bold mb-2 font-[Heading] tracking-wide">ARC International Fertility and Research Centre</h3>
+              <h3 className="text-lg font-bold mb-2 font-[choco] tracking-wide">{loc.name}</h3>
+              {/* <h3 className="text-lg font-bold mb-2 font-[Heading] tracking-wide">ARC International Fertility and Research Centre</h3> */}
               <p className="text-sm mb-3 font-[choco]">{loc.address}</p>
               <button className="px-4 py-2 bg-[#d25c78] text-white rounded-md hover:scale-105 transition-all w-full sm:w-auto font-[choco]">
                 View Map

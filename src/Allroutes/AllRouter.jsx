@@ -14,6 +14,7 @@ import OurExports from '../Pages/OurExports.jsx'
 import Contactus from '../Pages/Contactus.jsx'
 import Ourcenters from '../Pages/Ourcenters.jsx'
 import LocationDetails from '../Pages/LocationDetails.jsx'
+import EggFreezingPage from "../FesPages/EggFreezing.jsx"
 
 const AllRouter = () => {
   return (
@@ -33,6 +34,7 @@ const AllRouter = () => {
             <Route path="/OurExports" element={<OurExports />} />
             <Route path="/profile/:id" element={<ProfileDetails />} />
             <Route path="/Ourcenters/:name" element={<LocationDetails />} />
+            <Route path="/EggFreezingPage" element={<EggFreezingPage />} />
             
             
         </Routes>

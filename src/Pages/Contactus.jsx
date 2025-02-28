@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Contactus = () => {
   return (
-    <div className='min-h-[100vh] bg-[#f4d1ff] mt-15 md:mt-32 '>
+    <div className='min-h-[100vh] bg-[#fed9c9] mt-15 md:mt-28 '>
       <h1 className='font-[Belli] text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl mt-5 px-5 text-white tracking-wide p-5'>Contact Us </h1>
         <div className="flex flex-col lg:flex-row items-center justify-around gap-4 ">
       <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-6 w-[60%] font-[choco]">

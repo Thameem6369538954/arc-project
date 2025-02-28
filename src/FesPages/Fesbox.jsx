@@ -10,10 +10,9 @@ import therapautic from '../FecImg/therapautic.jpg'
 import counselling from '../FecImg/counselling.jpg'
 import corporate from '../FecImg/corporate.jpg'
 import Downarrow from "../Images/Downarrow.png"
-import { Link, Route } from 'react-router-dom';
 
 const services = [
-  { title: 'Emotional Considerations', content: 'Content for Emotional Considerations...', image: ExtA, list: [{ image: eggfreezing, title: 'Egg Freezing' }, { image: fertilitypreservation, title: 'Fertility Preservation ', route :"/EggFreezing" }, { image: eggbanking, title: 'Egg Banking Calculator' } ], },
+  { title: 'Emotional Considerations', content: 'Content for Emotional Considerations...', image: ExtA, list: [{ image: eggfreezing, title: 'Egg Freezing' }, { image: fertilitypreservation, title: 'Fertility Preservation ' }, { image: eggbanking, title: 'Egg Banking Calculator' }], },
   { title: 'Prenatal Counselling', content: 'Content for Prenatal Counselling...', image: lifestyle, list: [{ image: Bank, title: 'Timing & Frequency Of Intercourse' }, { image: Round, title: 'Exercise In Moderation' }, { image: Bank, title: 'Nutrition & Fertility' }, {image: Bank, title: 'BMI & Fertility' }, {image: Bank, title: 'Alcohol & Drug Use' }], },
   { title: 'Therapeutic Activity For Patients', content: 'Content for Extending the Biological Clock...', image: therapautic, list: [{ image: Round, title: 'Yoga' }, { image: Bank, title: 'Massage Therapy' }, { image: Round, title: 'Acupuncture' }, { image: Round, title: 'Medication' }, { image: Round, title: 'Fertility Preservation' }, { image: Round, title: 'Walking/Hiking' }], },
   { title: 'Counselling', content: 'Content for Stem Cell Banking...', image: counselling, list: [{ image: Bank, title: 'Emotional Considerations' }, { image: Round, title: 'Premarital Counselling' }, ], },
@@ -37,7 +36,7 @@ export default function ServicesPage() {
 
   return (
     <div className="p-4 md:p-10 mt-10 md:mt-25 w-full min-h-[100vh] bg-[#f5f4f1] ">
-      <h1 className="text-2xl md:text-6xl font-bold text-center font-[belli] text-pink-600">Counselling Services</h1>
+      {/* <h1 className="text-2xl md:text-6xl font-bold text-center font-[belli] text-pink-600">Counselling Services</h1> */}
       <div className="flex flex-col md:flex-row gap-6 md:gap-10 mt-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full md:w-1/2 h-[600px] md:h-[800px] overflow-y-scroll scrollbar-hide">
       <h1 className="text-2xl md:text-5xl grid place-items-center font-bold text-center font-[belli] text-pink-600 border-1  border-black rounded">Our Services
@@ -57,49 +56,17 @@ export default function ServicesPage() {
             <p className='font-[choco]'>{activeService.content}</p>
             <ul className="mt-4 font-[choco] h-60 overflow-y-scroll scrollbar-thin scrollbar-thumb-pink-400 scrollbar-track-pink-100">
   {activeService.list.map((item, idx) => (
-    <li
-      key={idx}
-      className="flex items-center gap-4 mb-3 border-2 border-pink-400 p-5 rounded-xl cursor-pointer hover:bg-pink-50 transition-all duration-300"
-    >
-      {item.route ? ( 
-        <Link to={item.route} className="w-full flex items-center gap-4">
-          <img
-            src={item.image}
-            alt={item.title}
-            className="w-10 h-10 md:w-12 md:h-12 rounded object-cover"
-          />
-          <span className="text-md md:text-lg font-semibold">{item.title}</span>
-        </Link>
-      ) : ( 
-        <div className="w-full flex items-center gap-4">
-          <img
-            src={item.image}
-            alt={item.title}
-            className="w-10 h-10 md:w-12 md:h-12 rounded object-cover"
-          />
-          <span className="text-md md:text-lg font-semibold">{item.title}</span>
-        </div>
-      )}
+    <li key={idx} className="flex items-center gap-4 mb-3 border-2 border-pink-400 p-5 rounded-xl">
+      <img src={item.image} alt={item.title} className="w-10 h-10 md:w-12 md:h-12 rounded object-cover" />
+      <span className="text-md md:text-lg font-semibold">{item.title}</span>
     </li>
   ))}
 </ul>
 
-
           </div>
         )}
       </div>
-      <div className="mt-12 bg-pink-100 p-6 md:p-10 rounded shadow">
-        <h3 className="text-xl md:text-2xl font-bold text-center text-pink-600 font-[belli]">World Class Fertility Treatment</h3>
-        <form className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 font-[choco]">
-          <input type="text" placeholder="Select Doctor" className="p-2 border rounded" />
-          <input type="text" placeholder="Name" className="p-2 border rounded" />
-          <input type="email" placeholder="Email" className="p-2 border rounded" />
-          <input type="text" placeholder="Mobile Number" className="p-2 border rounded" />
-          <input type="text" placeholder="Your Location" className="p-2 border rounded" />
-          <textarea placeholder="Message" className="p-2 border rounded col-span-1 md:col-span-2"></textarea>
-          <button className="col-span-1 md:col-span-2 bg-pink-600 text-white p-2 rounded">Submit Now</button>
-        </form>
-      </div>
+  
     </div>
   );
 }

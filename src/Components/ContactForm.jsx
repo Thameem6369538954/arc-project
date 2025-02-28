@@ -37,10 +37,11 @@ const ContactForm = () => {
 
   return (
     <div className="bg-[#bed1e3] w-full min-h-[100vh] ">
-      <div className="p-5">
-        <h1 className="font-[Belli] text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl  p-2">We Are Always Ready to Help You. Book An Appointment</h1>
-        <p className="font-[choco] md:text-7xl text-3xl bg-white rounded text-center p-5">"Get Flat 100% Off On investigation"</p>
-        <p className="font-[choco] md:text-3xl text-3xl bg-white rounded text-center p-5" >First-Time-Visit</p>
+      <div className="p-5 bg-white
+bg-white">
+        <h1 className="font-[Belli] text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl  p-2">We Are Always Ready to Help You. Book An Appointment</h1>
+        <p className="font-[choco] md:text-4xl text-3xl  rounded text-center p-5">"Get Flat 100% Off On investigation"</p>
+        <p className="font-[choco] md:text-3xl text-3xl  rounded text-center " >First-Time-Visit</p>
       </div>
 <div className="flex flex-col md:flex-row items-center justify-center min-h-[600px] p-5">
       {/* Form Section */}

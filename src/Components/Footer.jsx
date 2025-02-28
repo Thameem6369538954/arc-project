@@ -1,100 +1,60 @@
-const Footer = () => {
+export default function Footer() {
   return (
-    <footer className="min-h-[60vh] font-[choco] bg-[#fadadd] text-black flex items-center justify-center px-10 py-16">
-      <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-4 gap-10">
-        {/* About Us Section */}
+    <footer className="bg-gradient-to-r from-pink-200 to-rose-400 py-10 text-white">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+        
         <div>
-          <h3 className="text-3xl font-bold mb-3 border-b border-black inline-block">About Us</h3>
-          <p className="mb-5 text-md  leading-relaxed">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit do eiusmod tempor incididunt ut labore dolore magna.
+          <h3 className="text-xl font-bold mb-3 border-b-2 border-white inline-block">About Us</h3>
+          <p className="text-sm leading-relaxed">
+            Discover our journey towards making dreams come true with top-notch IVF services.
           </p>
-          <div className="flex space-x-4">
-            <a href="#" className="w-10 h-10 flex items-center justify-center border rounded-full hover:bg-white hover:text-[#d25c78] transition-all">
-              <i className="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" className="w-10 h-10 flex items-center justify-center border rounded-full hover:bg-white hover:text-[#d25c78] transition-all">
-              <i className="fab fa-instagram"></i>
-            </a>
-            <a href="#" className="w-10 h-10 flex items-center justify-center border rounded-full hover:bg-white hover:text-[#d25c78] transition-all">
-              <i className="fab fa-youtube"></i>
-            </a>
-          </div>
         </div>
 
         <div>
-  <h3 className="text-3xl font-bold mb-3 border-b border-black inline-block">Our IVF Centres</h3>
-  <div className="grid grid-cols-2 gap-x-8">
-    <ul className="space-y-2 text-md ">
-      {[
-        "Ariyar", "Bengaluru", "Coimbatore", "Dindigul", "Hyderabad",
-        "Kochi", "Kolkata", "Kovilpatti", "Sri Lanka", "Madurai"
-      ].map((item, index) => (
-        <li key={index} className="hover:translate-x-2 transition-all flex items-center">
-          ▸ {item}
-        </li>
-      ))}
-    </ul>
-    <ul className="space-y-2 text-md ">
-      {[
-        "Nagercoil", "Nellore", "Ongole", "Reddiyarpalayam", "Trichy",
-        "Ambattur", "Tiruvannamalai", "Tirunelveli", "Tirupathi", "Tiruppur",
-        "Vellore", "Tambaram", "Kumbakonam"
-      ].map((item, index) => (
-        <li key={index} className="hover:translate-x-2 transition-all flex items-center">
-          ▸ {item}
-        </li>
-      ))}
-    </ul>
-  </div>
-</div>
-
-
-        {/* Services List */}
-        <div>
-          <h3 className="text-3xl font-bold mb-3 border-b border-black inline-block">Our IVF Centres</h3>
-          <ul className="space-y-2 text-md ">
-            {[
-              "Extending The Biological Clock",
-              "Life Style And Conception Advice",
-              "Therapeutic Activity For Patients",
-              "Counselling",
-              "Fertility Tools",
-              "Corporate Social Responsibility",
-              "Sexually Dysfunction Clinic",
-              "Gynecologic Surgery",
-            ].map((item, index) => (
-              <li key={index} className="hover:translate-x-2 transition-all flex items-center">
-                ▸ {item}
-              </li>
-            ))}
+          <h3 className="text-xl font-bold mb-3 border-b-2 border-white inline-block">Our IVF Centres</h3>
+          <ul className="text-sm space-y-2">
+            <li>Ariyar</li>
+            <li>Bengaluru</li>
+            <li>Coimbatore</li>
+            <li>Dindigul</li>
+            <li>Hyderabad</li>
+            <li>Kochi</li>
+            <li>Kolkata</li>
+            <li>Kovilpatti</li>
           </ul>
         </div>
 
-        {/* Online Subscription */}
-<div className="p-4 rounded-lg text-black">
-  <h3 className="text-3xl font-bold mb-3 border-b border-black inline-block">
-    Online
-  </h3>
-  <p className="mb-3 text-md  leading-relaxed">
-    Subscribe to our online consultation in your inbox.
-  </p>
-  <div className="relative w-full">
-  <input
-    type="email"
-    placeholder="Email Address"
-    className="w-full px-4 py-3 pr-14 rounded-lg text-black border border-black"
-  />
-  <button className="absolute right-2 top-1/2 transform -translate-y-1/2 p-2  text-[#000] rounded-full hover:scale-110 transition-all border border-[#000]">
-    Submit
-  </button>
-</div>
-</div>
+        <div>
+          <h3 className="text-xl font-bold mb-3 border-b-2 border-white inline-block">Our Services</h3>
+          <ul className="text-sm space-y-2">
+            <li>Fertility Tools</li>
+            <li>Gynecologic Surgery</li>
+            <li>Counselling</li>
+            <li>Lifestyle Advice</li>
+          </ul>
+        </div>
 
+        <div>
+          <h3 className="text-xl font-bold mb-3 border-b-2 border-white inline-block">Subscribe</h3>
+          <p className="text-sm mb-4">
+            Stay updated with our latest services and offers.
+          </p>
+          <div className="flex items-center">
+            <input
+              type="email"
+              placeholder="Your Email"
+              className="p-2 w-full rounded-l-md text-black"
+            />
+            <button className="bg-rose-500 hover:bg-rose-600 text-white px-4 py-2 rounded-r-md">
+              Submit
+            </button>
+          </div>
+        </div>
       </div>
 
-      
+      <div className="text-center text-sm mt-10">
+        &copy; 2025 All Rights Reserved | Company Name
+      </div>
     </footer>
   );
-};
-
-export default Footer;
+}

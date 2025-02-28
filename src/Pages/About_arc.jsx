@@ -79,7 +79,7 @@ const AboutUs = () => {
           <div className="w-16 h-1 bg-pink-500 my-2"></div>
           <ul className="mt-4 space-y-4 font-[choco] text-xl md:text-2xl text-gray-700">
             <div>
-                <h1 className="p-5 font-bold">1 , Relationship with our clients</h1>
+                <h1 className="p-5 font-bold">1 Relationship with our clients</h1>
             {["We are dedicated to patient care.", "Treat everyone with respect and dignity.", "Listen compassionately and do everything in our power to help them achieve parenthood",].map((value, index) => (
               <motion.li
                 key={index}
@@ -105,7 +105,7 @@ const AboutUs = () => {
           
           <ul className="mt-4 space-y-4 font-[choco] text-xl md:text-2xl text-gray-700">
             <div>
-                <h1 className="p-5 font-bold">2 , Approach to Health Care</h1>
+                <h1 className="p-5 font-bold">2 Approach to Health Care</h1>
             {["Provide holistic care for our clients preferring to see the complexity of every childless individual’s life and believe that addressing a broad range of human needs is the best way to provide fertility solutions", "Strive to continuously examine and improve upon the services we provide.", "Providing high-quality, accessible, and affordable solutions to our clients.",].map((value, index) => (
               <motion.li
                 key={index}
@@ -131,7 +131,7 @@ const AboutUs = () => {
           
           <ul className="mt-4 space-y-4 font-[choco] text-xl md:text-2xl text-gray-700">
             <div>
-                <h1 className="p-5 font-bold">3 , Work Environment</h1>
+                <h1 className="p-5 font-bold">3 Work Environment</h1>
             {["Teamwork is central to our work. We each take the responsibility to contribute effectively to teams", "Take pride in what we do and how we do it – our integrity and ethics will never be compromised.", "Listen compassionately and do everything in our power to help them achieve parenthood",].map((value, index) => (
               <motion.li
                 key={index}

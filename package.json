@@ -13,6 +13,7 @@
     "@shadcn/ui": "^0.0.4",
     "@tailwindcss/vite": "^4.0.6",
     "aos": "^2.3.4",
+    "embla-carousel-react": "^8.5.2",
     "framer-motion": "^12.4.4",
     "locomotive-scroll": "^4.1.4",
     "lottie-react": "^2.4.1",
