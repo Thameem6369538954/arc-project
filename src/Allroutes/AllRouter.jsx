@@ -11,10 +11,12 @@ import OurFacilities from '../Pages/OurFacilities.jsx'
 import Testimonial from '../Pages/Testimonial.jsx'
 import Awards from '../Pages/Awards.jsx'
 import OurExports from '../Pages/OurExports.jsx'
+import Why_Choose_us from '../Pages/Why_Choose_us.jsx'
 import Contactus from '../Pages/Contactus.jsx'
 import Ourcenters from '../Pages/Ourcenters.jsx'
 import LocationDetails from '../Pages/LocationDetails.jsx'
 import EggFreezingPage from "../FesPages/EggFreezing.jsx"
+import Dummy from "../Pages/Dummy.jsx"
 
 const AllRouter = () => {
   return (
@@ -32,9 +34,11 @@ const AllRouter = () => {
             <Route path="/Contactus" element={<Contactus />} />
             <Route path="/Ourcenters" element={<Ourcenters />} />
             <Route path="/OurExports" element={<OurExports />} />
+            <Route path="/Why_Choose_us" element={<Why_Choose_us />} />
             <Route path="/profile/:id" element={<ProfileDetails />} />
             <Route path="/Ourcenters/:name" element={<LocationDetails />} />
             <Route path="/EggFreezingPage" element={<EggFreezingPage />} />
+            <Route path="/Dummy" element={<Dummy />} />
             
             
         </Routes>

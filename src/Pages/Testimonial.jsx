@@ -1,22 +1,22 @@
 import React from "react";
 
 const videos = [
-  { id: "dQw4w9WgXcQ", title: "Feedback 1" },
-  { id: "3JZ_D3ELwOQ", title: "Feedback 2" },
-  { id: "L_jWHffIx5E", title: "Feedback 3" },
-  { id: "M3BM9TB-8yA", title: "Feedback 4" },
-  { id: "tgbNymZ7vqY", title: "Feedback 5" },
-  { id: "V-_O7nl0Ii0", title: "Feedback 6" },
-  { id: "kJQP7kiw5Fk", title: "Feedback 7" },
-  { id: "2Vv-BfVoq4g", title: "Feedback 8" },
-  { id: "9bZkp7q19f0", title: "Feedback 9" },
-  { id: "3tmd-ClpJxA", title: "Feedback 10" },
+  { id: "dQw4w9WgXcQ", title: "Testimonial 1" },
+  { id: "3JZ_D3ELwOQ", title: "Testimonial 2" },
+  { id: "L_jWHffIx5E", title: "Testimonial 3" },
+  { id: "M3BM9TB-8yA", title: "Testimonial 4" },
+  { id: "tgbNymZ7vqY", title: "Testimonial 5" },
+  { id: "V-_O7nl0Ii0", title: "Testimonial 6" },
+  { id: "kJQP7kiw5Fk", title: "Testimonial 7" },
+  { id: "2Vv-BfVoq4g", title: "Testimonial 8" },
+  { id: "9bZkp7q19f0", title: "Testimonial 9" },
+  { id: "3tmd-ClpJxA", title: "Testimonial 10" },
 ];
 
 const YouTubeGallery = () => {
   return (
     <div className="min-h-screen  p-6 bg-[#fd95a4] w-full mt-15 md:mt-25">
-      <h2 className="font-[Belli] text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl mt-5 px-5 text-white tracking-wide p-5">User Feedback Videos</h2>
+      <h2 className="font-[Belli] text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl mt-1 px-0 text-white tracking-wide p-5">Patient Reviews</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {videos.map((video, index) => (
           <div key={index} className="bg-[#fadadd] shadow-lg rounded-lg p-4">

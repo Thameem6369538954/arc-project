@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const Contactus = () => {
   return (
     <div className='min-h-[100vh] bg-[#fed9c9] mt-15 md:mt-28 '>
-      <h1 className='font-[Belli] text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl mt-5 px-5 text-white tracking-wide p-5'>Contact Us </h1>
+      <h1 className='font-[Belli] text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl mt-5 px-5 text tracking-wide p-5'>Contact Us </h1>
         <div className="flex flex-col lg:flex-row items-center justify-around gap-4 ">
       <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-6 w-[60%] font-[choco]">
       <motion.div
@@ -54,7 +54,7 @@ const Contactus = () => {
               animate={{ opacity: 1, y: 0 }}
               className="bg-white p-5 rounded-lg shadow-lg border"
             >
-              <h3 className="text-lg font-bold mb-2">Srilanka</h3>
+              <h3 className="text-lg font-bold mb-2">Sri Lanka</h3>
               <p className="text-sm mb-3">94 757333666</p>
               <button className="px-4 py-2 bg-[#d25c78] text-white rounded-md hover:scale-105 transition-all w-full sm:w-auto">
                 View Map

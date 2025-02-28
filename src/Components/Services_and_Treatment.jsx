@@ -54,10 +54,10 @@ const ServicesAndTreatment = () => {
           {["services", "treatment", "packages"].map((tab) => (
             <button
               key={tab}
-              className={`px-6 py-2 font-[Heading] rounded-full transition-all ${
+              className={`px-6 py-2 font-[new]  rounded-full transition-all ${
                 activeTab === tab
-                  ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-md"
-                  : "bg-gray-300 text-gray-700 hover:bg-gray-400"
+                  ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-md "
+                  : "bg-white text-gray-700 hover:bg-gray-400"
               }`}
               onClick={() => setActiveTab(tab)}
             >

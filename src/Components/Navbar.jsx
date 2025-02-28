@@ -13,6 +13,7 @@ const menuItems = [
       { title: "About Arc", link: "/About_arc" },
       { title: "Leadership Team", link: "/OurTeam" },
       { title: "Our Experts", link: "/OurExports" },
+      { title: "Why Choose Us", link: "/Why_Choose_us" },
       { title: "Virtual Tour", link: "/about/contact" },
     ],
   },
@@ -23,8 +24,8 @@ const menuItems = [
     submenu: [
       { title: "Awards & Recognitions", link: "/Awards" },
       { title: "Testimonials", link: "/Testimonial" },
-      { title: "Blog", link: "/success/case-studies" },
-      { title: "Live", link: "/success/case-studies" },
+      { title: "Patient Stories", link: "/success/case-studies" },
+      // { title: "Live", link: "/success/case-studies" },
     ],
   },
   { title: "Our Centers", link: "/Ourcenters" },

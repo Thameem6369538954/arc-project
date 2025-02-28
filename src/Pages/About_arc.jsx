@@ -5,7 +5,8 @@ import Abt from '../Animations/Abt.json'
 
 const AboutUs = () => {
   return (
-    <div className='bg-[#fadadd] w-full min-h-screen py-16 px-8 lg:px-20 mt-15 md:mt-25'>
+    <div className=' w-full min-h-screen  mt-15 md:mt-25'>
+      <div className='bg-[#fadadd] w-full py-16 px-8 lg:px-20 '>
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -26,8 +27,12 @@ const AboutUs = () => {
 
       </motion.div>
 
+      </div>
+
       {/* Mission, Vision & Values */}
-      <div className="mt-12">
+      <div className="w-full min-h-[60vh] bg-[#ffe6bb] py-16 px-8 lg:px-20">
+
+      <div className="mt-12  w-full ">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -36,8 +41,8 @@ const AboutUs = () => {
           className="mb-12"
         >
           <h2 className="text-3xl font-[Heading] text-gray-900">Mission</h2>
-          <div className="w-16 h-1 bg-pink-500 my-2"></div>
-          <p className="text-gray-700 font-[choco] text-xl md:text-2xl">
+          <div className="w-19 h-1 bg-pink-500"></div>
+          <p className="text-gray-700 font-[choco] p-5 text-xl md:text-2xl">
           To be the globally preferred brand in assisted reproductive technology for childless individuals through excellence in quality, service, and access
           </p>
         </motion.div>
@@ -50,7 +55,8 @@ const AboutUs = () => {
           className="mb-12"
         >
           <h2 className="text-3xl font-[Heading] text-gray-900">Vision</h2>
-          <div className="w-16 h-1 bg-pink-500 my-2"></div>
+                    <div className="w-15 h-1 bg-pink-500"></div>
+
          
           <ul className="mt-4 space-y-4 font-[choco] text-xl md:text-2xl text-gray-700">
             {["Creating a community wherein we ensure solutions for every childless individual desiring a child by providing advanced fertility treatment solutions at affordable cost", "To be a trusted & valued partner in the community and creators of positive change through the excellence of our people, superior client care, innovation and research."].map((value, index) => (
@@ -75,11 +81,12 @@ const AboutUs = () => {
           viewport={{ once: false, amount: 0.3 }}
           className="mb-12"
         >
-          <h2 className="text-3xl font-[Heading] text-gray-900">Values:</h2>
-          <div className="w-16 h-1 bg-pink-500 my-2"></div>
+          <h2 className="text-3xl font-[Heading] text-gray-900">Values</h2>
+                    <div className="w-17 h-1 bg-pink-500"></div>
+
           <ul className="mt-4 space-y-4 font-[choco] text-xl md:text-2xl text-gray-700">
             <div>
-                <h1 className="p-5 font-bold">1 Relationship with our clients</h1>
+                <h1 className="p-5 font-bold">1. Relationship with our clients</h1>
             {["We are dedicated to patient care.", "Treat everyone with respect and dignity.", "Listen compassionately and do everything in our power to help them achieve parenthood",].map((value, index) => (
               <motion.li
                 key={index}
@@ -105,7 +112,7 @@ const AboutUs = () => {
           
           <ul className="mt-4 space-y-4 font-[choco] text-xl md:text-2xl text-gray-700">
             <div>
-                <h1 className="p-5 font-bold">2 Approach to Health Care</h1>
+                <h1 className="p-5 font-bold">2. Approach to Health Care</h1>
             {["Provide holistic care for our clients preferring to see the complexity of every childless individual’s life and believe that addressing a broad range of human needs is the best way to provide fertility solutions", "Strive to continuously examine and improve upon the services we provide.", "Providing high-quality, accessible, and affordable solutions to our clients.",].map((value, index) => (
               <motion.li
                 key={index}
@@ -131,7 +138,7 @@ const AboutUs = () => {
           
           <ul className="mt-4 space-y-4 font-[choco] text-xl md:text-2xl text-gray-700">
             <div>
-                <h1 className="p-5 font-bold">3 Work Environment</h1>
+                <h1 className="p-5 font-bold">3. Work Environment</h1>
             {["Teamwork is central to our work. We each take the responsibility to contribute effectively to teams", "Take pride in what we do and how we do it – our integrity and ethics will never be compromised.", "Listen compassionately and do everything in our power to help them achieve parenthood",].map((value, index) => (
               <motion.li
                 key={index}
@@ -147,6 +154,7 @@ const AboutUs = () => {
             </div>
           </ul>
         </motion.div>
+      </div>
       </div>
     </div>
   );

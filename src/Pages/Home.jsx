@@ -11,6 +11,7 @@ import ContactForm from '../Components/ContactForm'
 import ScrollToTop from '../Components/ScrollToTop'
 import FAQ from '../Components/Faq'
 import Gallery from '../Components/Gallery'
+import Dummy from "../Pages/Dummy.jsx"
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
         <NumberRolling />
         <VitroFertilization />
         <Team />  
+        <Dummy />
         <Gallery />
         <OurServices />
         <IVFSection />
