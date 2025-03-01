@@ -23,7 +23,7 @@ const Home = () => {
         <NumberRolling />
         <VitroFertilization />
         <Team />  
-        <Dummy />
+        {/* <Dummy /> */}
         <Gallery />
         <OurServices />
         <IVFSection />

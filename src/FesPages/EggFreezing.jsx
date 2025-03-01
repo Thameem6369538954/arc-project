@@ -10,7 +10,7 @@ const EggFreezingPage = () => {
         <img
           src={eggfreezing}
           alt="Egg Freezing"
-          className="w-[30%] object-fit mt-5 p-5"
+          className="md:w-[30%] object-fit mt-5 p-5"
         />
       </div>
 
