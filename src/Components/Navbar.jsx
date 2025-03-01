@@ -37,7 +37,7 @@ const menuItems = [
       { title: "Fellowship Programs", link: "/academics/fellowshipprograms" },
     ],
   },
-  { title: "Our Facilities", link: "/OurFacilities" },
+  // { title: "Our Facilities", link: "/OurFacilities" },
   { title: "Contact", link: "/Contactus" },
 ];
 

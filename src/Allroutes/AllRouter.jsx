@@ -36,7 +36,7 @@ const AllRouter = () => {
             <Route path="/OurExports" element={<OurExports />} />
             <Route path="/Why_Choose_us" element={<Why_Choose_us />} />
             <Route path="/profile/:id" element={<ProfileDetails />} />
-            <Route path="/Ourcenters/:name" element={<LocationDetails />} />
+            <Route path="/LocationDetails/:city" element={<LocationDetails />} />
             <Route path="/EggFreezingPage" element={<EggFreezingPage />} />
             <Route path="/Dummy" element={<Dummy />} />
             
