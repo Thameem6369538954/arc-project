@@ -10,87 +10,152 @@ import Clinic from "../SerImg/Serv/Clinic.jpg";
 import Surgery from "../SerImg/Serv/Surgery.jpg";
 import Bank from "../SerImg/Serv/Bank.jpg";
 
-import ooci from "../SerImg/Tret/ooci.jpeg";
-import Consul from "../SerImg/Tret/Consul.jpg";
-import IVF from "../SerImg/Tret/IVF.jpg";
-import cancer from "../SerImg/Tret/cancer.jpg";
-import UN from "../SerImg/Tret/UN.jpg";
-import Ind from "../SerImg/Tret/Ind.jpg";
-
 const ServicesAndTreatment = () => {
   const [activeTab, setActiveTab] = useState("services");
+  const [selectedItem, setSelectedItem] = useState(null);
 
   const data = {
     services: [
-      { title: "Extending the biological clock", image: Clock, link: "/services/consulting" },
-      { title: "Lifestyle and conception advice", image: Adice, link: "/services/support" },
-      { title: "Therapeutic activity for patients", image: Yoh, link: "/services/planning" },
-      { title: "Counselling", image: Conselt, link: "/services/planning" },
-      { title: "Fertility tools", image: Tools, link: "/services/planning" },
-      { title: "Corporate social responsibility", image: Social, link: "/services/planning" },
-      { title: "Sexual dysfunction Clinic", image: Clinic, link: "/services/planning" },
-      { title: "Gynaecologic surgery", image: Surgery, link: "/services/planning" },
-      { title: "Stem cell banking", image: Bank, link: "/services/planning" },
+      {
+        title: "Extending the biological clock",
+        image: Clock,
+        link: "/services/consulting",
+        innerBoxes: [
+          { title: "Egg Freezing", image: Clock, link: "/EggFreezing" },
+          { title: "IVF Process", image: Adice, link: "/services/ivf-process" },
+          { title: "Consultation", image: Yoh, link: "/services/consultation" },
+        ],
+      },
+      {
+        title: "Lifestyle and conception advice",
+        image: Adice,
+        innerBoxes: [
+          { title: "Diet Plans", image: Conselt, link: "/services/diet-plans" },
+          { title: "Fitness Advice", image: Tools, link: "/services/fitness-advice" },
+        ],
+      },
     ],
-    treatment: [
-      { title: "Controlled Ovarian stimulation", image: ooci, link: "/treatment/skin-therapy" },
-      { title: "Intrauterine insemination", image: Consul, link: "/treatment/physiotherapy" },
-      { title: "In vitro fertilization (IVF) For Fertility", image: IVF, link: "/treatment/mental-wellness" },
-      { title: "Fertility preservation for cancer patients", image: cancer, link: "/treatment/mental-wellness" },
-      { title: "Unexplained infertility", image: UN, link: "/treatment/mental-wellness" },
+    vicom: [
+      {
+        title: "Extending the biological clock",
+        image: Clock,
+        link: "/services/consulting",
+        innerBoxes: [
+          { title: "new services", image: Clock, link: "/services/egg-freezing" },
+          { title: "IVF Process", image: Adice, link: "/services/ivf-process" },
+          { title: "Consultation", image: Yoh, link: "/services/consultation" },
+        ],
+      },
+      {
+        title: "Lifestyle and conception advice",
+        image: Adice,
+        innerBoxes: [
+          { title: "Diet Plans", image: Conselt, link: "/services/diet-plans" },
+          { title: "Fitness Advice", image: Tools, link: "/services/fitness-advice" },
+        ],
+      },
     ],
-    packages: [
-      { title: "India", image: Ind, link: "/packages/basic" },
-      { title: "International", image: "https://source.unsplash.com/300x200/?standard", link: "/packages/standard" },
+    cuscom: [
+      {
+        title: "Extending the biological clock",
+        image: Clock,
+        link: "/services/consulting",
+        innerBoxes: [
+          { title: "Egg Freezing", image: Clock, link: "/services/egg-freezing" },
+          { title: "IVF Process", image: Adice, link: "/services/ivf-process" },
+          { title: "Consultation", image: Yoh, link: "/services/consultation" },
+        ],
+      },
+      {
+        title: "Lifestyle and conception advice",
+        image: Adice,
+        innerBoxes: [
+          { title: "Diet Plans", image: Conselt, link: "/services/diet-plans" },
+          { title: "Fitness Advice", image: Tools, link: "/services/fitness-advice" },
+        ],
+      },
     ],
   };
 
+  const handleBoxClick = (item) => {
+    setSelectedItem(item);
+  };
+
+  const closePopup = () => {
+    setSelectedItem(null);
+  };
+
   return (
-    <div className="w-full min-h-screen bg-[#fed9c9] flex items-center justify-center py-12 px-4 mt-15 md:mt-32 ">
-      <div className="w-[100%] max-w-6xl bg-white/10  p-6  text-center">
-        
-        {/* Tabs Section */}
-        <div className="flex flex-wrap justify-center gap-4 mb-6">
-          {["services", "treatment", "packages"].map((tab) => (
+    <div className="w-full min-h-screen bg-[#fed9c9] flex items-center justify-center py-12">
+      <div className="w-full max-w-6xl bg-white p-6 text-center rounded-lg shadow-lg">
+        {/* Tabs */}
+        <div className="flex gap-4 justify-center mb-6">
+          {["services","vicom","cuscom"].map((tab) => (
             <button
               key={tab}
-              className={`px-6 py-2 font-[new]  rounded-full transition-all ${
+              className={`px-6 py-2 rounded-full ${
                 activeTab === tab
-                  ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-md "
-                  : "bg-white text-gray-700 hover:bg-gray-400"
+                  ? "bg-blue-500 text-white"
+                  : "bg-gray-300 hover:bg-gray-400"
               }`}
               onClick={() => setActiveTab(tab)}
             >
-              {tab.charAt(0).toUpperCase() + tab.slice(1)}
+              {tab.toUpperCase()}
             </button>
           ))}
         </div>
 
-        {/* Animated Cards */}
-        <motion.div
-          key={activeTab}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.4 }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
+        {/* Cards */}
+        <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {data[activeTab].map((item, index) => (
             <motion.div
               key={index}
               whileHover={{ scale: 1.05 }}
-              className="p-4 bg-white/20 backdrop-blur-lg rounded-xl shadow-lg text-lg font-semibold text-gray-900 flex flex-col items-center"
+              className="p-4 bg-white shadow-lg rounded-xl cursor-pointer"
+              onClick={() => handleBoxClick(item)}
             >
-              <img src={item.image} alt={item.title} className="w-full h-40 object-cover rounded-lg mb-3" />
-              <h3 className="text-md font-[Belli]">{item.title}</h3>
-              <a href={item.link}>
-                <button className="mt-3 font-[choco] px-4 py-2 bg-gradient-to-r text-[12px] from-blue-500 to-purple-500 text-white rounded-full shadow-md transition hover:shadow-lg">
-                  Learn More
-                </button>
-              </a>
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-40 object-cover rounded-lg mb-3"
+              />
+              <h3>{item.title}</h3>
             </motion.div>
           ))}
         </motion.div>
+
+        {/* Popup */}
+        {selectedItem && (
+          <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+            <div className="bg-white p-6 rounded-lg shadow-xl w-[90%] max-w-4xl">
+              <h3 className="text-2xl mb-4">{selectedItem.title}</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {selectedItem.innerBoxes.map((box, index) => (
+                  <a
+                    key={index}
+                    href={box.link}
+                    // target="_blank"
+                    rel="noopener noreferrer"
+                    className="block p-4 bg-gray-100 rounded-lg shadow-md text-center"
+                  >
+                    <img
+                      src={box.image}
+                      alt={box.title}
+                      className="w-full h-32 object-cover rounded-lg mb-2"
+                    />
+                    <h4>{box.title}</h4>
+                  </a>
+                ))}
+              </div>
+              <button
+                onClick={closePopup}
+                className="mt-6 px-4 py-2 bg-blue-500 text-white rounded-full"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -29,19 +29,19 @@ const LocationDetails = () => {
   const galleryImages = [data.imga, data.imgb, data.imgc, data.imgd];
 
   return (
-    <div className="p-5 md:p-10 mt-30">
+    <div className="p-5 md:p-10 mt-27 font-[choco] w-full min-h-[100vh] bg-[#f5efe1]">
       <div className="flex flex-col md:flex-row items-center justify-around gap-5">
-        <div className="w-full md:w-1/2  border-2 border-red-400 min-h-[400px]">
+        <div className="w-full md:w-1/2   min-h-[400px]">
           <h1 className="text-xl md:text-2xl font-bold text-center md:text-left p-2">{data.name}</h1>
           <p className="text-lg text-center md:text-left p-2">{data.address}</p>
 
           {/* Tabs */}
-          <ul className="border border-black rounded flex flex-wrap justify-between gap-2">
+          <ul className=" rounded flex flex-wrap justify-between gap-2">
             {tabs.map((tab, i) => (
               <li
                 key={i}
                 className={`cursor-pointer p-2 text-center ${
-                  activeTab === tab ? "bg-pink-400 text-white" : "border px-6 border border-pink-400 rounded text-pink-400"
+                  activeTab === tab ? "bg-pink-400 text-white rounded " : "border px-6 border border-pink-400 rounded text-pink-400"
                 }`}
                 onClick={() => setActiveTab(tab)}
               >
@@ -71,10 +71,10 @@ const LocationDetails = () => {
             )}
 
             {activeTab === "Doctors" && (
-              <div className="grid grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {data.spldoctors?.length > 0 ? (
                   data.spldoctors.map((doc, i) => (
-                    <div key={i} className="mb-4 border border-pink-400 grid place-items-center">
+                    <div key={i} className="mb-4 border border-pink-400 grid place-items-center rounded-sm">
                       <img src={doc.docImg}  className="h-[100px]" alt="" />
                       <p>{doc.docname}</p>
                       <p>{doc.qualification}</p>
@@ -101,9 +101,17 @@ const LocationDetails = () => {
             )}
 
             {activeTab === "Contact Details" && (
-              <div>
+              <div className="font-[choco] flex flex-col items-start justify-start gap-2">
+                {/* <div className=""></div>
+                <div></div>
+                <div></div>
+                <div></div> */}
+                <label>Address</label>
                 <p>{data.address}</p>
+                <label>phone Number</label>
                 <p>{data.phonenumber}</p>
+                <label className="p-2">Google Map</label>
+                <a href="" className="border border-pink-400 p-2 rounded">Click Here</a>
               </div>
             )}
           </div>

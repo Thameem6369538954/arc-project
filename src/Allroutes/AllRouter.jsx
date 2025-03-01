@@ -15,7 +15,7 @@ import Why_Choose_us from '../Pages/Why_Choose_us.jsx'
 import Contactus from '../Pages/Contactus.jsx'
 import Ourcenters from '../Pages/Ourcenters.jsx'
 import LocationDetails from '../Pages/LocationDetails.jsx'
-import EggFreezingPage from "../FesPages/EggFreezing.jsx"
+import EggFreezing from "../FesPages/EggFreezing.jsx"
 import Dummy from "../Pages/Dummy.jsx"
 
 const AllRouter = () => {
@@ -37,7 +37,7 @@ const AllRouter = () => {
             <Route path="/Why_Choose_us" element={<Why_Choose_us />} />
             <Route path="/profile/:id" element={<ProfileDetails />} />
             <Route path="/LocationDetails/:city" element={<LocationDetails />} />
-            <Route path="/EggFreezingPage" element={<EggFreezingPage />} />
+            <Route path="/EggFreezing" element={<EggFreezing />} />
             <Route path="/Dummy" element={<Dummy />} />
             
             
