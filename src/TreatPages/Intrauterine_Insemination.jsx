@@ -1,11 +1,11 @@
 import { FaClock, FaShieldAlt, FaCheckCircle, FaMoneyBillWave } from 'react-icons/fa';
-import kid from "../Images/kid.jpg";
+// import kid from "../Images/kid.jpg";
 
 const IntrauterineInseminationPage = () => {
   return (
     <div className="bg-gray-100">
       <div className="w-full h-[80vh] overflow-hidden ">
-        <img src={kid} alt="Kid" className="w-full h-full object-cover" />
+        {/* <img src={kid} alt="Kid" className="w-full h-full object-cover" /> */}
       </div>
 
       <div className="container mx-auto p-6 font-[choco]">
