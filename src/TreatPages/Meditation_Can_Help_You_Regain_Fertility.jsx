@@ -1,11 +1,11 @@
 import { FaHeart, FaBalanceScale, FaAppleAlt } from 'react-icons/fa';
-import Kid from "../Images/kid.jpg"
+// import Kid from "../Images/kid.jpg"
 
 const Meditation_Can_Help_You_Regain_Fertility = () => {
   return (
     <div className=''>
          <div className=''>
-        <img src={Kid}  className="p-4 rounded-xl " alt="" />
+        {/* <img src={Kid}  className="p-4 rounded-xl " alt="" /> */}
         </div>
     <div className="container mx-auto p-6 font-[choco]">
        
