@@ -35,8 +35,8 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <div className="w-full min-h-[85vh] grid place-items-center bg-[#ffc9d7] py-10">
-      <h2 className="text-3xl md:text-5xl font-[Belli] text-gray-800 text-center mb-10">
+    <div className="w-full min-h-[85vh] grid place-items-center bg-[#ffc9d7] md:py-10 py-15">
+      <h2 className="text-3xl md:text-5xl font-[Belli] text-gray-800 text-center md:mb-10 mb-0">
         Meet Our <span className="text-[#1c97c8]">Expert Team</span>
       </h2>
 

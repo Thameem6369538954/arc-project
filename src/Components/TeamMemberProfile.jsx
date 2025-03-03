@@ -21,11 +21,11 @@ const TeamMemberProfile = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center md:items-start justify-center gap-8 mt-15 md:mt-25">
+      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center md:items-start justify-center gap-8 mt-25 md:mt-35">
         
         {/* Image and Name Section */}
         <motion.div 
-          className="w-full md:w-1/2 flex flex-col items-center text-center"
+          className="w-full md:w-1/2 flex flex-col items-center text-center "
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.2 }}
@@ -47,7 +47,7 @@ const TeamMemberProfile = () => {
 
         {/* Achievements Section */}
         <motion.div 
-          className="w-full md:w-1/2"
+          className="w-full md:w-1/1"
           initial={{ x: 50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.4 }}
@@ -58,27 +58,28 @@ const TeamMemberProfile = () => {
                 Key Achievements
               </h3>
               <motion.ul 
-                className="list-none text-gray-600 font-[choco] mt-3 text-left max-w-xl mx-auto md:mx-0"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-              >
-                {member.achievements.map((achievement, index) => (
-                  <motion.li 
-                    key={index} 
-                    className="flex items-center gap-2 text-gray-700 mb-1 p-2 "
-                    whileHover={{ scale: 1.05, x: 5 }}
-                    transition={{ type: "spring", stiffness: 150 }}
-                  >
-                    {achievement.includes("Award") || achievement.includes("Winner") ? (
-                      <FaTrophy className="text-yellow-500 text-lg" /> // Trophy Icon 🏆
-                    ) : (
-                      <MdCheckCircle className="text-green-500 text-lg" /> // Checkmark ✅
-                    )}
-                    {achievement}
-                  </motion.li>
-                ))}
-              </motion.ul>
+  className="list-none text-gray-600 font-[choco] mt-3 text-left max-w-full mx-auto md:mx-0"
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: 0.6 }}
+>
+  {member.achievements.map((achievement, index) => (
+    <motion.li 
+      key={index} 
+      className="flex items-center gap-2 text-gray-700 mb-1 p-2"
+      whileHover={{ scale: 1.05, x: 5 }}
+      transition={{ type: "spring", stiffness: 150 }}
+    >
+      {achievement.includes("Award") || achievement.includes("Winner") ? (
+        <FaTrophy className="text-yellow-500 text-xl min-w-[25px]" /> 
+      ) : (
+        <MdCheckCircle className="text-green-500 text-xl min-w-[25px]" />
+      )}
+      {achievement}
+    </motion.li>
+  ))}
+</motion.ul>
+
             </div>
           )}
         </motion.div>

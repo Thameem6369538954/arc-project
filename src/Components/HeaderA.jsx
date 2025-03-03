@@ -37,14 +37,14 @@ const HeaderA = () => {
         <div className="relative">
             {/* Header Section */}
             <motion.div
-                className="w-full md:min-h-[100vh] mt-10 md:mt-28 min-h-[120vh] bg-[#fff8ef] flex flex-col md:flex-row items-center justify-center p-5 md:p-10 relative text-center md:text-left"
+                className="w-full md:min-h-[100vh]  md:mt-28 mt-12 md:min-h-[120vh] min-h-[110vh] bg-[#fff8ef] flex flex-col md:flex-row items-center justify-center p-5 md:p-10 relative text-center md:text-left"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
             >
                 <motion.img
                     src={Fart}
-                    className="absolute w-[50px] sm:w-[120px] md:w-[150px] sm:top-70  md:top-30 lg:top-20  top-130  right-5 sm:right-10 animate-bounce"
+                    className="absolute w-[50px] sm:w-[120px] md:w-[150px] sm:top-70  md:top-60 lg:top-40  top-130  right-5 sm:right-10 animate-bounce"
                     alt="Decoration"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -59,7 +59,7 @@ const HeaderA = () => {
                 >
                     <h1 className="font-[Belli] text-3xl sm:text-3xl md:text-3xl  lg:text-4xl xl:text-5xl p-3 text-black  tracking-wide">
                         <span className="text-[#1c97c8]">We take care of your dreams</span>{" "}
-                        <span className="text-pink-400">&</span> turn them into families
+                        <span className="text-black">&</span> turn them into families
                     </h1>
                     <p className="tracking-wide font-[choco] text-xl sm:text-2xl md:text-3xl lg:text-3xl p-3 ">
                         "Building bonds, creating love, and making dreams come true."

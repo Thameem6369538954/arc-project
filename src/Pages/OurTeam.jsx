@@ -8,11 +8,11 @@ const OurTeam = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="py-12 bg-[#fff8ef] mt-15 md:mt-25 ">
+    <section className="py-12 bg-[#fff8ef] mt-25 md:mt-32 ">
       <div className="container mx-auto px-4">
-        <h2 className="text-center text-3xl md:text-4xl font-[Belli] text-pink-600 mb-6">Meet Our Team</h2>
+        <h2 className="text-center text-3xl md:text-6xl font-[Belli] text-pink-600 mb-6">Meet <span className="text-[#1c97c8]">Our</span> Team</h2>
         <div className="grid place-items-center">
-          <p className="text-center text-gray-700 max-w-3xl mx-auto mb-12 font-[choco]">
+          <p className="text-center text-gray-700 max-w-4xl mx-auto mb-12 font-[choco]">
             Meet our esteemed team of professionals dedicated to excellence in reproductive medicine and healthcare.
           </p>
           {/* <Lottie animationData={Doctor} className="max-w-[300px] md:max-w-1/2" /> */}

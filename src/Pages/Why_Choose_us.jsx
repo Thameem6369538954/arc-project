@@ -31,11 +31,11 @@ const Why_Choose_us = () => {
   }, [contents.length]);
 
   return (
-    <div className="w-full min-h-[100vh] mt-29 bg-[#f4d1ff] p-5">
+    <div className="w-full min-h-[100vh] mt-30 md:mt-40 bg-[#f4d1ff] p-5">
       <div>
-        <h1 className="text-4xl md:text-6xl font-[Belli] p-5 text-center">Why Choose US</h1>
+        <h1 className="text-4xl md:text-6xl font-[Belli] p-5 text-center"><span className="text-[#1c97c8]">Why</span> Choose Us</h1>
         <div className="w-full md:w-[90%] mx-auto grid place-items-center">
-          <p className="text-lg md:text-xl font-[choco] text-center p-5">
+          <p className="text-lg md:text-xl font-[choco] text-center p-5 mb-10">
             Providing world-class fertility care, ARC Fertility uses the latest machines and instruments in its treatment.
           </p>
         </div>

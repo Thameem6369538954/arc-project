@@ -57,9 +57,9 @@ const Navbar = () => {
 
   return (
     <div className="w-full fixed top-0 z-50 bg-[#fff8ef] shadow-md font-[choco]">
-      <nav className="flex justify-between items-center px-6 py-4">
+      <nav className="flex justify-between pa-5 items-center">
         <Link to="/" onClick={closeMenu}>
-          <img src={arclogo} alt="Logo" className="h-14 md:h-20" />
+          <img src={arclogo} alt="Logo" className="h-30 md:h-40" />
         </Link>
 
         {/* Desktop Menu */}
@@ -89,7 +89,7 @@ const Navbar = () => {
         </ul>
 
         {/* Mobile Menu Button */}
-        <button onClick={toggleMobileMenu} className="lg:hidden text-2xl">
+        <button onClick={toggleMobileMenu} className="lg:hidden text-2xl p-5">
           {mobileMenuOpen ? <FiX /> : <FiMenu />}
         </button>
       </nav>

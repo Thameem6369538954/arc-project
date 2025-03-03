@@ -1,6 +1,6 @@
 const doctors = [
-    { id: 1, name: "Dr. Mahalakshmi", specialty: "Embryologist", image: "/images/doc1.jpg", details: "Expert in fertility treatments with 10+ years of experience." },
-    { id: 2, name: "Dr. Arun Prasath", specialty: "Gynecologist", image: "/images/doc2.jpg", details: "Specialist in women's health and prenatal care." },
+    // { id: 1, name: "Dr. Mahalakshmi", specialty: "Embryologist", image: "/images/doc1.jpg", details: "Expert in fertility treatments with 10+ years of experience." },
+    { id: 2, name: "Dr. Arun Prasath", specialty: "Gynecologist", image: "/images/doc2.jpg", details: "Specialist in women's health and prenatal care.",des:"Dr. Arun Poornesh is a highly promising up-and-coming doctor specializing in gynecology and laparoscopic surgery. Known for his expertise in minimally invasive procedures, Dr. Arun provides compassionate, personalized care to each patient. He is dedicated to advancing medical practices and enhancing patient outcomes through cutting-edge techniques. With a commitment to excellence, Dr. Arun Poornesh ensures that every treatment plan is tailored to meet individual needs. His approach combines clinical precision with empathetic support to deliver exceptional healthcare." },
     { id: 3, name: "Dr. Aavani SL", specialty: "Fertility Specialist", image: "/images/doc3.jpg", details: "Pioneer in advanced fertility treatments and research." },
     { id: 4, name: "Dr. Divyasree B", specialty: "IVF Specialist", image: "/images/doc4.jpg", details: "Extensive experience in IVF and assisted reproduction." },
     { id: 5, name: "Dr. Gayathri R", specialty: "Reproductive Endocrinologist", image: "/images/doc5.jpg", details: "Researcher in hormonal fertility treatments." },

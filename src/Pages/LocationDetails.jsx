@@ -25,11 +25,11 @@ const LocationDetails = () => {
     return <p>No Data Found</p>;
   }
 
-  const tabs = ["OverView", "Doctors", "Gallery", "Contact Details"];
+  const tabs = ["OverView", "Our Specialist", "Gallery", "Contact Details"];
   const galleryImages = [data.imga, data.imgb, data.imgc, data.imgd];
 
   return (
-    <div className="p-5 md:p-10 mt-27 font-[choco] w-full min-h-[100vh] bg-[#f5efe1]">
+    <div className="p-5 md:p-10 mt-27 md:mt-37 mb-15 font-[choco] w-full min-h-[100vh] bg-[#f5efe1]">
       <div className="flex flex-col md:flex-row items-center justify-around gap-5">
         <div className="w-full md:w-1/2   min-h-[400px]">
           <h1 className="text-xl md:text-2xl font-bold text-center md:text-left p-2">{data.name}</h1>
@@ -70,8 +70,8 @@ const LocationDetails = () => {
               </div>
             )}
 
-            {activeTab === "Doctors" && (
-              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {activeTab === "Our Specialist" && (
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
                 {data.spldoctors?.length > 0 ? (
                   data.spldoctors.map((doc, i) => (
                     <div key={i} className="mb-4 border border-pink-400 grid place-items-center rounded-sm">

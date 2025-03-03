@@ -7,7 +7,7 @@ const Meditation_Can_Help_You_Regain_Fertility = () => {
          <div className=''>
         <img src={Kid}  className="p-4 rounded-xl " alt="" />
         </div>
-    <div className="container mx-auto p-6 font-[choco]">
+    <div className="container mx-auto p-6 font-[choco] min-h-[100vh]">
        
       <div className="grid md:grid-cols-3 gap-8">
         {/* Sidebar Section */}
@@ -49,9 +49,9 @@ Apart from the common treatment procedures, there are some physical activities t
             </div>
           </div>
 
-          <div className="mt-10">
+          <div className="mt-10 p-4">
             <h3 className="text-2xl font-bold text-pink-600">Why Choose ARC Fertility?</h3>
-            <p className="text-gray-700 mt-2">ARC Fertility is one of the premier infertility treatment facilities in India. The clinic is equipped with all the latest technologies, to provide its patients with the care and attention that they truly deserve. ARC’s doctors are well versed on infertility treatment and you will get a thorough treatment, complete with guidance and suggestions related to your medical conditions.</p>
+            <p className="text-gray-700 mt-2 bg-white min-h-[300px]">ARC Fertility is one of the premier infertility treatment facilities in India. The clinic is equipped with all the latest technologies, to provide its patients with the care and attention that they truly deserve. ARC’s doctors are well versed on infertility treatment and you will get a thorough treatment, complete with guidance and suggestions related to your medical conditions.</p>
           </div>
         </div>
       </div>

@@ -1,100 +1,63 @@
-import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
-import { motion } from "framer-motion";
-import arclogo from "../Images/arclogo.png";
+import React from "react";
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import arclogo from "../Images/arclogo.png"
+import waveA from "../Images/waveA.png"
 
 const Footer = () => {
-  const services = [
-    "Extending the biological clock",
-    "Life style and Conception advice",
-    "Therapeutic activity For Patients",
-    "Counselling",
-    "Fertility Tools",
-    "Corporate social Responsibility",
-    "Sexually Dysfunction Clinic",
-    "Gynocologic Surgery",
-    "Stem cell Banking",
-    "IVF Treatment",
-    "IUI Treatment",
-    "Egg Donation",
-    "Surrogacy Program",
-  ];
-
-  const cities = [
-    "Ariyur", "Bengaluru", "Coimbatore", "Dindigul", "Egmore", "Erode", "Hyderabad", "Kochi", 
-    "Kolkata", "Kovilpatti", "Sri Lanka", "Madurai", "Nagercoil", "Nellore", "Ongole", 
-    "Perambur", "Ramanathapuram", "Reddiyarpalayam", "Salem", "Trichy", "Ambattur", 
-    "Tiruvannamalai", "Tirunelveli", "Tirupathi", "Tiruppur", "Vellore", "Tambaram", "Kumbakonam"
-  ];
-
-  const socialIcons = [
-    { icon: <FaFacebookF />, link: "#" },
-    { icon: <FaInstagram />, link: "#" },
-    { icon: <FaYoutube />, link: "#" },
-  ];
-
   return (
-    <footer className="bg-white py-12">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 p-5">
-        <div>
-          <img src={arclogo} alt="ARC Logo" className="w-70 mb-4" />
-          <h3 className="font-bold mb-4">Our Services</h3>
-          <ul className="space-y-2">
-            {services.map((service, index) => (
-              <motion.li 
-                key={index} 
-                whileHover={{ scale: 1.1 }} 
-                className="text-gray-700 flex items-center gap-2 cursor-pointer"
-              >
-                🔹 {service}
-              </motion.li>
-            ))}
-          </ul>
-        </div>
-        
-        <div className="col-span-2">
-          <h3 className="font-bold mb-4">Our IVF Centres</h3>
-          <div className="grid grid-cols-3 gap-4">
-            {cities.map((city, index) => (
-              <motion.span 
-                key={index} 
-                whileHover={{ scale: 1.1, color: "#ff0080" }} 
-                className="text-gray-700 cursor-pointer"
-              >
-                🔹 {city}
-              </motion.span>
-            ))}
-          </div>
-        </div>
-
-        <div>
-          <h3 className="font-bold mb-4">Follow Us</h3>
-          <div className="flex gap-4">
-            {socialIcons.map((social, index) => (
-              <motion.a 
-                key={index} 
-                href={social.link} 
-                whileHover={{ scale: 1.2, color: "#ff0080" }} 
-                className="text-pink-500 text-2xl"
-              >
-                {social.icon}
-              </motion.a>
-            ))}
+    <footer className="bg-[#ffc9d7]  pt-10 pb-6 relative font-[choco]">
+      <div className=" absolute -top-15 md:top-0 w-full ">
+      <img src={waveA} className="w-full bg-[#bed1e3]" alt="" />
+      </div>
+      <div className="container mx-auto px-4 mt-5  sm:mt-70">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+          {/* Company Info */}
+          <div>
+            <img src={arclogo} className="w-40 h-40" alt="" />
+            <p className="text-sm mb-4">
+              All content on this website is protected by copyright and may not be used without permission from Arc.
+            </p>
+            <div className="flex gap-4 justify-center md:justify-start">
+              <FaFacebookF className="cursor-pointer hover:text-pink-400 text-2xl" />
+              <FaInstagram className="cursor-pointer hover:text-pink-400 text-2xl" />
+              <FaTwitter className="cursor-pointer hover:text-pink-400 text-2xl" />
+            </div>
           </div>
 
-          <address className="mt-6 text-gray-700">
-            No. 22/2, ESI Hospital Road,<br />
-            Peravallur (Perambur), Chennai,<br />
-            Tamil Nadu 600011
-          </address>
+          {/* IVF Centres */}
+          <div>
+            <h2 className="text-lg font-bold mb-4">Our IVF Centres</h2>
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 text-sm">
+              {["Ariyur", "Bengaluru", "Coimbatore", "Dindigul", "Egmore", "Erode", "Hyderabad", "Kochi", "Kolkata", "Kovilpatti", "Sri Lanka", "Madurai", "Nagercoil", "Nellore", "Ongole", "Perambur","Tambaram",  "Reddiyarpalayam", "Salem", "Trichy", "Ambattur", "Tiruvannamalai", "Tirunelveli", "Tirupathi", "Tiruppur", "Vellore", "Kumbakonam","Ramanathapuram"].map((centre, index) => (
+                <p key={index} className="flex items-center gap-2 text-1xl">
+                  <span className="text-pink-400 ">&#9679;</span> {centre}
+                </p>
+              ))}
+            </div>
+          </div>
 
-          <div className="mt-6">
-            <button className="border border-pink-500 px-6 py-2 rounded-full text-pink-500 hover:bg-pink-500 hover:text-white transition">
-              BOOK AN APPOINTMENT
+          {/* Appointment & Subscription */}
+          <div className="flex flex-col gap-4">
+            <button className="bg-pink-500 hover:bg-pink-600 text-white  py-2 px-6 rounded-lg">
+              Appointment
             </button>
-            <button className="border border-pink-500 px-6 py-2 rounded-full text-pink-500 hover:bg-pink-500 hover:text-white transition mt-4">
-              Get Direction on Google
-            </button>
+            <h2 className="text-lg font-bold ">Subscribe to our Newsletter</h2>
+            <div className="flex">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="w-full p-2 rounded-l-lg outline-black border bg-white border-black text-black"
+              />
+              <button className="bg-pink-500 hover:bg-pink-600 text-white px-4 rounded-r-lg">
+                Subscribe
+              </button>
+            </div>
           </div>
+        </div>
+
+        <div className="text-center text-sm mt-10">
+          Copyright © 2025 ARC Fertility. All Rights Reserved.
+          <p className="text-[#5b3a94] font-bold">Created By Disha Medias</p>
         </div>
       </div>
     </footer>

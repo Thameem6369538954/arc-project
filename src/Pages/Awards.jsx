@@ -23,8 +23,8 @@ const images = [
 
 const ImageGallery = () => {
   return (
-    <div className="w-full mx-auto p-4 bg-[#e1f4fb] mt-15 md:mt-25">
-        <h1 className="font-[Belli] text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl mt-1 p-5 text-[#000] tracking-wide">Awards & Recognitions</h1>
+    <div className="w-full mx-auto p-4 bg-[#e1f4fb] mt-25 md:mt-35">
+        <h1 className="font-[Belli] text-3xl sm:text-3xl md:text-3xl lg:text-6xl xl:text-6xl mt-1 p-5 text-[#000] tracking-wide mb-5">Awards <span className="text-pink-400">&</span> Recognitions</h1>
       <div className="grid grid-cols-3 md:grid-cols-4 gap-4 auto-rows-[200px] md:auto-rows-[250px]">
         {images.map((img, index) => (
           <motion.div

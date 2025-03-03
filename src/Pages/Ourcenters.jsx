@@ -85,9 +85,9 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="p-5 mt-45">
+    <div className="p-5 mt-30 md:mt-40 w-full font-[choco] bg-[#fff8ef]">
     {/* Category Buttons */}
-    <div className="flex gap-4 mb-6 justify-center">
+    <div className="flex gap-4 mb-6 justify-center font-bold ">
       {categories.map((cat, index) => (
         <button
           key={index}
@@ -100,7 +100,7 @@ const ContactUs = () => {
     </div>
 
     {/* Location Cards */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
       {filteredLocations.map((location, index) => (
         <motion.div
           key={index}
