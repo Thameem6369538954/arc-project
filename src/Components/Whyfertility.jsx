@@ -3,6 +3,7 @@ import Lottie from 'lottie-react';
 import Ani from '../Animations/Ani.json';
 import { FaArrowUpRightDots, FaUserDoctor } from 'react-icons/fa6';
 import { GiReceiveMoney } from 'react-icons/gi';
+import NumberRolling from './NumberRolling';
 
 const Whyfertility = () => {
   const treeData = [
@@ -24,9 +25,10 @@ const Whyfertility = () => {
   ];
 
   return (
-    <div className="w-full min-h-screen flex items-center justify-center px-4 md:px-0 bg-[#ffc9d7]">
-      <div className="w-full max-w-7xl min-h-[600px]  bg-opacity-5 rounded-xl  relative p-6 md:p-10">
-        <div className="absolute -top-10 md:top-0 -left-5 z-10 left-0 w-[30%] max-w-[250px] md:max-w-[300px]">
+    <>
+    <div className="w-full min-h-[100vh] flex items-center justify-center px-4 md:px-0 bg-[#ffc9d7]">
+      <div className="w-full max-w-7xl min-h-[600px]  bg-opacity-5 rounded-xl  relative p-6 md:p-10 mt-40 ">
+        <div className="absolute -top-10 md:top-0 -left-10 z-10 w-[30%] max-w-[250px] md:max-w-[300px]">
           <Lottie animationData={Ani} loop={true} />
         </div>
         <h1 className="font-[Belli] text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl mt-5 px-5 text-black tracking-wide text-center">
@@ -63,13 +65,19 @@ const Whyfertility = () => {
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded-full shadow-lg border-2 border-gray-200">
                 {item.icon}
               </div>
-              <h3 className="text-2xl font-bold mt-8">{item.title}</h3>
-              <p className="text-gray-600 mt-2">{item.description}</p>
+              <h3 className="text-2xl font-[choco] font-bold mt-8">{item.title}</h3>
+              <p className="text-gray-600 text-xl font-[choco] mt-2">{item.description}</p>
             </div>
           ))}
         </div>
+        
       </div>
+      
     </div>
+    <div className="w-full min-h-[10vh]  px-4 md:px-0 bg-[#ffc9d7]">
+        <NumberRolling />
+      </div>
+    </>
   );
 };
 

@@ -19,10 +19,10 @@ const NumberRolling = () => {
 
   return (
     <div className="flex items-center justify-center">
- <div ref={ref} className="flex flex-col md:flex-row justify-around items-center gap-8 p-10 m-2 rounded-lg bg-[#d6d4ac] shadow-md w-[80%]">
+ <div ref={ref} className="flex flex-col md:flex-row justify-around items-center gap-8 p-10 m-2 rounded-lg bg-white shadow-md w-[80%]">
       {stats.map((stat, index) => (
-        <div key={index} className="flex flex-col items-center font-[choco] ">
-          <div className="text-white">{stat.icon}</div>
+        <div key={index} className="flex flex-col items-center font-[choco] gap-2 ">
+          <div className="text-pink-400 p-3">{stat.icon}</div>
           {inView ? (
             <CountUp
               start={stat.value - 50}
@@ -30,12 +30,12 @@ const NumberRolling = () => {
               duration={2.5}
               separator=","
               suffix="+"
-              className="text-4xl font-bold text-white"
+              className="text-4xl font-bold"
             />
           ) : (
-            <span className="text-4xl font-bold text-white ">0+</span> // Placeholder when out of view
+            <span className="text-4xl font-bold ">0+</span> // Placeholder when out of view
           )}
-          <p className="text-lg font-semibold text-white mt-1">{stat.label}</p>
+          <p className="text-lg font-semibold  mt-1">{stat.label}</p>
         </div>
       ))}
     </div>

@@ -5,7 +5,7 @@ import NumberRolling from "./NumberRolling";
 
 const IVFSection = () => {
   return (
-    <div className='bg-[#f4d1ff]  w-full min-h-[150vh]'>
+    <div className='bg-[#fff8ef]  w-full min-h-[150vh]'>
     <section className="flex flex-col lg:flex-row items-center justify-between px-8 lg:px-20 py-16 ">
       {/* Left Side - Text Content */}
       <motion.div

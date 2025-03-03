@@ -67,7 +67,7 @@ export default function Header() {
     {/* Left Side: Text Section */}
     <div className="w-full md:w-1/3 flex justify-center items-center p-6">
       <div className="text-center">
-        <h1 className="text-4xl md:text-6xl lg:text-5xl font-[Heading] leading-tight">
+        <h1 className="text-4xl md:text-6xl lg:text-8xl text-bold font-[Heading] leading-tight">
           We take dreams & turn them into families
         </h1>
         <button className="mt-6 px-6 py-3 bg-pink-400 text-white text-lg font-[MyCustomFont] rounded-lg shadow-md transition-all duration-500 ease-in-out transform hover:bg-pink-500 hover:scale-110 hover:shadow-xl">

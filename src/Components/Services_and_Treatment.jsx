@@ -22,42 +22,177 @@ const ServicesAndTreatment = () => {
         link: "/services/consulting",
         innerBoxes: [
           { title: "Egg Freezing", image: Clock, link: "/EggFreezing" },
-          { title: "IVF Process", image: Adice, link: "/services/ivf-process" },
-          { title: "Consultation", image: Yoh, link: "/services/consultation" },
+          { title: "Fertility Preservation", image: Adice, link: "/Fertility_preservation" },
+          { title: "BMI Calculator", image: Yoh, link: "/services/consultation" },
         ],
       },
       {
         title: "Lifestyle and conception advice",
         image: Adice,
         innerBoxes: [
-          { title: "Diet Plans", image: Conselt, link: "/services/diet-plans" },
-          { title: "Fitness Advice", image: Tools, link: "/services/fitness-advice" },
+          { title: "Timing & Frequency Of Intercourse", image: Conselt, link: "/services/diet-plans" },
+          { title: "Exercise In Moderation", image: Tools, link: "/services/fitness-advice" },
+          { title: "Nutrition & Fertility", image: Tools, link: "/services/fitness-advice" },
+          { title: "BMI & Fertility", image: Tools, link: "/services/fitness-advice" },
+          { title: "Alcohol & Drug Use", image: Tools, link: "/services/fitness-advice" },
+        ],
+      },
+      {
+        title: "Therapeutic Activity For Patients",
+        image: Adice,
+        innerBoxes: [
+          { title: "Yoga", image: Conselt, link: "/services/diet-plans" },
+          { title: "Massage Therapy", image: Tools, link: "/services/fitness-advice" },
+          { title: "Acupuncture", image: Tools, link: "/services/fitness-advice" },
+          { title: "Medication", image: Tools, link: "/services/fitness-advice" },
+          { title: "Fertility Preservation", image: Tools, link: "/services/fitness-advice" },
+          { title: "Walking/Hiking ", image: Tools, link: "/services/fitness-advice" },
+        ],
+      },
+      {
+        title: "Counselling",
+        image: Adice,
+        innerBoxes: [
+          { title: "Emotional Considerations", image: Conselt, link: "/services/diet-plans" },
+          { title: "Premarital Counselling", image: Tools, link: "/services/fitness-advice" },
+        ],
+      },
+      {
+        title: "Fertility Tools",
+        image: Adice,
+        innerBoxes: [
+          { title: "Due Date Calculator", image: Conselt, link: "/services/diet-plans" },
+          { title: "Fertility Assessment", image: Tools, link: "/services/fitness-advice" },
+          { title: "Gynaecological Condition", image: Tools, link: "/services/fitness-advice" },
+          { title: "Monthly Ovulation Cycle ", image: Tools, link: "/services/fitness-advice" },
+          { title: "Ovulation Calculator", image: Tools, link: "/services/fitness-advice" },
+        ],
+      },
+      {
+        title: "Corporate Social Responsibility",
+        image: Adice,
+        innerBoxes: [
+          { title: "Corporate Social Responsibility", image: Conselt, link: "/services/diet-plans" },
+          // { title: "Fitness Advice", image: Tools, link: "/services/fitness-advice" },
+        ],
+      },
+      {
+        title: "Sexual Dysfunction Clinic",
+        image: Adice,
+        innerBoxes: [
+          { title: "Male Sexual Dysfunctions", image: Conselt, link: "/services/diet-plans" },
+          { title: "Female Sexual Dysfunctions", image: Conselt, link: "/services/diet-plans" },
+          { title: "Surgeries In Sexual Disorders", image: Conselt, link: "/services/diet-plans" },
+          { title: "Medications for Sexual Dysfunction", image: Conselt, link: "/services/diet-plans" },
+          { title: "Sexual Hygiene", image: Conselt, link: "/services/diet-plans" },
+          { title: "Erectile Dysfunctions", image: Conselt, link: "/services/diet-plans" },
+          { title: "Ejaculatory Failures", image: Conselt, link: "/services/diet-plans" },
+          { title: "Decreased Sexual Desire", image: Conselt, link: "/services/diet-plans" },
+          { title: "Drug-Induced Sexual Dysfunction", image: Conselt, link: "/services/diet-plans" },
+          { title: "Sex-Related Diseases", image: Conselt, link: "/services/diet-plans" },
+        ],
+      },
+      {
+        title: "Gynaecologic Surgery",
+        image: Adice,
+        innerBoxes: [
+          { title: "Colposcopy", image: Conselt, link: "/services/diet-plans" },
+          { title: "Cryosurgery", image: Conselt, link: "/services/diet-plans" },
+          { title: "Leep", image: Conselt, link: "/services/diet-plans" },
+          { title: "Hysteroscopy", image: Conselt, link: "/services/diet-plans" },
+          { title: "Pelvic laparoscopy", image: Conselt, link: "/services/diet-plans" },
+          { title: "Dilation and Curretage", image: Conselt, link: "/services/diet-plans" },
+        ],
+      },
+      {
+        title: "Stem Cell Banking",
+        image: Adice,
+        innerBoxes: [
+          { title: "Sperm/Semen", image: Conselt, link: "/services/diet-plans" },
+          { title: "Egg/Oocyte/Embryo", image: Tools, link: "/services/fitness-advice" },
         ],
       },
     ],
-    vicom: [
+    treatments: [
       {
-        title: "Extending the biological clock",
+        title: "Controlled Ovarian Stimulation",
         image: Clock,
         link: "/services/consulting",
         innerBoxes: [
-          { title: "new services", image: Clock, link: "/services/egg-freezing" },
-          { title: "IVF Process", image: Adice, link: "/services/ivf-process" },
-          { title: "Consultation", image: Yoh, link: "/services/consultation" },
+          { title: "Meditation can help you regain fertility", image: Clock, link: "Meditation_Can_Help_You_Regain_Fertility" },
+          // { title: "IVF Process", image: Adice, link: "/services/ivf-process" },
+          // { title: "Consultation", image: Yoh, link: "/services/consultation" },
         ],
       },
       {
-        title: "Lifestyle and conception advice",
+        title: "Intrauterine Insemination",
         image: Adice,
         innerBoxes: [
-          { title: "Diet Plans", image: Conselt, link: "/services/diet-plans" },
-          { title: "Fitness Advice", image: Tools, link: "/services/fitness-advice" },
+          { title: "Intrauterine Insemination", image: Conselt, link: "/Intrauterine_Insemination" },
+          // { title: "Fitness Advice", image: Tools, link: "/services/fitness-advice" },
+        ],
+      },
+      {
+        title: "In Vitro Fertilization(IVF) For FertilIity",
+        image: Adice,
+        innerBoxes: [
+          { title: "In Vitro Fertilization(IVF) For FertilIity", image: Conselt, link: "/FertilizationIVF" },
+          // { title: "Fitness Advice", image: Tools, link: "/services/fitness-advice" },
+        ],
+      },
+      {
+        title: "Fertility Preservation For Cancer Patients",
+        image: Adice,
+        innerBoxes: [
+          { title: "Fertility preservation for cancer patients", image: Conselt, link: "/Fertility_Preservation_For_Cancer_Patients" },
+          // { title: "Fitness Advice", image: Tools, link: "/services/fitness-advice" },
+        ],
+      },
+      {
+        title: "Preventing Miscarriages",
+        image: Adice,
+        innerBoxes: [
+          { title: "Preventing Miscarri", image: Conselt, link: "/Preventing_Miscarriages" },
+          // { title: "Fitness Advice", image: Tools, link: "/services/fitness-advice" },
+        ],
+      },
+      {
+        title: "Unexplained Infertility ",
+        image: Adice,
+        innerBoxes: [
+          { title: "Unexplained Infertility", image: Conselt, link: "/Unexplained_Infertility" },
+          // { title: "Fitness Advice", image: Tools, link: "/services/fitness-advice" },
+        ],
+      },
+      {
+        title: "Ovulation Induction ",
+        image: Adice,
+        innerBoxes: [
+          { title: "Ovulation Induction", image: Conselt, link: "/services/diet-plans" },
+          // { title: "Fitness Advice", image: Tools, link: "/services/fitness-advice" },
+        ],
+      },
+      {
+        title: "Donor And Gestational Carrier ",
+        image: Adice,
+        innerBoxes: [
+          { title: "Using a sperm-donor", image: Conselt, link: "/Sperm_donor" },
+          { title: "Using an egg-donor ", image: Tools, link: "/Egg_donor" },
+          { title: "Using donor-embryo", image: Tools, link: "/Donor_Embryo" },
+          { title: "Using a gestational carrier", image: Tools, link: "/Gestational_Carrier" },
+        ],
+      },
+      {
+        title: "The Healthiest Embryo",
+        image: Adice,
+        innerBoxes: [
+          { title: "The Healthiest Embryo", image: Conselt, link: "/Healthiest_Embryo" },
         ],
       },
     ],
-    cuscom: [
+    payments: [
       {
-        title: "Extending the biological clock",
+        title: "India",
         image: Clock,
         link: "/services/consulting",
         innerBoxes: [
@@ -67,7 +202,7 @@ const ServicesAndTreatment = () => {
         ],
       },
       {
-        title: "Lifestyle and conception advice",
+        title: "International",
         image: Adice,
         innerBoxes: [
           { title: "Diet Plans", image: Conselt, link: "/services/diet-plans" },
@@ -86,11 +221,11 @@ const ServicesAndTreatment = () => {
   };
 
   return (
-    <div className="w-full min-h-screen bg-[#fed9c9] flex items-center justify-center py-12">
+    <div className="w-full min-h-screen bg-[#fed9c9] flex items-center justify-center py-12 mt-45">
       <div className="w-full max-w-6xl bg-white p-6 text-center rounded-lg shadow-lg">
         {/* Tabs */}
         <div className="flex gap-4 justify-center mb-6">
-          {["services","vicom","cuscom"].map((tab) => (
+          {["services","treatments","payments"].map((tab) => (
             <button
               key={tab}
               className={`px-6 py-2 rounded-full ${

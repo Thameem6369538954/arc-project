@@ -20,7 +20,7 @@ const Home = () => {
         <ScrollToTop />
         <HeaderA />
         <Whyfertility />
-        <NumberRolling />
+        {/* <NumberRolling /> */}
         <VitroFertilization />
         <Team />  
         {/* <Dummy /> */}

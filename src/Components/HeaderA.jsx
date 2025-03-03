@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FaTimes } from "react-icons/fa"; // Close icon
 import HeaderBg from "../Images/HeaderBg.jpg";
 import Fart from "../Images/Fart.png";
+import wave from "../Images/wave.png";
 
 const HeaderA = () => {
     const [isFormOpen, setIsFormOpen] = useState(false);
@@ -33,17 +34,17 @@ const HeaderA = () => {
     };
 
     return (
-        <div>
+        <div className="relative">
             {/* Header Section */}
             <motion.div
-                className="w-full md:min-h-[130vh] min-h-[160vh] bg-[#fff8ef] flex flex-col md:flex-row items-center justify-center p-5 md:p-10 relative text-center md:text-left"
+                className="w-full md:min-h-[100vh] mt-10 md:mt-28 min-h-[120vh] bg-[#fff8ef] flex flex-col md:flex-row items-center justify-center p-5 md:p-10 relative text-center md:text-left"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
             >
                 <motion.img
                     src={Fart}
-                    className="absolute w-[50px] sm:w-[120px] md:w-[150px]  sm:top-40  top-5  right-5 sm:right-10 animate-bounce"
+                    className="absolute w-[50px] sm:w-[120px] md:w-[150px] sm:top-70  md:top-30 lg:top-20  top-130  right-5 sm:right-10 animate-bounce"
                     alt="Decoration"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -56,7 +57,7 @@ const HeaderA = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 1 }}
                 >
-                    <h1 className="font-[Belli] text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl p-3 text-black  tracking-wide">
+                    <h1 className="font-[Belli] text-3xl sm:text-3xl md:text-3xl  lg:text-4xl xl:text-5xl p-3 text-black  tracking-wide">
                         <span className="text-[#1c97c8]">We take care of your dreams</span>{" "}
                         <span className="text-pink-400">&</span> turn them into families
                     </h1>
@@ -160,6 +161,9 @@ const HeaderA = () => {
                     ✅ Your appointment was successfully submitted!
                 </motion.div>
             )}
+            <div className="absolute w-[100%] md:-bottom-32 lg:-bottom-40  xl:-bottom-52 "> 
+                <img src={wave} className="w-[100%]" alt="" />
+            </div>
         </div>
     );
 };
