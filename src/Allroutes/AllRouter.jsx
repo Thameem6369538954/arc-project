@@ -20,7 +20,7 @@ import Dummy from "../Pages/Dummy.jsx"
 
 {/* treatpage */}
 // import Meditation_Can_Help_You_Regain_Fertility from "../TreatPages/Meditation_Can_Help_You_Regain_Fertility.jsx"
-import Intrauterine_Insemination from "../TreatPages/Intrauterine_Insemination.jsx"
+// import Intrauterine_Insemination from "../TreatPages/Intrauterine_Insemination.jsx"
 import FertilizationIVF from "../TreatPages/FertilizationIVF.jsx"
 import Fertility_Preservation_For_Cancer_Patients from "../TreatPages/Fertility_Preservation_For_Cancer_Patients.jsx"
 import Preventing_Miscarriages from "../TreatPages/Preventing_Miscarriages.jsx"
@@ -57,7 +57,7 @@ const AllRouter = () => {
             {/* treatpage */}
             
             {/* <Route path="/Meditation_Can_Help_You_Regain_Fertility" element={<Meditation_Can_Help_You_Regain_Fertility />} /> */}
-            <Route path="/Intrauterine_Insemination" element={<Intrauterine_Insemination />} />
+            {/* <Route path="/Intrauterine_Insemination" element={<Intrauterine_Insemination />} /> */}
             <Route path="/FertilizationIVF" element={<FertilizationIVF />} />
             <Route path="/Fertility_Preservation_For_Cancer_Patients" element={<Fertility_Preservation_For_Cancer_Patients />} />
             <Route path="/Preventing_Miscarriages" element={<Preventing_Miscarriages />} />
