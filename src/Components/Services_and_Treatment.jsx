@@ -224,21 +224,26 @@ const ServicesAndTreatment = () => {
     <div className="w-full min-h-screen bg-[#fed9c9] flex items-center justify-center py-12 mt-45">
       <div className="w-full max-w-6xl bg-white p-6 text-center rounded-lg shadow-lg">
         {/* Tabs */}
-        <div className="flex gap-4 justify-center mb-6">
-          {["services","treatments","payments"].map((tab) => (
-            <button
-              key={tab}
-              className={`px-6 py-2 rounded-full ${
-                activeTab === tab
-                  ? "bg-blue-500 text-white"
-                  : "bg-gray-300 hover:bg-gray-400"
-              }`}
-              onClick={() => setActiveTab(tab)}
-            >
-              {tab.toUpperCase()}
-            </button>
-          ))}
-        </div>
+        <div className="flex bg-black rounded-full w-fit p-1 m-5 gap-1 max-w-full overflow-x-auto sm:justify-center">
+  {["services", "treatments", "payments"].map((tab) => (
+    <button
+      key={tab}
+      className={`px-6 py-2 text-sm rounded-full transition-all uppercase whitespace-nowrap ${
+        activeTab === tab
+          ? "bg-white text-black font-semibold"
+          : "text-gray-400 hover:text-white"
+      }`}
+      onClick={() => setActiveTab(tab)}
+    >
+      {tab}
+    </button>
+  ))}
+</div>
+
+
+
+
+
 
         {/* Cards */}
         <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
