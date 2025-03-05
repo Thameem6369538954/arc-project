@@ -122,7 +122,7 @@ const FAQ = () => {
 
   return (
     <div className="mx-auto px-6 py-12 min-h-[100vh] bg-[#f5f4f1]">
-      <h2 className="text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl font-[Belli] text-black p-5">Frequently Asked Questions</h2>
+      <h2 className="text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl font-[Belli] text-black p-5">Frequently Asked <span className="text-pink-400">Questions</span></h2>
       <div className="flex justify-center">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center min-h-[80vh]">
           

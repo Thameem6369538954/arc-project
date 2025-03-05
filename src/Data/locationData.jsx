@@ -2,46 +2,67 @@ import D from "../AwardImg/D.png"
 import max from "../FecImg/max.jpg"
 import Docter from "../Images/Docter.png"
 export const locations = [
-        { category: "All",
+    {
+        category: "All",
         name: "MADURAI",
-        address: "No 21-C, 3rd Floor, Singarayar Main Road, Madurai - 625 001" ,
-        phonenumber:"9898787678",
-        imga:max,
-        imgb:max,
-        imgc:max,
-        imgd:max,
-        gmap:max,
-        // vanakkam:"ADFADSCASDFASD",
-        spldoctors:[
-            {
-            id:1,
-            docname:"thameem ansari",
-            // docnameA:"Ansari",
-            docImg:Docter,
-            qualification:"mbbs",
-            from:"",
-            }
+        address: "No 21-C, 3rd Floor, Singarayar Main Road, Madurai - 625 001",
+        phonenumber: "9898787678",
+        imga: max,
+        imgb: max,
+        imgc: max,
+        imgd: max,
+        gmap: max,
+        spldoctors: [
+          {
+            id: 1,
+            docname: "thameem ansari",
+            docImg: Docter,
+            qualification: "mbbs",
+            from: ""
+          }
         ],
-        overview:[
-        {
-            overviewtxt:"dadfasdfsqedfasfdasdfasdfasdf",
-        }
+        overview: [
+          {
+            overviewtxt: "dadfasdfsqedfasfdasdfasdfasdf"
+          }
         ],
-        services:[
-            {
-                sera:"servicesA",
-                serb:"servicesB",
-                serc:"servicesC ",
-                serd:"servicesD",
-                sere:"servicesE",
-                serf:"servicesF",
-                serg:"servicesG",
-                serh:"servicesH",
-                seri:"servicesI",
-            }
-        ]
+        services: [
+          {
+            sera: "servicesA",
+            serb: "servicesB",
+            serc: "servicesC ",
+            serd: "servicesD",
+            sere: "servicesE",
+            serf: "servicesF",
+            serg: "servicesG",
+            serh: "servicesH",
+            seri: "servicesI"
+          }
+        ],
+       "testimonials": {
+  "heading": "What Our Patients Say......",
+  "paragraph": "We are proud to share some heartwarming stories from our patients.",
+  "items": [
+    {
+      "heading": "Patient 1",
+      "paragraph": "I feel better now...",
+      "youtubeVideo": "https://www.youtube.com/embed/jUICJXBYXFw?si=C4CJCRmmdrEQWdhZ"
+    },
+    {
+      "heading": "Patient 2",
+      "paragraph": "Doctor is very kind...",
+      "youtubeVideo": "https://www.youtube.com/embed/ZjC9G4HAFig?si=ErR6BQ5jzK5Zf7DQ"
+    },
+    {
+      "heading": "Patient 3",
+      "paragraph": "Great hospital experience...",
+      "youtubeVideo": "https://www.youtube.com/embed/0wWeuGmA0TI?si=MjH123AsuOPLMZZZ"
+    }
+  ]
+}
 
-        },
+      }
+,      
     { category: "All", 
         name: "DINDIGUL", 
         address: "1st floor, Bharathi Mission Hospital, 11, 91, NVGB Hall Rd, EB Colony, Dindigul - 624003",

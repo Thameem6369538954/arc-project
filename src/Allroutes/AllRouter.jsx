@@ -16,7 +16,8 @@ import Contactus from '../Pages/Contactus.jsx'
 import Ourcenters from '../Pages/Ourcenters.jsx'
 import LocationDetails from '../Pages/LocationDetails.jsx'
 import EggFreezing from "../ServPages/EggFreezing.jsx"
-import Dummy from "../Pages/Dummy.jsx"
+import InternationalPatients from "../Pages/InternationalPatients.jsx"
+import Pgprogrammes from "../Pages/Pgprogrammes.jsx"
 
 {/* treatpage */}
 import Meditation_Can_Help_You_Regain_Fertility from "../TreatPages/Meditation_Can_Help_You_Regain_Fertility.jsx"
@@ -40,6 +41,8 @@ const AllRouter = () => {
             <Route path='/' element={<Home />} />
             <Route path='/Services_and_Treatment' element={<Services_and_Treatment />} />
             <Route path='/About_arc' element={<About_arc />} />
+            <Route path='/InternationalPatients' element={<InternationalPatients />} />
+            <Route path='/Pgprogrammes' element={<Pgprogrammes />} />
             <Route path='/FAQ' element={<FAQ />} />
             <Route path='/OurTeam' element={<OurTeam />} />
             <Route path='/OurFacilities' element={<OurFacilities />} />

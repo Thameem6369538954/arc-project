@@ -31,7 +31,17 @@ const teamMembers = [
     description: "Mr. N. Sundar is the CFO of the organization. He is well-versed in all aspects of financial management...",
     image: Sundar,
     achievements: [
-      "Mr.N.Sundar is the CFO of the organization. Is well-versed in all aspects of financial management ranging from simple accounting to broad investment and banking operations. The ideal person to be an excellent leader since all relative departments of the organization is under his command. Performs risk management by analyzing the organization’s liabilities and investments .A Finance Professional with over 25 years of experience in Pharmaceutical Industry in various capacities. Started his career in Fourrts India Labs and then worked in Stedman Pharmaceuticals and worked as COO - Chief Operating Officer in Micro Therapeutic Research Labs. a Clinical Research Organization During the course of his career , he has had hands on experience in Management of Finance , Taxation ( Direct & Indirect Taxes -Central Excise . Service Tax ) , Project Finance . Exports , Forex Treasury management. Company Law affairs and HR Management, He was instrumental in designing Integrated ERP Software for Factory Management which include Manufacturing Plan, Stores & Central Excise, Quality Control Process, Batch Product Costing . He was also key managerial person responsible for obtaining DSIR certification - Recognized R&D Institution for both Stedman Pharma & Micro Therapeutic Research Labs. He also received recognition from the then Union Finance Minister of India on behalf of the company for effective Finance Management in the select category as evaluated by Dun & Bradstreet.",
+      "Well-versed in all aspects of financial management, from simple accounting to broad investment and banking operations.",
+      "Excellent leader, overseeing all financial departments of the organization.",
+      "Performs risk management by analyzing the organization’s liabilities and investments.",
+      "Finance professional with 25+ years of experience in the Pharmaceutical Industry.",
+      "Started his career at Fourrts India Labs and then worked at Stedman Pharmaceuticals.",
+      "Worked as COO (Chief Operating Officer) in Micro Therapeutic Research Labs, a Clinical Research Organization.",
+      "Expertise in Finance Management, Taxation (Direct & Indirect Taxes – Central Excise, Service Tax), Project Finance, Exports, Forex Treasury Management, Company Law Affairs, and HR Management.",
+      "Instrumental in designing Integrated ERP Software for Factory Management, which includes Manufacturing Plan, Stores & Central Excise, Quality Control Process, and Batch Product Costing.",
+      "Key managerial person responsible for obtaining DSIR certification – Recognized R&D Institution for both Stedman Pharma & Micro Therapeutic Research Labs.",
+      "Received recognition from the then Union Finance Minister of India on behalf of the company for Effective Finance Management in a select category evaluated by Dun & Bradstreet.",
+
     ],
   },
   {
@@ -41,9 +51,16 @@ const teamMembers = [
     description: "Dr. Riyas is a highly accomplished medical professional with extensive...",
     image: Riyaz,
     achievements: [
-      "Dr. Riyas Mohamed is a highly accomplished medical professional with extensive experience in international settings. Dr. Riyas is a firm believer in the power of technology integration in healthcare. He is committed to establishing technological standards for future healthcare projects, such as IoT, AI, and data analytics. He has been instrumental in setting up hospital protocols and standards that comply with international standards. Under his leadership, ARC Hospitals has won several accolades and honors for its quality standards. Some of his notable work for ARC Fertility Hospitals include bringing in the industry best fertility specialists and care delivery systems and creating an end-to-end fertility hospital operation protocol.",
-      "An MD in Emergency Medicine, Dr. Riyas has also undergone specialized training in Healthcare Management from leading institutes like BITS Pilani, India, and Monash University, Australia. Dr. Riyas is a passionate leader and teacher and has been a driving force behind ARC Hospital's most successful initiatives. Patients and colleagues alike, admire his dedication to work and his passion for helping others. Dr. Riyas is truly a role model for the medical community and ARC is proud to have him as its Director of Clinical Operations and Academics.",
-      
+      "Highly accomplished medical professional with extensive international experience.",
+      "Firm believer in technology integration in healthcare, focusing on IoT, AI, and Data Analytics for future healthcare projects.",
+      "Instrumental in setting up hospital protocols and standards that comply with international quality standards.",
+      "Played a key role in bringing the best fertility specialists and care delivery systems to ARC Fertility Hospitals.",
+      "Created end-to-end fertility hospital operation protocols for seamless patient care.",
+      "Under his leadership, ARC Hospitals received several accolades and honors for quality standards.",
+      "Holds an MD in Emergency Medicine with specialized training in Healthcare Management from BITS Pilani, India and Monash University, Australia.",
+      "Passionate leader and teacher, driving many of ARC Hospital's successful initiatives.",
+      "Admired by both patients and colleagues for his dedication and compassion.",
+      "A true role model for the medical community, contributing immensely to the growth of ARC Hospitals", 
     ],
   },
   {

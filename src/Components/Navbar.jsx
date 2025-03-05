@@ -11,13 +11,31 @@ const menuItems = [
     link: "/About_arc",
     submenu: [
       { title: "About Arc", link: "/About_arc" },
-      { title: "Leadership Team", link: "/OurTeam" },
-      { title: "Our Experts", link: "/OurExports" },
+      {
+        title: "Team",
+        link: "/OurTeam",
+        submenu: [ // Nested submenu inside Leadership Team
+          { title: "Our Experts", link: "/OurExperts" },
+          { title: "Leadership Team", link: "/OurTeam" },
+        ],
+      },
+      
       { title: "Why Choose Us", link: "/Why_Choose_us" },
+      
       { title: "Virtual Tour", link: "/about/contact" },
     ],
+    
   },
+  { title: "Our Centers", link: "/Ourcenters" },
   { title: "Services & Treatment", link: "/Services_and_Treatment" },
+  {
+    title: "Academics",
+    link: "/academics",
+    submenu: [
+      { title: "PG Programs", link: "/academics/pgprograms" },
+      { title: "Fellowship Programs", link: "/academics/fellowshipprograms" },
+    ],
+  },
   {
     title: "Success Stories",
     link: "/success-stories",
@@ -28,20 +46,27 @@ const menuItems = [
       // { title: "Live", link: "/success/case-studies" },
     ],
   },
-  { title: "Our Centers", link: "/Ourcenters" },
-  {
-    title: "Academics",
-    link: "/academics",
-    submenu: [
-      { title: "PG Programs", link: "/academics/pgprograms" },
-      { title: "Fellowship Programs", link: "/academics/fellowshipprograms" },
-    ],
-  },
-  // { title: "Our Facilities", link: "/OurFacilities" },
+ 
+  
+  { title: "International Patients", link: "/InternationalPatients" },
   { title: "Contact", link: "/Contactus" },
 ];
 
 const Navbar = () => {
+  const [mainDropdown, setMainDropdown] = useState(null); // Parent Dropdown
+const [subDropdown, setSubDropdown] = useState(null);   // Submenu Dropdown
+
+const toggleMainDropdown = (index) => {
+  setMainDropdown(mainDropdown === index ? null : index);
+  setSubDropdown(null); // Close submenu when clicking parent
+};
+
+const toggleSubDropdown = (subIndex) => {
+  setSubDropdown(subDropdown === subIndex ? null : subIndex);
+};
+
+
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
 
@@ -74,16 +99,38 @@ const Navbar = () => {
                 {menu.title} {menu.submenu && <SlArrowDown className="ml-1" />}
               </Link>
               {menu.submenu && (
-                <ul className="absolute hidden group-hover:block bg-white shadow-md rounded-lg w-48 z-50">
-                  {menu.submenu.map((sub, subIndex) => (
-                    <li key={subIndex} className="hover:bg-pink-100 p-3">
-                      <Link to={sub.link} onClick={closeMenu}>
-                        {sub.title}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              )}
+  <ul className="absolute hidden group-hover:block bg-white shadow-md rounded-lg w-48 z-50">
+    {menu.submenu.map((sub, subIndex) => (
+      <li key={subIndex} className="hover:bg-pink-100 p-3 relative group/submenu">
+        <Link to={sub.link} onClick={closeMenu} className="flex justify-between items-center">
+          {sub.title}
+          {sub.submenu && <SlArrowDown className="ml-2" />}
+        </Link>
+
+        {sub.title === "Team" && (
+          <ul className="absolute hidden group-hover/submenu:block bg-white shadow-md rounded-lg left-full top-0 w-48">
+            <li className="hover:bg-pink-100 p-3">
+              <Link to="/OurTeam" onClick={closeMenu}>
+                Leadership Team
+              </Link>
+            </li>
+            <li className="hover:bg-pink-100 p-3">
+              <Link to="/OurExports" onClick={closeMenu}>
+                Our Experts
+              </Link>
+            </li>
+            
+          </ul>
+        )}
+      </li>
+    ))}
+  </ul>
+)}
+
+
+
+
+
             </li>
           ))}
         </ul>
@@ -95,60 +142,107 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <motion.div
-            initial={{ height: 0 }}
-            animate={{ height: "auto" }}
-            exit={{ height: 0 }}
-            transition={{ duration: 0.4 }}
-            className="bg-white shadow-md lg:hidden"
-          >
-            <ul>
-              {menuItems.map((menu, index) => (
-                <li key={index} className="border-b">
-                  <button
-                    onClick={() => {
-                      toggleDropdown(index);
-                      if (!menu.submenu) {
-                        closeMenu();
-                        window.location.href = menu.link;
-                      }
-                    }}
-                    className="w-full text-left px-6 py-4 flex justify-between items-center"
-                  >
-                    {menu.title}
-                    {menu.submenu && (
-                      <SlArrowDown
-                        className={`ml-2 transition-transform ${
-                          activeDropdown === index ? "rotate-180" : ""
-                        }`}
-                      />
-                    )}
-                  </button>
+      <AnimatePresence mode="wait">
+  {mobileMenuOpen && (
+    <motion.div
+      initial={{ height: 0 }}
+      animate={{ height: "auto" }}
+      exit={{ height: 0 }}
+      transition={{ duration: 0.4 }}
+      className="bg-white shadow-md lg:hidden"
+    >
+      <ul>
+        {menuItems.map((menu, index) => (
+          <li key={index} className="border-b">
+            <button
+              onClick={() => {
+                toggleDropdown(index);
+                if (!menu.submenu) {
+                  closeMenu();
+                  window.location.href = menu.link;
+                }
+              }}
+              className="w-full text-left px-6 py-4 flex justify-between items-center"
+            >
+              {menu.title}
+              {menu.submenu && (
+                <SlArrowDown
+                  className={`ml-2 transition-transform ${
+                    activeDropdown === index ? "rotate-180" : ""
+                  }`}
+                />
+              )}
+            </button>
 
-                  {menu.submenu && activeDropdown === index && (
-                    <motion.ul
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: "auto" }}
-                      exit={{ opacity: 0, height: 0 }}
-                      className="bg-gray-100"
-                    >
-                      {menu.submenu.map((sub, subIndex) => (
-                        <li key={subIndex} className="pl-10 py-2">
-                          <Link to={sub.link} onClick={closeMenu}>
-                            {sub.title}
-                          </Link>
-                        </li>
-                      ))}
-                    </motion.ul>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            {menu.submenu && activeDropdown === index && (
+              <motion.ul
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.3 }}
+                className="bg-gray-100"
+              >
+               {menu.submenu.map((sub, subIndex) => (
+  <li key={subIndex} className="pl-10 py-2 relative">
+    {sub.title === "Team" ? (
+      <>
+        <button
+          onClick={() => toggleSubDropdown(subIndex)}
+          className="flex justify-between w-full items-center"
+        >
+          {sub.title}
+          <SlArrowDown
+            className={`ml-2 transition-transform ${
+              subDropdown === subIndex ? "rotate-180" : ""
+            }`}
+          />
+        </button>
+
+        <AnimatePresence>
+          {subDropdown === subIndex && (
+            <motion.ul
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="bg-gray-200"
+            >
+              <li className="pl-6 py-2">
+              <Link to="/OurTeam" onClick={closeMenu}>
+                Leadership Team
+              </Link>
+            </li>
+              <li className="pl-6 py-2">
+                
+                <Link to="/OurExports" onClick={closeMenu}>
+                  Our Experts
+                </Link>
+              </li>
+              
+            </motion.ul>
+          )}
+        </AnimatePresence>
+      </>
+    ) : (
+      <Link to={sub.link} onClick={closeMenu}>
+        {sub.title}
+      </Link>
+    )}
+  </li>
+))}
+
+              </motion.ul>
+            )}
+          </li>
+        ))}
+      </ul>
+    </motion.div>
+  )}
+</AnimatePresence>
+
+
+
+
     </div>
   );
 };

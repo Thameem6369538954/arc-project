@@ -28,7 +28,7 @@ const Home = () => {
         <OurServices />
         <IVFSection />
 
-        {/* <FAQ /> */}
+        <FAQ />
         <ContactForm />
 
     </div>

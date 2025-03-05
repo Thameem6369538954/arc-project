@@ -4,6 +4,7 @@ import Ani from '../Animations/Ani.json';
 import { FaArrowUpRightDots, FaUserDoctor } from 'react-icons/fa6';
 import { GiReceiveMoney } from 'react-icons/gi';
 import NumberRolling from './NumberRolling';
+import { Link } from 'react-router-dom';
 
 const Whyfertility = () => {
   const treeData = [
@@ -28,7 +29,7 @@ const Whyfertility = () => {
     <>
     <div className="w-full min-h-[100vh] flex items-center justify-center px-4 md:px-0 bg-[#ffc9d7]">
       <div className="w-full max-w-7xl min-h-[600px]  bg-opacity-5 rounded-xl  relative p-6 md:p-10 md:mt-40 mt-20 ">
-        <div className="absolute -top-20 md:top-0 -left-0 z-10 w-[30%] max-w-[250px] md:max-w-[300px]">
+        <div className="absolute -top-20 md:top-0 -left-0  w-[30%] max-w-[250px] md:max-w-[300px]">
           <Lottie animationData={Ani} loop={true} />
         </div>
         <h1 className="font-[Belli] text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl mt-5 px-5 py-2 text-black tracking-wide text-center">
@@ -45,9 +46,12 @@ const Whyfertility = () => {
 
         </div>
         <div className='grid place-items-center'>
-        <button className="mt-5 px-6 py-4 sm:py-5 md:py-6 bg-[#1c97c8] font-[choco] text-1xl sm:text-3xl text-white rounded-lg shadow-lg transition-all">
+          <Link to="/Why_Choose_us">
+          
+        <button className="mt-5 px-8 py-2 sm:py-5 md:py-3 bg-[#1c97c8] font-[choco] text-1xl sm:text-3xl text-white rounded-lg shadow-lg transition-all">
                         Learn More
                     </button>
+          </Link>
         </div>
        
         {/* Boxes */}
@@ -55,7 +59,7 @@ const Whyfertility = () => {
           {treeData.map((item, index) => (
             <div
               key={index}
-              className="relative bg-white shadow-lg rounded-3xl px-8 py-12 flex flex-col items-center text-center border border-gray-200"
+              className="relative bg-white shadow-lg rounded-3xl px-8 py-12  flex flex-col items-center text-center border border-gray-200"
             >
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded-full shadow-lg border-2 border-gray-200">
                 {item.icon}

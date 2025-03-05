@@ -6,7 +6,7 @@ import Abt from '../Animations/Abt.json'
 const AboutUs = () => {
   return (
     <div className=' w-full min-h-screen  mt-20 md:mt-35'>
-      <div className='bg-[#fadadd] w-full py-16 px-8 lg:px-20 '>
+      <div className='bg-[#fadadd] w-full py-16 px-8 lg:px-20  min-h-[100vh] '>
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -28,6 +28,8 @@ const AboutUs = () => {
       </motion.div>
 
       </div>
+     
+
 
       {/* Mission, Vision & Values */}
       <div className="w-full min-h-[60vh] bg-[#ffe6bb] py-16 px-8 lg:px-20">
@@ -154,7 +156,21 @@ const AboutUs = () => {
             </div>
           </ul>
         </motion.div>
+
+        
       </div>
+     <div >
+     <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-start"
+      >
+      <p className="mt-4 space-y-4 font-[choco] text-xl md:text-2xl text-gray-700">At ARC, we take care of our patients using the experiences that we have gathered over the years wherein we have been instrumental in answering the prayers of tens of thousands of childless couples and enabling them to have a child through essential fertility treatment provided with utmost care. We also pride ourselves in reciprocating the unique gift of trust that our patients have shown us by providing them with the best of medical care at affordable cost. We believe that everyone has the right to get pregnant, despite their financial condition.</p> <br />
+    <p className="mt-4 space-y-4 font-[choco] text-xl md:text-2xl text-gray-700">Our aim is to take care of our patients as our own family. Being mindful of this, we constantly reinvent and work towards providing the best of facilities and services to meet the fertility needs of our growing patient numbers. We have designed our services under three specific areas of excellence and we call it “the ARC Advantage” - Care, Cost and Continued Support. Once under the care of ARC, patients may rest assured that they get complete care at affordable cost and continuous support. We provide our patients with the best resources and tools on patient education, treatment management, and stress reduction that makes the patients put their trust in us for their treatment.</p><br />
+     <p className="mt-4 space-y-4 font-[choco] text-xl md:text-2xl text-gray-700">We at ARC have been working for decades to make it possible for our patients to hear that euphoric moment of the first cry of a baby and we are proud to say that we are truly blessed to be able to achieve it on a continuous basis.</p>
+    </motion.div>
+     </div>
       </div>
     </div>
   );

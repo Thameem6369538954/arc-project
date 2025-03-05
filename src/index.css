@@ -13,3 +13,26 @@ html, body {
   -ms-overflow-style: none; /* For IE */
   scrollbar-width: none; /* For Firefox */
 }
+.group:hover .group-hover\\:block {
+  display: block;
+}
+.typing {
+  display: inline-block;
+  width: 3ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid transparent;
+  animation: typing 2s steps(3) infinite, blink 0.5s step-end infinite alternate;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: black;
+  }
+}

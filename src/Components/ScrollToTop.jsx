@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import { MdKeyboardArrowUp } from "react-icons/md";
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -26,9 +26,10 @@ const ScrollToTop = () => {
     isVisible && (
       <button
         onClick={scrollToTop}
-        className="fixed bottom-5 right-5 bg-white text-[#d25c78] p-3 rounded-full shadow-lg hover:scale-110 transition-all  z-50"
+        className="fixed bottom-5 right-5 bg-white text-[#d25c78] p-3 text-2xl rounded-full shadow-lg hover:scale-110 transition-all  z-50"
       >
-        ⬆️
+        <MdKeyboardArrowUp  />
+        {/* <MdKeyboardArrowUp /> */}
       </button>
     )
   );

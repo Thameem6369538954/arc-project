@@ -16,32 +16,54 @@ const LocationDetails = () => {
     if (location.state) {
       setData(location.state);
       localStorage.setItem("locationData", JSON.stringify(location.state));
-    } else if (localStorage.getItem("locationData")) {
-      setData(JSON.parse(localStorage.getItem("locationData")));
+    } else {
+      const storedData = JSON.parse(localStorage.getItem("locationData"));
+      if (storedData) {
+        setData(storedData);
+      }
     }
   }, [location.state]);
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const updatedData = JSON.parse(localStorage.getItem("locationData"));
+      if (updatedData && JSON.stringify(updatedData) !== JSON.stringify(data)) {
+        console.log("Data Updated ✅");
+        setData(updatedData);
+      }
+    }, 1000);
+  
+    return () => clearInterval(interval);
+  }, [data]);
+
+  window.addEventListener("storage", () => {
+    const updatedData = JSON.parse(localStorage.getItem("locationData"));
+    setData(updatedData);
+  });
+  
+  
+  
 
   if (!data) {
     return <p>No Data Found</p>;
   }
 
-  const tabs = ["OverView", "Our Specialist", "Gallery", "Contact Details"];
+  const tabs = ["OverView", "Our Specialist", "Gallery", "Contact Details", "Testimonial"];
   const galleryImages = [data.imga, data.imgb, data.imgc, data.imgd];
 
   return (
     <div className="p-5 md:p-10 mt-27 md:mt-37 mb-15 font-[choco] w-full min-h-[100vh] bg-[#f5efe1]">
       <div className="flex flex-col md:flex-row items-center justify-around gap-5">
-        <div className="w-full md:w-1/2   min-h-[400px]">
+        <div className="w-full md:w-1/2 min-h-[400px]">
           <h1 className="text-xl md:text-2xl font-bold text-center md:text-left p-2">{data.name}</h1>
           <p className="text-lg text-center md:text-left p-2">{data.address}</p>
 
-          {/* Tabs */}
-          <ul className=" rounded flex flex-wrap justify-between gap-2">
+          <ul className="rounded flex flex-wrap justify-between gap-2">
             {tabs.map((tab, i) => (
               <li
                 key={i}
                 className={`cursor-pointer p-2 text-center ${
-                  activeTab === tab ? "bg-pink-400 text-white rounded " : "border px-6 border border-pink-400 rounded text-pink-400"
+                  activeTab === tab ? "bg-pink-400 text-white rounded" : "border px-6 border-pink-400 rounded text-pink-400"
                 }`}
                 onClick={() => setActiveTab(tab)}
               >
@@ -50,8 +72,7 @@ const LocationDetails = () => {
             ))}
           </ul>
 
-          {/* Tab Content */}
-          <div className="p-5 ">
+          <div className="p-5">
             {activeTab === "OverView" && (
               <div>
                 <h1>Services offered</h1>
@@ -71,15 +92,14 @@ const LocationDetails = () => {
             )}
 
             {activeTab === "Our Specialist" && (
-              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {data.spldoctors?.length > 0 ? (
                   data.spldoctors.map((doc, i) => (
                     <div key={i} className="mb-4 border border-pink-400 grid place-items-center rounded-sm">
-                      <img src={doc.docImg}  className="h-[100px]" alt="" />
+                      <img src={doc.docImg} className="h-[100px]" alt="" />
                       <p>{doc.docname}</p>
                       <p>{doc.qualification}</p>
                       <p>{doc.from}</p>
-                      {/* <p>{doc.docnameA}</p> */}
                     </div>
                   ))
                 ) : (
@@ -102,22 +122,60 @@ const LocationDetails = () => {
 
             {activeTab === "Contact Details" && (
               <div className="font-[choco] flex flex-col items-start justify-start gap-2">
-                {/* <div className=""></div>
-                <div></div>
-                <div></div>
-                <div></div> */}
                 <label>Address</label>
                 <p>{data.address}</p>
-                <label>phone Number</label>
+                <label>Phone Number</label>
                 <p>{data.phonenumber}</p>
                 <label className="p-2">Google Map</label>
-                <a href="" className="border border-pink-400 p-2 rounded">Click Here</a>
+                <a href={data.map} className="border border-pink-400 p-2 rounded" target="_blank" rel="noopener noreferrer">Click Here</a>
               </div>
             )}
+        {activeTab === "Testimonial" && (
+  <div className="text-center">
+    <h1 className="text-xl font-bold mb-4">
+      {data?.testimonials?.heading ? data.testimonials.heading : "Testimonial"}
+    </h1>
+
+    {data?.testimonials?.paragraph ? (
+      <p className="mb-4">{data.testimonials.paragraph}</p>
+    ) : (
+      <p>No Testimonial Description Found</p>
+    )}
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {data?.testimonials?.items?.length > 0 ? (
+        data.testimonials.items.map((item, i) => (
+          <div key={i} className="shadow-lg p-4 rounded-lg bg-white">
+            <h2 className="text-lg font-semibold mb-2">{item.heading}</h2>
+            <p className="text-sm mb-4">{item.paragraph}</p>
+
+            {item.youtubeVideo ? (
+              <iframe
+                width="100%"
+                height="300"
+                src={item.youtubeVideo}
+                title={`Testimonial Video ${i + 1}`}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="rounded-lg"
+              ></iframe>
+            ) : (
+              <p>No Video Available</p>
+            )}
+          </div>
+        ))
+      ) : (
+        <p>No Testimonials Found</p>
+      )}
+    </div>
+  </div>
+)}
+
+
+
           </div>
         </div>
 
-        {/* Side Image */}
         <div className="w-full md:w-1/2">
           <img src={data.imga} className="w-full object-cover rounded-lg" alt="" />
         </div>

@@ -36,8 +36,11 @@ const Why_Choose_us = () => {
         <h1 className="text-4xl md:text-6xl font-[Belli] p-5 text-center"><span className="text-[#1c97c8]">Why</span> Choose Us</h1>
         <div className="w-full md:w-[90%] mx-auto grid place-items-center">
           <p className="text-lg md:text-xl font-[choco] text-center p-5 mb-10">
-            Providing world-class fertility care, ARC Fertility uses the latest machines and instruments in its treatment.
-          </p>
+          Providing world-class fertility care, ARC Fertility uses the latest machines and instruments in its treatment. We are one of the most reputable fertility clinics in Chennai for a reason. We deliver exceptional quality services to patients at a reasonable price. We at ARC pride ourselves on providing individualized, optimum care based on our vast experience helping tens of thousands of women conceive successfully through our technology over the years. Our patients have entrusted us with their trust and we strive to keep up with their expectations when it comes to medical care. A major concern of many patients who dream of having a child of their own is price, so we offer our services at an affordable price. We believe that a woman's right to become pregnant should be inviolable, regardless of financial means Dr.Mahalakshmi established ARC fertility to provide the most sophisticated reproductive care for individuals from diverse cultural, ethnic, and economic backgrounds.
+
+</p>
+          <p className="text-lg md:text-xl font-[choco] text-center p-5 mb-10">
+          Our goal is to treat all patients as if they were family. Keeping this in mind, we strive to provide every type of provision to satisfy our patients' fertility needs. We have structured our services to excel in three areas, which we term "The Arc Advantage" - Care, Cost, and Commitment.          </p>
         </div>
 
         <div className="grid place-items-center">
