@@ -34,12 +34,18 @@ import Donor_Embryo from "../TreatPages/Donor_Embryo.jsx"
 import Gestational_Carrier from "../TreatPages/Gestational_Carrier.jsx" 
 
 import Fertility_preservation from "../ServPages/Fertility_preservation.jsx"
+
+
+      // newpages
+
+import FertilityProcedures from "../Newpages/FertilityProcedures.jsx"      
 const AllRouter = () => {
   return (
     <div>
         <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/Services_and_Treatment' element={<Services_and_Treatment />} />
+            <Route path='/FertilityProcedures' element={<FertilityProcedures />} />
             <Route path='/About_arc' element={<About_arc />} />
             <Route path='/InternationalPatients' element={<InternationalPatients />} />
             <Route path='/Pgprogrammes' element={<Pgprogrammes />} />

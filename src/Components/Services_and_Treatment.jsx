@@ -210,6 +210,29 @@ const ServicesAndTreatment = () => {
         ],
       },
     ],
+    procedure: [
+      {
+        title: "Fertility-Related Laparoscopic Procedures",
+        image: Clock,
+        link: "/services/consulting",
+      },
+      {
+        title: "Advanced Rejuvenative Therapy",
+        image: Adice,
+      },
+      {
+        title: "Assisted Reproductive Technology (ART) Procedures",
+        image: Adice,
+      },
+      {
+        title: "Obstetrics",
+        image: Adice,
+      },
+      {
+        title: "Obstetrics",
+        image: Adice,
+      },
+    ],
   };
 
   const handleBoxClick = (item) => {
@@ -224,8 +247,8 @@ const ServicesAndTreatment = () => {
     <div className="w-full min-h-screen bg-[#fed9c9] flex items-center justify-center py-12 mt-45">
       <div className="w-full max-w-6xl bg-white p-6 text-center rounded-lg shadow-lg">
         {/* Tabs */}
-        <div className="flex bg-black rounded-full w-fit p-1 m-5 gap-1 max-w-full overflow-x-auto sm:justify-center">
-  {["services", "treatments", "payments"].map((tab) => (
+        <div className="flex bg-black rounded-full w-fit font-[choco] font-bold p-1 m-5 gap-1 max-w-full overflow-x-auto sm:justify-center">
+  {["services", "treatments","procedure", "payments"].map((tab) => (
     <button
       key={tab}
       className={`px-6 py-2 text-sm rounded-full transition-all uppercase whitespace-nowrap ${

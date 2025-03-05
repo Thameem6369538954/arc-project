@@ -4,6 +4,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+
+
 
 const LocationDetails = () => {
   const location = useLocation();
@@ -56,7 +62,7 @@ const LocationDetails = () => {
       <div className="flex flex-col md:flex-row items-center justify-around gap-5">
         <div className="w-full md:w-1/2 min-h-[400px]">
           <h1 className="text-xl md:text-2xl font-bold text-center md:text-left p-2">{data.name}</h1>
-          <p className="text-lg text-center md:text-left p-2">{data.address}</p>
+          {/* <p className="text-lg text-center md:text-left p-2">{data.address}</p> */}
 
           <ul className="rounded flex flex-wrap justify-between gap-2">
             {tabs.map((tab, i) => (
@@ -142,30 +148,46 @@ const LocationDetails = () => {
       <p>No Testimonial Description Found</p>
     )}
 
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
       {data?.testimonials?.items?.length > 0 ? (
-        data.testimonials.items.map((item, i) => (
-          <div key={i} className="shadow-lg p-4 rounded-lg bg-white">
-            <h2 className="text-lg font-semibold mb-2">{item.heading}</h2>
-            <p className="text-sm mb-4">{item.paragraph}</p>
+        <Swiper
+          modules={[Pagination, Autoplay]}
+          spaceBetween={30}
+          slidesPerView={1}
+          loop={true}
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          breakpoints={{
+            768: {
+              slidesPerView: 2,
+            },
+          }}
+        >
+          {data.testimonials.items.map((item, i) => (
+            <SwiperSlide key={i}>
+              <div className="shadow-lg p-4 rounded-lg bg-white">
+                <h2 className="text-lg font-semibold mb-2">{item.heading}</h2>
+                <p className="text-sm mb-4">{item.paragraph}</p>
 
-            {item.youtubeVideo ? (
-              <iframe
-                width="100%"
-                height="300"
-                src={item.youtubeVideo}
-                title={`Testimonial Video ${i + 1}`}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="rounded-lg"
-              ></iframe>
-            ) : (
-              <p>No Video Available</p>
-            )}
-          </div>
-        ))
+                {item.youtubeVideo ? (
+                  <iframe
+                    width="100%"
+                    height="300"
+                    src={item.youtubeVideo}
+                    title={`Testimonial Video ${i + 1}`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="rounded-lg"
+                  ></iframe>
+                ) : (
+                  <p>No Video Available</p>
+                )}
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       ) : (
-        <p>No Testimonials Found</p>
+        <p className="text-center">No Testimonials Found</p>
       )}
     </div>
   </div>
