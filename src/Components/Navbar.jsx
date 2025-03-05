@@ -32,7 +32,7 @@ const menuItems = [
     title: "Academics",
     link: "/academics",
     submenu: [
-      { title: "PG Programs", link: "/academics/pgprograms" },
+      { title: "PG Programs", link: "Pgprogrammes" },
       { title: "Fellowship Programs", link: "/academics/fellowshipprograms" },
     ],
   },
