@@ -214,24 +214,40 @@ const ServicesAndTreatment = () => {
       {
         title: "Fertility-Related Laparoscopic Procedures",
         image: Clock,
-        link: "/services/consulting",
+        link: "/FertilityProcedures",
+        innerBoxes: [
+          { title: "Fertility-Related Laparoscopic Procedures", image: Conselt, link: "/FertilityProcedures" },
+          // { title: "Fitness Advice", image: Tools, link: "/services/fitness-advice" },
+        ],
       },
       {
         title: "Advanced Rejuvenative Therapy",
         image: Adice,
+        link: "/AdvancedRejuvenativeTherapy",
+        innerBoxes: [
+          { title: "Advanced Rejuvenative Therapy", image: Conselt, link: "/AdvancedRejuvenativeTherapy" },
+          // { title: "Fitness Advice", image: Tools, link: "/services/fitness-advice" },
+        ],
       },
       {
         title: "Assisted Reproductive Technology (ART) Procedures",
         image: Adice,
+        link: "/ARTProcedures",
+        innerBoxes: [
+          { title: "Assisted Reproductive Technology (ART) Procedures", image: Conselt, link: "/ARTProcedures" },
+          // { title: "Fitness Advice", image: Tools, link: "/services/fitness-advice" },
+        ],
       },
       {
         title: "Obstetrics",
         image: Adice,
+        link: "/Obstetrics",
+        innerBoxes: [
+          { title: "Obstetrics", image: Conselt, link: "/Obstetrics" },
+          // { title: "Fitness Advice", image: Tools, link: "/services/fitness-advice" },
+        ],
       },
-      {
-        title: "Obstetrics",
-        image: Adice,
-      },
+    
     ],
   };
 

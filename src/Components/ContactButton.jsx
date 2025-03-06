@@ -1,9 +1,10 @@
 import { FaWhatsapp, FaPhone } from "react-icons/fa";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { IoCallOutline } from "react-icons/io5";
 
 const ContactButton = ({ phoneNumber, whatsappNumber }) => {
   const [show, setShow] = useState(false);
-
+  const menuRef = useRef(null);
   const whatsappMessage = "Welcome to the ARC Fertility Hospital";
 
   const handleWhatsappClick = () => {
@@ -15,27 +16,41 @@ const ContactButton = ({ phoneNumber, whatsappNumber }) => {
     );
   };
 
+  // Outside Click Event
+  useEffect(() => {
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  });
+
+  const handleOutsideClick = (e) => {
+    if (menuRef.current && !menuRef.current.contains(e.target)) {
+      setShow(false);
+    }
+  };
+
   return (
-    <div className="fixed bottom-10 right-10 z-50">
-      <div
-        className="relative"
-        onMouseEnter={() => setShow(true)}
-        onMouseLeave={() => setShow(false)}
-        onClick={() => setShow(!show)} // For Mobile Touch
-      >
-        {/* Main Button 🔥 */}
-        <button className="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300">
-          📞 Contact Us
+    <div className="fixed bottom-10 right-5 bottom-40 z-50">
+      <div className="relative" ref={menuRef}>
+        <button
+          onClick={() => setShow(!show)}
+          className="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300"
+        >
+         <IoCallOutline />
         </button>
 
-        {/* Hover + Click Menu */}
         {show && (
-          <div className="absolute bottom-16 flex flex-col items-center gap-3 bg-white shadow-lg rounded-lg p-3 animate-slideUp transition-all duration-300">
+          <div
+            className="absolute bottom-16 right-10 flex flex-col items-center gap-3 bg-white shadow-lg rounded-lg p-3 animate-slideUp transition-all duration-300"
+            onMouseEnter={() => setShow(true)} // Laptop Hover
+            onMouseLeave={() => setShow(true)} // Prevent Disappear
+          >
             <a
               href={`tel:${phoneNumber}`}
               className="flex items-center gap-2 text-blue-600 hover:text-blue-800 cursor-pointer"
             >
-              <FaPhone />
+              <IoCallOutline />
               Call Us
             </a>
             <button

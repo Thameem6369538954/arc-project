@@ -39,11 +39,15 @@ import Fertility_preservation from "../ServPages/Fertility_preservation.jsx"
       // newpages
 
 import FertilityProcedures from "../Newpages/FertilityProcedures.jsx"      
+import AdvancedRejuvenativeTherapy from "../Newpages/AdvancedRejuvenativeTherapy.jsx"      
+import ARTProcedures from "../Newpages/ARTProcedures.jsx"      
+import Obstetrics from "../Newpages/Obstetrics.jsx"      
 const AllRouter = () => {
   return (
     <div>
         <Routes>
             <Route path='/' element={<Home />} />
+            <Route path='/ARTProcedures' element={<ARTProcedures />} />
             <Route path='/Services_and_Treatment' element={<Services_and_Treatment />} />
             <Route path='/FertilityProcedures' element={<FertilityProcedures />} />
             <Route path='/About_arc' element={<About_arc />} />
@@ -62,6 +66,7 @@ const AllRouter = () => {
             <Route path="/profile/:id" element={<ProfileDetails />} />
             <Route path="/LocationDetails/:city" element={<LocationDetails />} />
             <Route path="/EggFreezing" element={<EggFreezing />} />
+            <Route path="/Obstetrics" element={<Obstetrics />} />
             
             {/* treatpage */}
             
@@ -83,6 +88,7 @@ const AllRouter = () => {
 
 
         <Route path="/Fertility_preservation" element={<Fertility_preservation />} />
+        <Route path="/AdvancedRejuvenativeTherapy" element={<AdvancedRejuvenativeTherapy />} />
         </Routes>
     </div>
   )
