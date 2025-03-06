@@ -3,7 +3,7 @@ import Docter from '../Images/Docter.png';
 
 const AdmissionForm = () => {
   return (
-    <div className="bg-pink-50 mt-10 min-h-screen py-10 font-[choco]">
+    <div className="bg-pink-50 mt-30 md:mt-10 min-h-screen py-10 font-[choco]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Left Side */}
@@ -46,7 +46,7 @@ const AdmissionForm = () => {
           >
             <form className="grid grid-cols-1 gap-6">
               <input type="text" placeholder="Applicant Name" className="p-3 border rounded-md" />
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-4">
                 <input type="date" placeholder="DOB" className="p-3 border rounded-md" />
                 <select className="p-3 border rounded-md">
                   <option>Select Gender</option>
