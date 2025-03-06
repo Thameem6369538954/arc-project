@@ -4,22 +4,22 @@ import ARC from "../Images/ARC.jpg"
 const hospitalData = [
   {
     id: 1,
-    name: 'Global Care Hospital',
-    location: 'New York, USA',
+    name: 'ARC hospital',
+    location: 'Sri Lanka, USA',
     contact: '+1 234 567 890',
     image: ARC,
   },
   {
     id: 2,
-    name: 'Royal Health Clinic',
-    location: 'London, UK',
+    name: 'ARC hospital',
+    location: 'Malaysia',
     contact: '+44 123 456 789',
     image: ARC,
   },
   {
     id: 3,
-    name: 'Asian Medical Center',
-    location: 'Chennai, India',
+    name: 'ARC hospital',
+    location: 'Bangladesh',
     contact: '+91 987 654 3210',
     image: ARC,
   },
