@@ -5,7 +5,7 @@ const hospitalData = [
   {
     id: 1,
     name: 'ARC hospital',
-    location: 'Sri Lanka, USA',
+    location: 'Sri Lanka',
     contact: '+1 234 567 890',
     image: ARC,
   },

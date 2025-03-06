@@ -210,7 +210,7 @@ const ServicesAndTreatment = () => {
         ],
       },
     ],
-    procedure: [
+    procedures: [
       {
         title: "Fertility-Related Laparoscopic Procedures",
         image: Clock,
@@ -264,7 +264,7 @@ const ServicesAndTreatment = () => {
       <div className="w-full max-w-6xl bg-white p-6 text-center rounded-lg shadow-lg">
         {/* Tabs */}
         <div className="flex bg-black rounded-full w-fit font-[choco] font-bold p-1 m-5 gap-1 max-w-full overflow-x-auto sm:justify-center">
-  {["services", "treatments","procedure", "payments"].map((tab) => (
+  {["services", "treatments","procedures", "payments"].map((tab) => (
     <button
       key={tab}
       className={`px-6 py-2 text-sm rounded-full transition-all uppercase whitespace-nowrap ${
@@ -285,7 +285,7 @@ const ServicesAndTreatment = () => {
 
 
         {/* Cards */}
-        <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
           {data[activeTab].map((item, index) => (
             <motion.div
               key={index}
@@ -306,34 +306,36 @@ const ServicesAndTreatment = () => {
         {/* Popup */}
         {selectedItem && (
           <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-            <div className="bg-white p-6 rounded-lg shadow-xl w-[90%] max-w-4xl">
-              <h3 className="text-2xl mb-4">{selectedItem.title}</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {selectedItem.innerBoxes.map((box, index) => (
-                  <a
-                    key={index}
-                    href={box.link}
-                    // target="_blank"
-                    rel="noopener noreferrer"
-                    className="block p-4 bg-gray-100 rounded-lg shadow-md text-center"
-                  >
-                    <img
-                      src={box.image}
-                      alt={box.title}
-                      className="w-full h-32 object-cover rounded-lg mb-2"
-                    />
-                    <h4>{box.title}</h4>
-                  </a>
-                ))}
-              </div>
-              <button
-                onClick={closePopup}
-                className="mt-6 px-4 py-2 bg-blue-500 text-white rounded-full"
-              >
-                Close
-              </button>
+          <div className="bg-white p-6 rounded-lg shadow-xl w-[90%] max-w-4xl max-h-[80vh] overflow-y-auto scrollbar-hide">
+            <h3 className="text-2xl mb-4">{selectedItem.title}</h3>
+        
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {selectedItem.innerBoxes.map((box, index) => (
+                <a
+                  key={index}
+                  href={box.link}
+                  rel="noopener noreferrer"
+                  className="block p-4 bg-gray-100 rounded-lg shadow-md text-center"
+                >
+                  <img
+                    src={box.image}
+                    alt={box.title}
+                    className="w-full h-32 object-cover rounded-lg mb-2"
+                  />
+                  <h4>{box.title}</h4>
+                </a>
+              ))}
             </div>
+        
+            <button
+              onClick={closePopup}
+              className="mt-6 px-4 py-2 bg-blue-500 text-white rounded-full"
+            >
+              Close
+            </button>
           </div>
+        </div>
+        
         )}
       </div>
     </div>
