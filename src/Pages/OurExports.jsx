@@ -16,7 +16,8 @@ const OurExports = () => {
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-5 py-10 mt-25 md:mt-35 font-[choco] mb-20">
+    <div className="w-full bg-[#fff8ef]">
+    <div className="w-full max-w-7xl mx-auto px-5 py-10 mt-25 md:mt-25 font-[choco] mb-20 ">
       <h2 className="text-6xl font-bold text-center text-[#1c97c8] font-[belli] mb-8">
         <span className="text-black">Our</span> Experts
       </h2>
@@ -80,6 +81,8 @@ const OurExports = () => {
           </div>
         </motion.div>
       )}
+    </div>
+
     </div>
   );
 };

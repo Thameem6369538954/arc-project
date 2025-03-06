@@ -260,7 +260,7 @@ const ServicesAndTreatment = () => {
   };
 
   return (
-    <div className="w-full min-h-screen bg-[#fed9c9] flex items-center justify-center py-12 mt-45">
+    <div className="w-full min-h-screen bg-[#fed9c9] flex items-center justify-center py-12 mt-25">
       <div className="w-full max-w-6xl bg-white p-6 text-center rounded-lg shadow-lg">
         {/* Tabs */}
         <div className="flex bg-black rounded-full w-fit font-[choco] font-bold p-1 m-5 gap-1 max-w-full overflow-x-auto sm:justify-center">

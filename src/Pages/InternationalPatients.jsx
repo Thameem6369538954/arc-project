@@ -27,7 +27,7 @@ const hospitalData = [
 
 const InternationalPatients = () => {
   return (
-    <div className="py-10  mt-35 font-[choco] w-full bg-[#fff8ef] min-h-[100vh]">
+    <div className="py-10  mt-25 font-[choco] w-full bg-[#fff8ef] min-h-[100vh]">
       <h2 className="md:text-6xl text-3xl p-2 font-[belli] text-center mb-8">International <span className='text-[#1c97c8]'>Patients</span></h2>
       <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 max-w-6xl mx-auto px-4">
         {hospitalData.map((hospital) => (

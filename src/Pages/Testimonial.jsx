@@ -15,7 +15,7 @@ const videos = [
 
 const YouTubeGallery = () => {
   return (
-    <div className="min-h-screen  p-6 bg-[#fd95a4] w-full mt-25 md:mt-35 mb-15">
+    <div className="min-h-screen  p-6 bg-[#fd95a4] w-full mt-25 md:mt-25 mb-15">
       <h2 className="font-[Belli] text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl mt-1 px-0 text-white tracking-wide p-5 mb-5">Patient <span className="text-[]">Reviews</span></h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {videos.map((video, index) => (

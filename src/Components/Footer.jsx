@@ -2,10 +2,11 @@ import React from "react";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import arclogo from "../Images/arclogo.png"
 import waveA from "../Images/waveA.png"
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#ffc9d7]  pt-10 pb-6 relative font-[choco]">
+    <footer className="bg-[#ffc9d7]  lg:pt-10 pb-6 relative font-[choco]">
       <div className=" absolute -top-15 md:top-0 w-full ">
       <img src={waveA} className="w-full md:bg-[#bed1e3]" alt="" />
       </div>
@@ -13,7 +14,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
           {/* Company Info */}
           <div>
-            <img src={arclogo} className="w-40 h-40" alt="" />
+            <img src={arclogo} className="w-40 h-40 p-5" alt="" />
             <p className="text-sm mb-4">
               All content on this website is protected by copyright and may not be used without permission from Arc.
             </p>
@@ -38,9 +39,12 @@ const Footer = () => {
 
           {/* Appointment & Subscription */}
           <div className="flex flex-col gap-4">
+            <Link to="/Contactus">
+            
             <button className="bg-pink-500 hover:bg-pink-600 text-white  py-2 px-6 rounded-lg">
               Appointment
             </button>
+            </Link>
             <h2 className="text-lg font-bold ">Subscribe to our Newsletter</h2>
             <div className="flex">
               <input

@@ -8,7 +8,7 @@ const OurTeam = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="py-12 bg-[#fff8ef] mt-25 md:mt-32 ">
+    <section className="py-12 bg-[#fff8ef] mt-25 md:mt-22 ">
       <div className="container mx-auto px-4">
         <h2 className="text-center text-3xl md:text-6xl font-[Belli] text-pink-600 mb-6">Meet <span className="text-[#1c97c8]">Our</span> Team</h2>
         <div className="grid place-items-center">

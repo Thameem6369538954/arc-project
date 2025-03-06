@@ -85,7 +85,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="p-5 mt-30 md:mt-40 w-full font-[choco] bg-[#fff8ef]">
+    <div className="p-5 mt-30 md:mt-25 w-full font-[choco] bg-[#fff8ef]">
     {/* Category Buttons */}
     <div className="flex gap-4 mb-6 justify-center font-bold ">
       {categories.map((cat, index) => (

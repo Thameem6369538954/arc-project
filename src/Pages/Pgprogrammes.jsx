@@ -3,7 +3,7 @@ import Docter from '../Images/Docter.png';
 
 const AdmissionForm = () => {
   return (
-    <div className="bg-pink-50 mt-30 min-h-screen py-10 font-[choco]">
+    <div className="bg-pink-50 mt-10 min-h-screen py-10 font-[choco]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Left Side */}

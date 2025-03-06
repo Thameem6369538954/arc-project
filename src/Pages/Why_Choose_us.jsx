@@ -31,7 +31,7 @@ const Why_Choose_us = () => {
   }, [contents.length]);
 
   return (
-    <div className="w-full min-h-[100vh] mt-30 md:mt-40 bg-[#f4d1ff] p-5">
+    <div className="w-full min-h-[100vh] mt-30 md:mt-20 bg-[#f4d1ff] p-5">
       <div>
         <h1 className="text-4xl md:text-6xl font-[Belli] p-5 text-center"><span className="text-[#1c97c8]">Why</span> Choose Us</h1>
         <div className="w-full md:w-[90%] mx-auto grid place-items-center">

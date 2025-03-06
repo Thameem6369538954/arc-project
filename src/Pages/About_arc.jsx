@@ -5,7 +5,7 @@ import Abt from '../Animations/Abt.json'
 
 const AboutUs = () => {
   return (
-    <div className=' w-full min-h-screen  mt-20 md:mt-35'>
+    <div className=' w-full min-h-screen  mt-20 md:mt-15'>
       <div className='bg-[#fadadd] w-full py-16 px-8 lg:px-20  min-h-[100vh] '>
       <motion.div
         initial={{ opacity: 0, y: -50 }}
