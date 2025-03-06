@@ -6,12 +6,16 @@ import { motion, useAnimation } from "framer-motion";
 import { Play, Pause } from "lucide-react";
 
 const videoLinks = [
-  'https://www.youtube.com/embed/f6nC2tGyLw0?si=zKTtr16wTVJDmA0W',
-  'https://www.youtube.com/embed/f6nC2tGyLw0?si=zKTtr16wTVJDmA0W',
-  'https://www.youtube.com/embed/f6nC2tGyLw0?si=zKTtr16wTVJDmA0W',
-  'https://www.youtube.com/embed/f6nC2tGyLw0?si=zKTtr16wTVJDmA0W',
-  'https://www.youtube.com/embed/f6nC2tGyLw0?si=zKTtr16wTVJDmA0W',
-  'https://www.youtube.com/embed/f6nC2tGyLw0?si=zKTtr16wTVJDmA0W',
+  'https://www.youtube.com/embed/M7NA_Mjjf8k?si=ZtGzMLf_tJvWY9En',
+  'https://www.youtube.com/embed/f6nC2tGyLw0?si=i9osyo4DxqAK0M4p',
+  'https://www.youtube.com/embed/qDJIpukgwP8?si=NP49D30_tioms_gs',
+  'https://www.youtube.com/embed/3Y3IvHLE6gg?si=x9Fw64ggGRPznDUH',
+  'https://www.youtube.com/embed/afWVk1KtPPU?si=2-AJpwLNu1wmBWxW',
+  'https://www.youtube.com/embed/7v8LREB47S8?si=B0IDf6Dmdmm0xQ6Z',
+  'https://www.youtube.com/embed/6i2LOhhXbT0?si=gL6YKpvjdjMLjimQ',
+  'https://www.youtube.com/embed/7v8LREB47S8?si=B0IDf6Dmdmm0xQ6Z',
+  'https://www.youtube.com/embed/7v8LREB47S8?si=B0IDf6Dmdmm0xQ6Z',
+  'https://www.youtube.com/embed/7v8LREB47S8?si=B0IDf6Dmdmm0xQ6Z',
   
 ];
 
