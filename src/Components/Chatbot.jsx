@@ -56,7 +56,7 @@ const Chatbot = () => {
   {/* Chatbot Icon */}
   <motion.div
     onClick={toggleChat}
-    className="fixed bottom-10 right-5 bg-pink-400 p-4 rounded-full cursor-pointer shadow-lg text-white text-2xl z-50"
+    className="fixed bottom-22 right-5 bg-pink-400 p-4 rounded-full cursor-pointer shadow-lg text-white text-2xl z-50"
     whileHover={{ scale: 1.1 }}
     whileTap={{ scale: 0.9 }}
   >
@@ -68,7 +68,7 @@ const Chatbot = () => {
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       exit={{ scale: 0, opacity: 0 }}
-      className="fixed bottom-20 right-5  sm:right-10 md:right-20 w-[90%] sm:w-96 bg-white shadow-xl rounded-lg p-4 z-50 max-w-[400px]"
+      className="fixed bottom-40 right-5  sm:right-10 md:right-20 w-[90%] sm:w-96 bg-white shadow-xl rounded-lg p-4 z-50 max-w-[400px]"
     >
       {/* Chat Messages */}
       <div className="h-64 overflow-y-scroll mb-4 space-y-2 scrollbar-thin scrollbar-thumb-pink-400">
@@ -103,22 +103,24 @@ const Chatbot = () => {
       </div>
 
       {/* Input Field */}
-      <div className="flex">
-        <input
-          type="text"
-          className="flex-1 border p-2 rounded-l-md outline-none text-sm sm:text-base"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          onKeyDown={handleKeyDown}
-          placeholder="Type a message..."
-        />
-        <button
-          onClick={sendMessage}
-          className="bg-pink-400 text-white px-4 rounded-r-md"
-        >
-          <FiSend />
-        </button>
-      </div>
+      {/* Input Field */}
+<div className="flex flex-wrap">
+  <input
+    type="text"
+    className="flex-1 border p-2 rounded-l-md outline-none text-sm sm:text-base"
+    value={input}
+    onChange={(e) => setInput(e.target.value)}
+    onKeyDown={handleKeyDown}
+    placeholder="Type a message..."
+  />
+  <button
+    onClick={sendMessage}
+    className="bg-pink-400 text-white px-4 rounded-r-md"
+  >
+    <FiSend />
+  </button>
+</div>
+
     </motion.div>
   )}
 </div>

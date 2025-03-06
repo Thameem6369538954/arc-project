@@ -37,7 +37,7 @@ const HeaderA = () => {
         <div className="relative">
             {/* Header Section */}
             <motion.div
-                className="w-full md:min-h-[100vh]   md:min-h-[120vh] min-h-[110vh] bg-[#fff8ef] flex flex-col md:flex-row items-center justify-center p-5 md:p-10 relative text-center md:text-left"
+                className="w-full md:min-h-[100vh]  mt-20 md:mt-5 lg:mt-5 md:min-h-[120vh] min-h-[110vh] bg-[#fff8ef] flex flex-col md:flex-row items-center justify-center p-5 md:p-10 relative text-center md:text-left"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
