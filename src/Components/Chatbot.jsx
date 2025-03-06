@@ -51,80 +51,89 @@ const Chatbot = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, isTyping]);
 
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="font-[choco]">
-  {/* Chatbot Icon */}
-  <motion.div
-    onClick={toggleChat}
-    className="fixed bottom-22 right-5 bg-pink-400 p-4 rounded-full cursor-pointer shadow-lg text-white text-2xl z-50"
-    whileHover={{ scale: 1.1 }}
-    whileTap={{ scale: 0.9 }}
-  >
-    {open ? <FiX /> : <FiMessageCircle />}
-  </motion.div>
+      {/* Chatbot Icon */}
+      <motion.div
+        onClick={toggleChat}
+        className="fixed bottom-22 right-5 bg-pink-400 p-4 rounded-full cursor-pointer shadow-lg text-white text-2xl z-50"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+      >
+        {open ? <FiX /> : <FiMessageCircle />}
+      </motion.div>
 
-  {open && (
-    <motion.div
-      initial={{ scale: 0, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      exit={{ scale: 0, opacity: 0 }}
-      className="fixed bottom-40 right-5  sm:right-10 md:right-20 w-[90%] sm:w-96 bg-white shadow-xl rounded-lg p-4 z-50 max-w-[400px]"
-    >
-      {/* Chat Messages */}
-      <div className="h-64 overflow-y-scroll mb-4 space-y-2 scrollbar-thin scrollbar-thumb-pink-400">
-        {messages.map((msg, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className={`mb-3 ${msg.user === "user" ? "text-right" : "text-left"}`}
+      {open && (
+        <motion.div
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          exit={{ scale: 0, opacity: 0 }}
+          className="fixed bottom-40 right-5 sm:right-10 md:right-20 w-[90%] sm:w-96 bg-white shadow-xl rounded-lg p-4 z-50 max-w-[400px]"
+        >
+          {/* Chat Messages */}
+          <div className="h-64 overflow-y-scroll mb-4 space-y-2 scrollbar-thin scrollbar-thumb-pink-400 relative">
+            {messages.map((msg, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className={`mb-3 ${msg.user === "user" ? "text-right" : "text-left"}`}
+              >
+                <span
+                  className={`p-2 rounded-md inline-block ${
+                    msg.user === "user" ? "bg-pink-400 text-white" : "bg-gray-200"
+                  }`}
+                >
+                  {msg.text}
+                </span>
+              </motion.div>
+            ))}
+            {isTyping && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
+                className="text-left text-sm text-gray-500"
+              >
+                Typing...
+              </motion.div>
+            )}
+            <div ref={messagesEndRef} />
+          </div>
+
+          {/* Scroll to Bottom Button */}
+          <button
+            onClick={scrollToBottom}
+            className="bg-pink-400 text-white px-4 py-1 rounded-full text-sm mb-2 hover:bg-pink-500"
           >
-            <span
-              className={`p-2 rounded-md inline-block ${
-                msg.user === "user" ? "bg-pink-400 text-white" : "bg-gray-200"
-              }`}
+            Scroll to Bottom
+          </button>
+
+          {/* Input Field */}
+          <div className="flex w-full">
+            <input
+              type="text"
+              className="flex-1 border p-2 rounded-l-md outline-none text-sm sm:text-base w-full"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={handleKeyDown}
+              placeholder="Type a message..."
+            />
+            <button
+              onClick={sendMessage}
+              className="bg-pink-400 text-white px-4 rounded-r-md"
             >
-              {msg.text}
-            </span>
-          </motion.div>
-        ))}
-        {isTyping && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
-            className="text-left text-sm text-gray-500"
-          >
-            Typing...
-          </motion.div>
-        )}
-        <div ref={messagesEndRef} />
-      </div>
-
-      {/* Input Field */}
-      {/* Input Field */}
-<div className="flex flex-wrap">
-  <input
-    type="text"
-    className="flex-1 border p-2 rounded-l-md outline-none text-sm sm:text-base"
-    value={input}
-    onChange={(e) => setInput(e.target.value)}
-    onKeyDown={handleKeyDown}
-    placeholder="Type a message..."
-  />
-  <button
-    onClick={sendMessage}
-    className="bg-pink-400 text-white px-4 rounded-r-md"
-  >
-    <FiSend />
-  </button>
-</div>
-
-    </motion.div>
-  )}
-</div>
-
+              <FiSend />
+            </button>
+          </div>
+        </motion.div>
+      )}
+    </div>
   );
 };
 
