@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#ffc9d7]  lg:pt-10 pb-6 relative font-[choco]">
-      <div className=" absolute -top-15 md:top-0 w-full ">
-      <img src={waveA} className="w-full md:bg-[#bed1e3]" alt="" />
-      </div>
-      <div className="container mx-auto px-4 mt-5  sm:mt-70">
+    <footer className="bg-[#ffc9d7]   pb-6 relative font-[choco]">
+      {/* <div className=" absolute top-0  md:-top-44 w-full ">
+      <img src={waveA} className="w-full" alt="" />
+      </div> */}
+      <div className="container mx-auto px-4 p-5  ">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
           {/* Company Info */}
           <div>

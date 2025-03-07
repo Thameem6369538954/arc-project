@@ -35,7 +35,7 @@ const ContactButton = ({ phoneNumber, whatsappNumber }) => {
       <div className="relative" ref={menuRef}>
         <button
           onClick={() => setShow(!show)}
-          className="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300"
+          className="bg-blue-600 text-white text-xl p-4 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300"
         >
          <IoCallOutline />
         </button>

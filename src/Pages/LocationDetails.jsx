@@ -58,7 +58,7 @@ const LocationDetails = () => {
   const galleryImages = [data.imga, data.imgb, data.imgc, data.imgd];
 
   return (
-    <div className="p-5 md:p-10 mt-27 md:mt-37 mb-15 font-[choco] w-full min-h-[100vh] bg-[#f5efe1]">
+    <div className=" md:p-10 mt-27 md:mt-25 font-[choco] w-full min-h-[60vh] bg-[#f5efe1]">
       <div className="flex flex-col md:flex-row items-center justify-around gap-5">
         <div className="w-full md:w-1/2 min-h-[400px]">
           <h1 className="text-xl md:text-2xl font-bold text-center md:text-left p-2">{data.name}</h1>

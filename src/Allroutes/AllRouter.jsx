@@ -41,7 +41,45 @@ import Fertility_preservation from "../ServPages/Fertility_preservation.jsx"
 import FertilityProcedures from "../Newpages/FertilityProcedures.jsx"      
 import AdvancedRejuvenativeTherapy from "../Newpages/AdvancedRejuvenativeTherapy.jsx"      
 import ARTProcedures from "../Newpages/ARTProcedures.jsx"      
-import Obstetrics from "../Newpages/Obstetrics.jsx"      
+import Obstetrics from "../Newpages/Obstetrics.jsx" 
+
+
+// service pages
+
+import TimingandFrequencyOfIntercourse from "../Servicespage/TimingandFrequencyOfIntercourse.jsx"
+import Exercise_in_Moderation from "../Servicespage/Exercise_in_Moderation.jsx"
+import Alcoholanddrug from "../Servicespage/Alcoholanddrug.jsx"
+import BMIandfertility from "../Servicespage/BMIandfertility.jsx"
+import NutritionandFertility from "../Servicespage/NutritionandFertility.jsx"
+import Yoga from "../Servicespage/Yoga.jsx"
+import MassageTherapy from "../Servicespage/MassageTherapy.jsx"
+import Medication from "../Servicespage/Medication.jsx"
+import Acupuncture from "../Servicespage/Acupuncture.jsx"
+import Walking_Hiking from "../Servicespage/Walking_Hiking.jsx"
+import EmotionalConsiderations from "../Servicespage/EmotionalConsiderations.jsx"
+import PremaritalCounseling from "../Servicespage/PremaritalCounseling.jsx"
+import FertilityAssessment from "../Servicespage/FertilityAssessment.jsx"
+import GynecologicalConditions from "../Servicespage/GynecologicalConditions.jsx"
+import MonthlyOvulationCycle from "../Servicespage/MonthlyOvulationCycle.jsx"
+import CorporateSocialResponsibility from "../Servicespage/CorporateSocialResponsibility.jsx"
+import Male_Sexual_Dysfunction from "../Servicespage/Male_Sexual_Dysfunction.jsx"
+import FemaleSexualDysfunction from "../Servicespage/FemaleSexualDysfunction.jsx"
+import Surgeries_in_Sexual_Disorders from "../Servicespage/Surgeries_in_Sexual_Disorders.jsx"
+import Medications_for_Sexual_Dysfunction from "../Servicespage/Medications_for_Sexual_Dysfunction.jsx"
+import Sexual_Hygiene from "../Servicespage/Sexual_Hygiene.jsx"
+import Erectile_Dysfunction from "../Servicespage/Erectile_Dysfunction.jsx"
+import Ejaculatory_Failures from "../Servicespage/Ejaculatory_Failures.jsx"
+import Decreased_Sexual_Desire from "../Servicespage/Decreased_Sexual_Desire.jsx"
+import Drug_Induced_Sexual_Dysfunction from "../Servicespage/Drug_Induced_Sexual_Dysfunction.jsx"
+import Sex_Related_Diseases from "../Servicespage/Sex_Related_Diseases.jsx"
+import Colposcopy from "../Servicespage/Colposcopy.jsx"
+import Cryosurgery from "../Servicespage/Cryosurgery.jsx"
+import Leep from "../Servicespage/Leep.jsx"
+import Hysteroscopy from "../Servicespage/Hysteroscopy.jsx"
+import PelvicLaparoscopy from "../Servicespage/PelvicLaparoscopy.jsx"
+import Dilation_and_Curretage from "../Servicespage/Dilation_and_Curretage.jsx"
+import Sperm_Semen from "../Servicespage/Sperm_Semen.jsx"
+import Egg_Oocyte_Embryo from "../Servicespage/Egg_Oocyte_Embryo.jsx"
 const AllRouter = () => {
   return (
     <div>
@@ -89,6 +127,40 @@ const AllRouter = () => {
 
         <Route path="/Fertility_preservation" element={<Fertility_preservation />} />
         <Route path="/AdvancedRejuvenativeTherapy" element={<AdvancedRejuvenativeTherapy />} />
+        <Route path="/TimingandFrequencyOfIntercourse" element={<TimingandFrequencyOfIntercourse />} />
+        <Route path="/Exercise_in_Moderation" element={<Exercise_in_Moderation />} />
+        <Route path="/BMIandfertility" element={<BMIandfertility />} />
+        <Route path="/Alcoholanddrug" element={<Alcoholanddrug />} />
+        <Route path="/Yoga" element={<Yoga />} />
+        <Route path="/NutritionandFertility" element={<NutritionandFertility />} />
+        <Route path="/MassageTherapy" element={<MassageTherapy />} />
+          <Route path="/Medication" element={<Medication />} />
+          <Route path="/Acupuncture" element={<Acupuncture />} />
+          <Route path="/Walking_Hiking" element={<Walking_Hiking />} />
+          <Route path="/EmotionalConsiderations" element={<EmotionalConsiderations />} />
+          <Route path="/PremaritalCounseling" element={<PremaritalCounseling />} />
+          <Route path="/FertilityAssessment" element={<FertilityAssessment />} />
+          <Route path="/GynecologicalConditions" element={<GynecologicalConditions />} />
+          <Route path="/MonthlyOvulationCycle" element={<MonthlyOvulationCycle />} />
+          <Route path="/CorporateSocialResponsibility" element={<CorporateSocialResponsibility />} />
+          <Route path="/Male_Sexual_Dysfunction" element={<Male_Sexual_Dysfunction />} />
+          <Route path="/FemaleSexualDysfunction" element={<FemaleSexualDysfunction />} />
+          <Route path="/Surgeries_in_Sexual_Disorders" element={<Surgeries_in_Sexual_Disorders />} />
+          <Route path="/Medications_for_Sexual_Dysfunction" element={<Medications_for_Sexual_Dysfunction />} />
+          <Route path="/Sexual_Hygiene" element={<Sexual_Hygiene />} />
+          <Route path="/Erectile_Dysfunction" element={<Erectile_Dysfunction />} />
+          <Route path="/Ejaculatory_Failures" element={<Ejaculatory_Failures />} />
+          <Route path="/Decreased_Sexual_Desire" element={<Decreased_Sexual_Desire />} />
+          <Route path="/Drug_Induced_Sexual_Dysfunction" element={<Drug_Induced_Sexual_Dysfunction />} />
+          <Route path="/Sex_Related_Diseases" element={<Sex_Related_Diseases />} />
+          <Route path="/Colposcopy" element={<Colposcopy />} />
+          <Route path="/Cryosurgery" element={<Cryosurgery />} />
+          <Route path="/Leep" element={<Leep />} />
+          <Route path="/Hysteroscopy" element={<Hysteroscopy />} />
+          <Route path="/PelvicLaparoscopy" element={<PelvicLaparoscopy />} />
+          <Route path="/Dilation_and_Curretage" element={<Dilation_and_Curretage />} />
+          <Route path="/Sperm_Semen" element={<Sperm_Semen />} />
+          <Route path="/Egg_Oocyte_Embryo" element={<Egg_Oocyte_Embryo />} />
         </Routes>
     </div>
   )

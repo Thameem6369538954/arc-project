@@ -35,14 +35,16 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <div className="w-full min-h-[85vh] grid place-items-center bg-[#ffc9d7] md:py-10 py-15">
-      <h2 className="text-3xl md:text-5xl font-[Belli] text-gray-800 text-center md:mb-10 mb-0">
+    <div className="w-full min-h-[85vh] flex flex-col items-center bg-[#ffc9d7] py-16">
+      <h2 className="text-3xl md:text-5xl font-[Belli] text-gray-800 text-center mb-12 animate-fade-up">
         Meet Our <span className="text-[#1c97c8]">Expert Team</span>
       </h2>
 
       <Swiper
         spaceBetween={30}
         slidesPerView={1}
+        loop={true}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
         breakpoints={{
           640: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
@@ -52,24 +54,21 @@ const Team = () => {
       >
         {teamMembers.map((member, index) => (
           <SwiperSlide key={index} className="flex justify-center">
-            <div className="bg-white p-10 shadow-xl rounded-2xl w-80 h-[400px] flex flex-col items-center  transition-all hover:scale-105 hover:shadow-2xl">
-              {/* Image */}
-              <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-pink-400 shadow-lg">
+            <div className="bg-white p-10 shadow-xl rounded-2xl w-80 h-[370px] flex flex-col items-center transition-all hover:scale-105 hover:shadow-2xl animate-zoom-in">
+              <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-pink-400 shadow-lg mb-6">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                 />
               </div>
-
-              {/* Details */}
-              <h3 className="text-xl font-semibold text-gray-900 font-[new]">
+              <h3 className="text-xl font-[choco] text-gray-900 mb-2 text-center">
                 {member.name}
               </h3>
-              <p className="text-pink-400 text-center text-sm font-[newa] leading-relaxed">
+              <p className="text-pink-400 text-center text-sm font-[choco] font-bold leading-relaxed mb-2">
                 {member.education}
               </p>
-              <p className="text-[#1c97c8] font-medium font-[newa]">
+              <p className="text-[#1c97c8] font-[choco] font-bold text-center">
                 {member.position}
               </p>
             </div>

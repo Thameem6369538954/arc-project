@@ -40,7 +40,7 @@ const OurServices = () => {
   
       {/* Title */}
       <h1 className="text-black text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl font-[Belli] mb-12">
-        Our <span className="text-black">Blog</span>
+        Our <span className="text-black">Blogs</span>
       </h1>
 
       {/* Swiper Slider */}

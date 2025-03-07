@@ -6,17 +6,16 @@ import { motion, useAnimation } from "framer-motion";
 import { Play, Pause } from "lucide-react";
 
 const videoLinks = [
-  'https://www.youtube.com/embed/M7NA_Mjjf8k?si=ZtGzMLf_tJvWY9En',
-  'https://www.youtube.com/embed/f6nC2tGyLw0?si=i9osyo4DxqAK0M4p',
-  'https://www.youtube.com/embed/qDJIpukgwP8?si=NP49D30_tioms_gs',
-  'https://www.youtube.com/embed/3Y3IvHLE6gg?si=x9Fw64ggGRPznDUH',
-  'https://www.youtube.com/embed/afWVk1KtPPU?si=2-AJpwLNu1wmBWxW',
-  'https://www.youtube.com/embed/7v8LREB47S8?si=B0IDf6Dmdmm0xQ6Z',
+  'https://www.youtube.com/embed/M7NA_Mjjf8k?si=5wVpovkr0VwbdpQi',
+  'https://www.youtube.com/embed/f6nC2tGyLw0?si=_Qw7Dp6MJ8lanECF',
+  'https://www.youtube.com/embed/qDJIpukgwP8?si=YhrQbsiGj8cApXQF',
+  'https://www.youtube.com/embed/qDJIpukgwP8?si=YhrQbsiGj8cApXQF',
+  'https://www.youtube.com/embed/afWVk1KtPPU?si=Q54SCB9nNZnySCIM',
+  'https://www.youtube.com/embed/-Eond9ws-Pw?si=q3f5nU461TLwx9Yh',
   'https://www.youtube.com/embed/6i2LOhhXbT0?si=gL6YKpvjdjMLjimQ',
-  'https://www.youtube.com/embed/7v8LREB47S8?si=B0IDf6Dmdmm0xQ6Z',
-  'https://www.youtube.com/embed/7v8LREB47S8?si=B0IDf6Dmdmm0xQ6Z',
-  'https://www.youtube.com/embed/7v8LREB47S8?si=B0IDf6Dmdmm0xQ6Z',
-  
+  'https://www.youtube.com/embed/bpiQQCHVdCA?si=E70disQbCN1nAtBr',
+  'https://www.youtube.com/embed/X7zmvSZcGXA?si=GyaFyROWve2qM6Jx',
+  // 'https://www.youtube.com/embed/7v8LREB47S8?si=B0IDf6Dmdmm0xQ6Z',
 ];
 
 const Ivfsection = () => {
@@ -26,7 +25,6 @@ const Ivfsection = () => {
 
   const isAnyVideoPlaying = playing.some((status) => status);
 
-  // Function to start/stop scrolling
   const startScrolling = () => {
     controls.start({
       x: ["0%", "-100%"],
@@ -56,15 +54,13 @@ const Ivfsection = () => {
 
   return (
     <div className="w-full min-h-screen flex items-center justify-center p-5 relative bg-[#e1f4fb]">
-    
-    <img
-  src={Baby}
-  className="absolute top-80 right-10 md:top-10 md:right-25 w-[180px] sm:w-[220px] md:w-[250px] lg:w-[300px]"
-  alt="Baby"
-/>
+      <img
+        src={Baby}
+        className="absolute top-80 right-10 md:top-10 md:right-25 w-[180px] sm:w-[220px] md:w-[250px] lg:w-[300px]"
+        alt="Baby"
+      />
 
-      <div className="w-[90%] min-h-[650px]  rounded-xl shadow-lg bg-[#f9f3aa]">
-        {/* Heading */}
+      <div className="w-[90%] min-h-[650px] rounded-xl shadow-lg bg-[#f9f3aa]">
         <h1 className="font-[Belli] text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl mt-5 px-5 text-black tracking-wide">
           Our <span className="text-pink-400">Success</span> Stories
         </h1>
@@ -84,8 +80,7 @@ const Ivfsection = () => {
           </div>
         </div>
 
-        {/* Marquee Video Section */}
-        <div className="w-full overflow-hidden  py-10 mt-5 flex justify-center">
+        <div className="w-full overflow-hidden py-10 mt-5 flex justify-center">
           <motion.div
             className="flex space-x-10"
             animate={controls}
@@ -100,27 +95,20 @@ const Ivfsection = () => {
                 <iframe
                   width="100%"
                   height="230"
-                  src={`${link}?autoplay=${playing[index] ? 1 : 0}&mute=1&loop=1&playlist=${
-                    link.split("/embed/")[1]
-                  }`}
+                  src={`${link}?autoplay=${playing[index] ? 1 : 0}&mute=1&loop=1&playlist=${link.split("embed/")[1].split("?")[0]}`}
                   title={`YouTube Video ${index + 1}`}
                   frameBorder="0"
-                  allow="autoplay; encrypted-media"
+                  allow="autoplay; encrypted-media; picture-in-picture"
                   allowFullScreen
                   className="rounded-xl"
                 ></iframe>
 
-                {/* Play/Pause Button */}
                 <button
                   className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full"
                   onClick={() => togglePlay(index)}
                 >
                   {playing[index] ? <Pause size={24} /> : <Play size={24} />}
                 </button>
-
-                {/* Video Title */}
-                {/* <h3 className="mt-4 font-bold text-lg">Video {index + 1}</h3>
-                <p className="text-gray-600">Published: 2024</p> */}
                 <div className="p-5"></div>
               </div>
             ))}

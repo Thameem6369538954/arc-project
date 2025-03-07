@@ -88,13 +88,13 @@ const toggleSubDropdown = (subIndex) => {
         </Link>
 
         {/* Desktop Menu */}
-        <ul className="hidden lg:flex space-x-6">
+        <ul className="hidden lg:flex space-x-3 lg:space-x-5">
           {menuItems.map((menu, index) => (
             <li key={index} className="relative group">
               <Link
                 to={menu.link}
                 onClick={closeMenu}
-                className="hover:text-pink-500 px-2 py-2 flex items-center px-4"
+                className="hover:text-pink-500 px-2 py-2 flex items-center px-1"
               >
                 {menu.title} {menu.submenu && <SlArrowDown className="ml-1" />}
               </Link>

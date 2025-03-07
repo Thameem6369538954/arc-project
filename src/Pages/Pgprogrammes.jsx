@@ -14,7 +14,7 @@ const AdmissionForm = () => {
             className="text-center md:text-left "
           >
             <div>
-            <h2 className="text-4xl font-bold text-pink-600">M.SC Clinical Embryology</h2>
+            <h2 className="text-4xl font-bold text-pink-600">M.Sc Clinical Embryology</h2>
             <p className="mt-3 text-gray-700">
               Duration: 2 Years (as per ART law)<br />
               
