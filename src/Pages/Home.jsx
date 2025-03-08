@@ -13,6 +13,7 @@ import FAQ from '../Components/Faq'
 import Gallery from '../Components/Gallery'
 import Dummy from "../Pages/Dummy.jsx"
 import Card from "../Components/Card.jsx"
+import OfferShowcase from '../Components/OfferShowcase.jsx'
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
         <HeaderA />
         <Card />
         <Whyfertility />
+        <OfferShowcase />
         <VitroFertilization />
         <Team />  
         <Gallery />

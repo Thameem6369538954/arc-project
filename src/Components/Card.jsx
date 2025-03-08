@@ -28,7 +28,7 @@ const WomensDayCard = () => {
         </button>
         <Lottie animationData={womensday} className='absolute'/>
         <img src={JJ} alt="Women's Day" className="rounded-lg h-[90vh] w-[]" />
-        <p className="text-center text-lg font-[newa] mt-4">Happy Women's Day</p>
+        {/* <p className="text-center text-lg font-[newa] mt-4">Happy Women's Day</p> */}
       </div>
     </div>
   );
