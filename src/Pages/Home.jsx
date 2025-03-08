@@ -12,6 +12,7 @@ import ScrollToTop from '../Components/ScrollToTop'
 import FAQ from '../Components/Faq'
 import Gallery from '../Components/Gallery'
 import Dummy from "../Pages/Dummy.jsx"
+import Card from "../Components/Card.jsx"
 
 const Home = () => {
   return (
@@ -19,11 +20,10 @@ const Home = () => {
         {/* <Header /> */}
         <ScrollToTop />
         <HeaderA />
+        <Card />
         <Whyfertility />
-        {/* <NumberRolling /> */}
         <VitroFertilization />
         <Team />  
-        {/* <Dummy /> */}
         <Gallery />
         <OurServices />
         <IVFSection />

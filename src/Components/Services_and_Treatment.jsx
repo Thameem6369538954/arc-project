@@ -5,11 +5,18 @@ import Adice from "../SerImg/Serv/Adice.jpg";
 import Yoh from "../SerImg/Serv/Yoh.jpg";
 import Conselt from "../SerImg/Serv/Conselt.jpg";
 import Tools from "../SerImg/Serv/Tools.jpg";
-import Social from "../SerImg/Serv/Social.jpg";
-import Clinic from "../SerImg/Serv/Clinic.jpg";
-import Surgery from "../SerImg/Serv/Surgery.jpg";
-import Bank from "../SerImg/Serv/Bank.jpg";
 
+import flat from "../Servicespage/ServicesImages/flat.jpg"
+import tp from "../Servicespage/ServicesImages/tp.jpg"
+import drunk from "../Servicespage/ServicesImages/drunk.jpg"
+import Frez from "../Servicespage/ServicesImages/Frez.jfif"
+import bmi from "../Servicespage/ServicesImages/bmi.jfif"
+import Time from "../Servicespage/ServicesImages/Time.jfif"
+import Ex from "../Servicespage/ServicesImages/Ex.jfif"
+import Neut from "../Servicespage/ServicesImages/Neut.jfif"
+import yoga from "../Servicespage/ServicesImages/yoga.jfif"
+import thero from "../Servicespage/ServicesImages/thero.jfif"
+import Acup from "../Servicespage/ServicesImages/Acup.jfif"
 const ServicesAndTreatment = () => {
   const [activeTab, setActiveTab] = useState("services");
   const [selectedItem, setSelectedItem] = useState(null);
@@ -21,29 +28,29 @@ const ServicesAndTreatment = () => {
         image: Clock,
         link: "/services/consulting",
         innerBoxes: [
-          { title: "Egg Freezing", image: Clock, link: "/EggFreezing" },
-          { title: "Fertility Preservation", image: Adice, link: "/Fertility_preservation" },
-          { title: "BMI Calculator", image: Yoh, link: "/services/consultation" },
+          { title: "Egg Freezing", image:Frez, link: "/EggFreezing" },
+          { title: "Fertility Preservation", image: flat, link: "/Fertility_preservation" },
+          { title: "BMI Calculator", image: bmi, link: "/services/consultation" },
         ],
       },
       {
         title: "Lifestyle and conception advice",
         image: Adice,
         innerBoxes: [
-          { title: "Timing & Frequency Of Intercourse", image: Conselt, link: "/TimingandFrequencyOfIntercourse" },
-          { title: "Exercise In Moderation", image: Tools, link: "/Exercise_in_Moderation" },
-          { title: "Nutrition & Fertility", image: Tools, link: "/NutritionandFertility" },
-          { title: "BMI & Fertility", image: Tools, link: "/BMIandfertility" },
-          { title: "Alcohol & Drug Use", image: Tools, link: "/Alcoholanddrug" },
+          { title: "Timing & Frequency Of Intercourse", image: Time, link: "/TimingandFrequencyOfIntercourse" },
+          { title: "Exercise In Moderation", image: Ex, link: "/Exercise_in_Moderation" },
+          { title: "Nutrition & Fertility", image: Neut, link: "/NutritionandFertility" },
+          { title: "BMI & Fertility", image: bmi, link: "/BMIandfertility" },
+          { title: "Alcohol & Drug Use", image: drunk, link: "/Alcoholanddrug" },
         ],
       },
       {
         title: "Therapeutic Activity For Patients",
-        image: Adice,
+        image: tp,
         innerBoxes: [
-          { title: "Yoga", image: Conselt, link: "/Yoga" },
-          { title: "Massage Therapy", image: Tools, link: "/MassageTherapy" },
-          { title: "Acupuncture", image: Tools, link: "/Acupuncture" },
+          { title: "Yoga", image: yoga, link: "/Yoga" },
+          { title: "Massage Therapy", image: thero, link: "/MassageTherapy" },
+          { title: "Acupuncture", image: Acup, link: "/Acupuncture" },
           { title: "Medication", image: Tools, link: "/Medication" },
           // { title: "Fertility Preservation", image: Tools, link: "/services/fitness-advice" },
           { title: "Walking/Hiking ", image: Tools, link: "/Walking_Hiking" },

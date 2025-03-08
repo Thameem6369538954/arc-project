@@ -1,14 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const CookiePopup = () => {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   const [showPreferences, setShowPreferences] = useState(false);
 
+  useEffect(() => {
+    const cookieConsent = localStorage.getItem("cookieConsent");
+    if (!cookieConsent) {
+      setShow(true);
+    }
+  }, []);
+
   const handleAccept = () => {
+    localStorage.setItem("cookieConsent", "accepted");
     setShow(false);
   };
 
   const handleReject = () => {
+    localStorage.setItem("cookieConsent", "rejected");
     setShow(false);
   };
 
@@ -19,7 +28,7 @@ const CookiePopup = () => {
   return (
     <>
       {show && (
-        <div className="fixed inset-x-0 bottom-10 font-[choco] bg-opacity-40 flex items-center justify-center z-50">
+        <div className="fixed inset-x-0 bottom-10 font-[choco] bg-opacity-40 flex items-center justify-center z-40">
           <div className="bg-white p-6 rounded-lg shadow-lg text-center w-11/12 max-w-8xl animate-fade relative">
             {/* Close Button */}
             <button

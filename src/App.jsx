@@ -4,6 +4,7 @@ import Chatbot from "./Components/Chatbot";
 import Chatbotnew from "./Components/Chatbotnew";
 import CookiesComponent from "./Components/CookiesComponent";
 import ContactButton from "./Components/ContactButton";
+// import Card from "./Components/Card"
 
 const Navbar = lazy(() => import("./Components/Navbar"));
 const AllRouter = lazy(() => import("./Allroutes/AllRouter"));
@@ -23,7 +24,7 @@ function App() {
   <Navbar />
   <ContactButton phoneNumber="+916369538954" whatsappNumber="+917811999999"  />
   <Chatbot />
-  {/* <Chatbotnew /> */}
+  {/* <Card /> */}
           <AllRouter />
           <CookiesComponent />
 
