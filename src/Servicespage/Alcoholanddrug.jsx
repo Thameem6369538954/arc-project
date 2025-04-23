@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import EX from "../Images/BlogFertilityPreservation.jpeg"; 
 
 const FertilityInfo = () => {
   const fadeIn = {
@@ -8,6 +9,17 @@ const FertilityInfo = () => {
 
   return (
     <div className="p-6 max-w-9xl mx-auto mt-40 font-[choco]">
+
+         <div className="w-full h-[500px] relative">
+                    <img
+                      src={EX}
+                      alt="Exercise in Moderation"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/30 bg-opacity-40 flex items-center justify-center"></div>
+                  </div>
+
+                  
          <motion.h2
         initial="hidden"
         animate="visible"

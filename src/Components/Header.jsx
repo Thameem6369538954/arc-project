@@ -45,7 +45,8 @@ export default function Header() {
 
 
   return (
-    <header className="relative w-full min-h-[80vh]  bg-white overflow-hidden flex items-center justify-center ">
+    <div className="-mt-55">
+    <header className="relative w-full min-h-[90vh]  bg-white overflow-hidden flex items-center justify-center ">
       {/* Blurred Glass Effect */}
       <div className="absolute inset-0 bg-white/60 backdrop-blur-2xl border border-gray-200 rounded-lg shadow-lg"></div>
 
@@ -125,5 +126,7 @@ export default function Header() {
 </div>
 
     </header>
+
+    </div>
   );
 }

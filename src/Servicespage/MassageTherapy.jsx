@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import EX from "../Images/BlogFertilityPreservation.jpeg"; // Replace with your local image path if needed
 
 const contentData = [
   {
@@ -24,6 +25,15 @@ const contentData = [
 export default function MassageTherapyComponent() {
   return (
     <div className=' mt-36 font-[choco]'>
+       <div className="w-full h-[500px] relative">
+              <img
+                src={EX}
+                alt="Exercise in Moderation"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black/30 bg-opacity-40 flex items-center justify-center"></div>
+            </div>
+
             <h1 className='font-[belli] text-6xl text-center'>Massage Therapy</h1>
             <div className="grid md:grid-cols-1 gap-6 p-6">
 

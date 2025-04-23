@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import EX from "../Images/BlogFertilityPreservation.jpeg"; // Replace with your local image path if needed
 
 export default function EmotionalSession() {
   const fadeIn = {
@@ -8,17 +9,20 @@ export default function EmotionalSession() {
 
   return (
     <div className="container mx-auto px-4 py-10 font-[choco] mt-25">
-        <motion.h2
-        className="text-6xl font-bold text-center text-pink-600 mb-6"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeIn}
-      >
-       Emotional Considerations
-      </motion.h2>
+        <div className="w-full h-[500px] relative">
+                          <img
+                            src={EX}
+                            alt="Exercise in Moderation"
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute inset-0 bg-black/30 bg-opacity-40 flex items-center justify-center"></div>
+                        </div>
+                  <h1 className="text-3xl font-bold text-center mb-6 text-pink-400 p-5" >
+                  Emotional Considerations
+                  </h1>
+       
       <motion.p
-        className="text-xl  mb-6"
+        className="text-xl  mb-6 text-xl"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -26,7 +30,7 @@ export default function EmotionalSession() {
       >
 Dealing with infertility problem can be sometimes much more strenuous than expected and often lead to emotional failure in certain cases. Recognizing and accepting the fact that the entire process of infertility treatment involves a lot of emotional ups and downs is very important. If you are dealing with such mental conditions then you are not alone. There are several couples who often feel mentally stressed out due to infertility problems. Though, it will be incorrect to say that the entire treatment involves feelings related to anxiety and stress only. Excitement, uncertainty, elation, depression are few of the feelings that are felt by the couples. ARC aims at reducing their stress levels so that they have a healthy and stable mental condition and are able to cope up with emotionally worsen situations.      </motion.p>
       <motion.h2
-        className="text-2xl font-bold text-pink-600 mb-6"
+        className="text-2xl font-bold text-pink-600 mb-6 text-xl"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -35,7 +39,7 @@ Dealing with infertility problem can be sometimes much more strenuous than expec
         How does emotional consideration session help patients?
       </motion.h2>
       <motion.p
-        className="text-gray-700 mb-6"
+        className="text-gray-700 mb-6 text-xl"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -53,7 +57,7 @@ Dealing with infertility problem can be sometimes much more strenuous than expec
         Why should patients attend these sessions?
       </motion.h3>
       <motion.p
-        className="text-gray-700 mb-6"
+        className="text-gray-700 mb-6 text-xl"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -71,7 +75,7 @@ When undergoing infertility treatments you might feel frustrated, depressed, str
         Why choose ARC?
       </motion.h3>
       <motion.p
-        className="text-gray-700 mb-6"
+        className="text-gray-700 mb-6 text-xl"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}

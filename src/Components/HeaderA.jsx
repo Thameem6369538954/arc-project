@@ -34,7 +34,7 @@ const HeaderA = () => {
     };
 
     return (
-        <div className="relative">
+        <div className="relative -mt-10 md:-mt-30" >
             {/* Header Section */}
             <motion.div
                 className="w-full md:min-h-[100vh]  mt-20 md:mt-5 lg:mt-5 md:min-h-[120vh] min-h-[110vh] bg-[#fff8ef] flex flex-col md:flex-row items-center justify-center p-5 md:p-10 relative text-center md:text-left"
@@ -161,7 +161,7 @@ const HeaderA = () => {
                     ✅ Your appointment was successfully submitted!
                 </motion.div>
             )}
-            <div className="absolute w-[100%] md:-bottom-32 lg:-bottom-40  xl:-bottom-52 "> 
+            <div className="absolute w-[100%] md:-bottom-35 lg:-bottom-45  xl:-bottom-55 "> 
                 <img src={wave} className="w-[100%]" alt="" />
             </div>
         </div>

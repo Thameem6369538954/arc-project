@@ -37,7 +37,7 @@ const OfferShowcase = () => {
             <img
               src={offer.image}
               alt={offer.title}
-              className="w-88 h-88 object-cover rounded-lg shadow-md"
+              className="w-88 h-88 object-fit rounded-lg shadow-md"
             />
             {/* <h2 className="text-xl font-bold text-gray-800 mt-4">
               {offer.title}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaCheckSquare } from 'react-icons/fa';
+import EX from "../Images/BlogFertilityPreservation.jpeg"; 
 
 const BmiFertility = () => {
   const listItems = [
@@ -40,6 +41,14 @@ const BmiFertility = () => {
 
   return (
     <div className="p-8 space-y-8 mt-30 font-[choco]">
+            <div className="w-full h-[500px] relative">
+              <img
+                src={EX}
+                alt="Exercise in Moderation"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black/30 bg-opacity-40 flex items-center justify-center"></div>
+            </div>
       <h2 className="text-6xl font-[belli] text-center ">BMI and Fertility</h2>
       <ul className="space-y-2">
         {listItems.map((item, index) => (

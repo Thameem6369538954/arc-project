@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import EX from "../Images/BlogFertilityPreservation.jpeg"; // Replace with your local image path if needed
 
 const content = [
   {
@@ -22,8 +23,18 @@ const content = [
 export default function PremaritalCounseling() {
   return (
     <div className="p-10 mt-20 font-[choco]">
+        <div className="w-full h-[500px] relative">
+                          <img
+                            src={EX}
+                            alt="Exercise in Moderation"
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute inset-0 bg-black/30 bg-opacity-40 flex items-center justify-center"></div>
+                        </div>
         <div>
-            <h1 className='p-5 text-center font-[belli] text-6xl'>Premarital Counseling</h1>
+                  <h1 className="text-3xl font-bold text-center mb-6 text-pink-400 p-5" >
+                  Premarital Counseling
+                  </h1>
             <p>Marriage is a platonic conception pursued through long-standing undertaking made between two singles. So it is a social congregation to give a momentum to accelerate the journey of a newly married couple to reach the destiny with a spirit of miles to go before they sleep. Marriage is a union of relationship, living wills, decision making in all sphere of activities of life. New couples, mostly think with an emotional assumption that they can conceive a baby. In reality, many of them fall in heartbreaking turmoil when conception becomes problematic. ARC is here with the qualified marriage counselors to give you pre marital counseling support. The necessities of premarital counseling are discussed below.</p>
         </div>
 

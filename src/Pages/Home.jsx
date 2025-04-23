@@ -21,9 +21,10 @@ const Home = () => {
         {/* <Header /> */}
         <ScrollToTop />
         <HeaderA />
+        <div>
         <Card />
         <Whyfertility />
-        <OfferShowcase />
+        {/* <OfferShowcase /> */}
         <VitroFertilization />
         <Team />  
         <Gallery />
@@ -32,6 +33,8 @@ const Home = () => {
 
         <FAQ />
         <ContactForm />
+        </div>
+       
 
     </div>
   )

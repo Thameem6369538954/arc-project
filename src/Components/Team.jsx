@@ -1,6 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { motion } from "framer-motion";
 import Maha from "../Images/Maha.jpg";
 import Arun from "../Images/Arun.png";
 import Avanti from "../Images/Avanti.png";
@@ -35,48 +36,64 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <div className="w-full min-h-[85vh] flex flex-col items-center bg-[#ffc9d7] py-16">
-      <h2 className="text-3xl md:text-5xl font-[Belli] text-gray-800 text-center mb-12 animate-fade-up">
-        Meet Our <span className="text-[#1c97c8]">Expert Team</span>
-      </h2>
-
-      <Swiper
-        spaceBetween={30}
-        slidesPerView={1}
-        loop={true}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
-        breakpoints={{
-          640: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-        }}
-        className="w-[95%] mx-auto"
+    <div className="w-full min-h-screen flex flex-col justify-center items-center bg-[#ffc9d7] py-16">
+      <motion.h2
+        className="text-3xl md:text-5xl font-[Belli] text-gray-800 text-center mb-12"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
       >
-        {teamMembers.map((member, index) => (
-          <SwiperSlide key={index} className="flex justify-center">
-            <div className="bg-white p-10 shadow-xl rounded-2xl w-80 h-[370px] flex flex-col items-center transition-all hover:scale-105 hover:shadow-2xl animate-zoom-in">
-              <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-pink-400 shadow-lg mb-6">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              <h3 className="text-xl font-[choco] text-gray-900 mb-2 text-center">
-                {member.name}
-              </h3>
-              <p className="text-pink-400 text-center text-sm font-[choco] font-bold leading-relaxed mb-2">
-                {member.education}
-              </p>
-              <p className="text-[#1c97c8] font-[choco] font-bold text-center">
-                {member.position}
-              </p>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+        Meet Our <span className="text-[#1c97c8]">Expert Team</span>
+      </motion.h2>
+
+      <div className="w-full flex justify-center">
+        <Swiper
+          spaceBetween={30}
+          slidesPerView={1}
+          loop={true}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          className="w-full max-w-[90%] md:max-w-[80%] lg:max-w-[70%]"
+        >
+          {teamMembers.map((member, index) => (
+            <SwiperSlide key={index} className="flex justify-center">
+              <motion.div
+                className="bg-white p-10 shadow-xl rounded-2xl w-80 h-[370px] flex flex-col items-center transition-all hover:scale-105 hover:shadow-2xl"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+              >
+                <motion.div
+                  className="w-40 h-40 rounded-full overflow-hidden border-4 border-pink-400 shadow-lg mb-6"
+                  whileHover={{ scale: 1.1 }}
+                >
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
+                </motion.div>
+                <h3 className="text-xl font-[choco] text-gray-900 mb-2 text-center">
+                  {member.name}
+                </h3>
+                <p className="text-pink-400 text-center text-sm font-[choco] font-bold leading-relaxed mb-2">
+                  {member.education}
+                </p>
+                <p className="text-[#1c97c8] font-[choco] font-bold text-center">
+                  {member.position}
+                </p>
+              </motion.div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
 };
 
 export default Team;
+   

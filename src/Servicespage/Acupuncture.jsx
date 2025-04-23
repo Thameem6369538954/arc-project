@@ -1,10 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import EX from "../Images/BlogFertilityPreservation.jpeg"; // Replace with your local image path if needed
 
 const AcupuncturePage = () => {
   return (
-    <div className="container mx-auto p-6 mt-30 font-[choco]">
-      <h1 className="text-3xl font-bold text-center mb-6">
+    <div className=" mx-auto p-6 mt-30 font-[choco]">
+          <div className="w-full h-[500px] relative">
+              <img
+                src={EX}
+                alt="Exercise in Moderation"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black/30 bg-opacity-40 flex items-center justify-center"></div>
+            </div>
+      <h1 className="text-3xl font-bold text-center mb-6 text-pink-400 p-5" >
         How does acupuncture work?
       </h1>
       <p className="text-gray-700 mb-6">
@@ -18,7 +27,7 @@ const AcupuncturePage = () => {
         Acupuncture is a treatment that is being used since ancient times and is looked after as a pain-free treatment for dealing with infertility problems. Many acupuncturists said that almost every patient approaches for acupuncture treatment after trying all other possible alternatives. The treatment involves the use of hair-fine needles that are positioned across meridians of the body relating to body organs. These pressure points stimulate the flow of energy to the brain through the set meridian pathway. As a result of this stimulation, the brain releases pain-relieving hormones and also helps in calming neurotransmitters. Acupuncture therapy when combined with herbal medicines gives wonderful results in overcoming all infertility problems. The reason why acupuncture is preferred by many is that this treatment leaves the patient with no side-effects and is also effective at the same time.
       </p>
 
-      <h3 className="text-xl font-semibold mb-4">
+      <h3 className="text-2xl font-semibold mb-4 text-pink-400">
         What is the correct timing for acupuncture treatment?
       </h3>
       <p className="text-gray-700 mb-6">
