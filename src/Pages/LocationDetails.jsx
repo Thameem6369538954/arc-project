@@ -7,10 +7,17 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 
-const tabs = ["OverView", "Our Specialist", "Gallery", "Contact Details", "Testimonial"];
-
 const LocationDetails = () => {
   const location = useLocation();
+
+  const tabs = [
+    "OverView",
+    "Our Specialist",
+    "Gallery",
+    "Contact Details",
+    "Testimonial",
+  ];
+
   const [data, setData] = useState(
     location.state || JSON.parse(localStorage.getItem("locationData"))
   );
@@ -54,34 +61,42 @@ const LocationDetails = () => {
 
   return (
     <div className="md:p-10 mt-20 font-[choco] w-full min-h-[60vh] bg-[#f5efe1] scroll-smooth">
-      <div className="flex flex-col md:flex-row items-center justify-around gap-5 w-full">
+      {/* Header Section with Background Image */}
+      <div className="relative w-full h-[300px] bg-cover bg-center" style={{ backgroundImage: `url(${data.headerImage})` }}>
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0 flex justify-center items-center z-10 text-white">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold">{data.name}</h1>
+            <p className="mt-2 text-xl">{data.description}</p>
+            <button className="mt-4 px-6 py-3 bg-pink-500 rounded-full text-white hover:bg-pink-600 transition-all">
+              Get More Info
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col md:flex-row items-center justify-around gap-5 w-full mt-10">
         <div className="w-full">
 
-          {/* Title */}
-          <h1 className="text-3xl font-bold text-center md:text-left p-2">{data.name}</h1>
-
           {/* Sticky Tabs */}
-          <ul
-  className="flex flex-wrap justify-center md:justify-start border-b bg-pink-500 text-white sticky top-16 z-30 shadow-md"
->
-  {tabs.map((tab, i) => (
-    <li
-      key={i}
-      onClick={() => {
-        setActiveTab(tab);
-        scrollToSection(tab);
-      }}
-      className={`cursor-pointer px-4 py-2 text-sm md:px-6 md:py-3 md:text-base transition-all whitespace-nowrap
-        ${
-          activeTab === tab
-            ? "bg-white text-pink-600 border-l border-r border-t rounded-t-md"
-            : "hover:bg-pink-400"
-        }`}
-    >
-      {tab}
-    </li>
-  ))}
-</ul>
+          <ul className="flex flex-wrap justify-center md:justify-start border-b bg-pink-500 text-white sticky top-16 z-30 shadow-md">
+            {tabs.map((tab, i) => (
+              <li
+                key={i}
+                onClick={() => {
+                  setActiveTab(tab);
+                  scrollToSection(tab);
+                }}
+                className={`cursor-pointer px-4 py-2 text-sm md:px-6 md:py-3 md:text-base transition-all whitespace-nowrap
+                ${activeTab === tab
+                  ? "bg-white text-pink-600 border-l border-r border-t rounded-t-md"
+                  : "hover:bg-pink-400"
+                }`}
+              >
+                {tab}
+              </li>
+            ))}
+          </ul>
 
           {/* OverView */}
           <section ref={sections["OverView"]} className="p-5 scroll-mt-120">
@@ -100,30 +115,49 @@ const LocationDetails = () => {
             )}
           </section>
 
-          {/* Our Specialist */}
+          {/* Our Specialist - Carousel with Doctor Details */}
           <section ref={sections["Our Specialist"]} className="p-5 scroll-mt-45">
             <h2 className="text-xl font-bold mb-2">Our Specialist</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <Swiper
+              navigation
+              modules={[Navigation, Pagination, Autoplay]}
+              spaceBetween={20}
+              slidesPerView={1}
+              loop
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              pagination={{ clickable: true }}
+              breakpoints={{
+                640: {
+                  slidesPerView: 2, // 2 items per slide for medium screens
+                },
+                1024: {
+                  slidesPerView: 3, // 3 items per slide for larger screens
+                },
+              }}
+              className="mySwiper"
+            >
               {data.spldoctors?.length > 0 ? (
                 data.spldoctors.map((doc, i) => (
-                  <div
-                    key={i}
-                    className="border border-pink-400 p-4 rounded text-center bg-white"
-                  >
-                    <img
-                      src={doc.docImg}
-                      alt={doc.docname}
-                      className="h-[100px] w-auto mx-auto object-contain"
-                    />
-                    <p className="font-semibold mt-2">{doc.docname}</p>
-                    <p className="text-sm">{doc.qualification}</p>
-                    <p className="text-xs text-gray-500">{doc.from}</p>
-                  </div>
+                  <SwiperSlide key={i}>
+                    <div className="border border-pink-400 p-4 rounded text-center bg-white">
+                      <img
+                        src={doc.docImg}
+                        alt={doc.docname}
+                        className="h-[400px] w-auto mx-auto object-contain"
+                      />
+                      <p className="font-semibold mt-2">{doc.docname}</p>
+                      <p className="text-sm">{doc.qualification}</p>
+                      <p className="text-xs text-gray-500">{doc.from}</p>
+                      <p className="mt-2 text-sm">{doc.description}</p>
+                      <p className="mt-1 text-xs">Experience: {doc.experience} years</p>
+                      <p className="mt-1 text-xs">Contact: {doc.contact}</p>
+                    </div>
+                  </SwiperSlide>
                 ))
               ) : (
                 <p>No Doctors Found</p>
               )}
-            </div>
+            </Swiper>
           </section>
 
           {/* Gallery */}
