@@ -36,15 +36,11 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <div className="w-full min-h-screen flex flex-col justify-center items-center bg-[#ffc9d7] py-16">
-      <motion.h2
-        className="text-3xl md:text-5xl font-[Belli] text-gray-800 text-center mb-12"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        Meet Our <span className="text-[#1c97c8]">Expert Team</span>
-      </motion.h2>
+    <div className="w-full min-h-auto flex flex-col justify-center items-center bg-[#ffc9d7] py-16">
+   
+      <h1 className="font-[Belli] text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl mt-5 p-7 text-black tracking-wide text-center">
+      Meet Our  <span className='text-[#1c97c8]'>Expert Team</span> 
+        </h1>
 
       <div className="w-full flex justify-center">
         <Swiper

@@ -24,7 +24,10 @@ const FlipBookSlider = () => {
   return (
     <div className="w-full min-h-[70vh] flex flex-col items-center bg-[#fff8ef] py-10">
       <h1 className="text-4xl font-[Belli] text-black mb-10 text-center">
-        Awards <span className='text-[#1c97c8]'>& Recognitions</span>
+        <span className='text-[#1c97c8]'></span>
+        <h1 className="font-[Belli] text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl mt-5 p-7 text-black tracking-wide text-center">
+        Awards <span className='text-[#1c97c8]'>& Recognitions</span> 
+        </h1>
       </h1>
       <div className="embla w-[90%] max-w-[800px] overflow-hidden rounded-lg shadow-lg" ref={emblaRef}>
         <div className="flex">

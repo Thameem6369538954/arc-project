@@ -37,8 +37,7 @@ const ContactForm = () => {
 
   return (
     <div className="bg-[#bed1e3] w-full min-h-[100vh] ">
-      <div className="p-5 bg-white
-bg-white">
+      <div className="p-5 bg-white grid place-items-center">
         <h1 className="font-[Belli] text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl  p-2">We Are Always Ready to Help You. Book An Appointment.</h1>
         <p className="font-[choco] md:text-4xl text-3xl  rounded text-center text-pink-400 p-5 font-bold"> Get Flat 100% Off On investigation<span className="text-pink-400">* </span> </p>
         <p className="font-[choco] md:text-3xl text-1xl  rounded text-center " >*First-Time-Visit</p>

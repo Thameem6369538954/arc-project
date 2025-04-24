@@ -30,7 +30,7 @@ const ServicesAndTreatment = () => {
         innerBoxes: [
           { title: "Egg Freezing", image:Frez, link: "/EggFreezing" },
           { title: "Fertility Preservation", image: flat, link: "/Fertility_preservation" },
-          { title: "BMI Calculator", image: bmi, link: "/services/consultation" },
+          { title: "BMI Calculator", image: bmi, link: "/BMIandfertility" },
         ],
       },
       {
@@ -268,7 +268,11 @@ const ServicesAndTreatment = () => {
 
   return (
     <div className="w-full min-h-screen bg-[#fed9c9] flex items-center justify-center py-12 mt-25">
-      <div className="w-full max-w-6xl bg-white p-6 text-center rounded-lg shadow-lg">
+      <div className="w-full max-w-8xl bg-white p-6 text-center rounded-lg shadow-lg">
+        <h1 className=""></h1>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-[Belli] text-gray-900 tracking-wide">
+        Services  & <span className="text-[#1c97c8]">Treatment</span>
+        </h1>
         {/* Tabs */}
         <div className="flex bg-black rounded-full w-fit font-[choco] font-bold p-1 m-5 gap-1 max-w-full overflow-x-auto sm:justify-center">
   {["services", "treatments","procedures", "payments"].map((tab) => (
@@ -292,7 +296,7 @@ const ServicesAndTreatment = () => {
 
 
         {/* Cards */}
-        <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
+        <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 font-[choco] text-xl">
           {data[activeTab].map((item, index) => (
             <motion.div
               key={index}
@@ -303,7 +307,7 @@ const ServicesAndTreatment = () => {
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-40 object-cover rounded-lg mb-3"
+                className="w-full h-70 object-cover rounded-lg mb-3"
               />
               <h3>{item.title}</h3>
             </motion.div>

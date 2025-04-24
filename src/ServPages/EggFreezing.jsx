@@ -6,15 +6,15 @@ const EggFreezingPage = () => {
   return (
     <div className="min-h-screen bg-[#f5efe1] text-gray-700 font-[choco] mt-10 md:mt-28">
       {/* Header Image */}
-      <div className="w-full">
+      <div className="w-full flex justify-start ">
         <img
           src={eggfreezing}
           alt="Egg Freezing"
-          className="md:w-[30%] object-fit mt-5 p-5"
+          className="w-full md:w-[30%] object-cover mt-5 p-5 md:ml-25"
         />
       </div>
 
-      <div className="container mx-auto p-6 md:flex gap-10">
+      <div className="w-[90%] mx-auto p-6 md:flex gap-10">
         {/* Left Content */}
         <div className="md:w-3/4">
           <h1 className="text-3xl font-bold text-pink-600 mb-4">Egg Freezing</h1>

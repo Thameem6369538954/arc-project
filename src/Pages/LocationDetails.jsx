@@ -59,9 +59,30 @@ const LocationDetails = () => {
 
   const galleryImages = [data.imga, data.imgb, data.imgc, data.imgd];
 
+  // Form state
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleInputChange = (e) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Submitted Data:", formData);
+    alert("Form submitted successfully!");
+    setFormData({ name: "", email: "", phone: "", message: "" });
+  };
+
   return (
     <div className="md:p-10 mt-20 font-[choco] w-full min-h-[60vh] bg-[#f5efe1] scroll-smooth">
-      {/* Header Section with Background Image */}
       <div className="relative w-full h-[300px] bg-cover bg-center" style={{ backgroundImage: `url(${data.headerImage})` }}>
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="absolute inset-0 flex justify-center items-center z-10 text-white">
@@ -77,7 +98,6 @@ const LocationDetails = () => {
 
       <div className="flex flex-col md:flex-row items-center justify-around gap-5 w-full mt-10">
         <div className="w-full">
-
           {/* Sticky Tabs */}
           <ul className="flex flex-wrap justify-center md:justify-start border-b bg-pink-500 text-white sticky top-16 z-30 shadow-md">
             {tabs.map((tab, i) => (
@@ -98,12 +118,12 @@ const LocationDetails = () => {
             ))}
           </ul>
 
-          {/* OverView */}
+          {/* Overview Section */}
           <section ref={sections["OverView"]} className="p-5 scroll-mt-120">
-            <h2 className="text-xl font-bold mb-2">Services Offered</h2>
+            <h2 className="text-4xl font-bold mb-2">Treatments Offered</h2>
             <p className="mb-4">{data.vanakkam}</p>
             {data.services?.length > 0 ? (
-              <ul className="list-disc pl-5 space-y-1">
+              <ul className="list-disc pl-5 space-y-3 text-xl">
                 {data.services.map((ser, i) =>
                   Object.values(ser).map((val, idx) => (
                     <li key={`${i}-${idx}`}>{val}</li>
@@ -115,7 +135,7 @@ const LocationDetails = () => {
             )}
           </section>
 
-          {/* Our Specialist - Carousel with Doctor Details */}
+          {/* Our Specialist */}
           <section ref={sections["Our Specialist"]} className="p-5 scroll-mt-45">
             <h2 className="text-xl font-bold mb-2">Our Specialist</h2>
             <Swiper
@@ -127,14 +147,9 @@ const LocationDetails = () => {
               autoplay={{ delay: 3000, disableOnInteraction: false }}
               pagination={{ clickable: true }}
               breakpoints={{
-                640: {
-                  slidesPerView: 2, // 2 items per slide for medium screens
-                },
-                1024: {
-                  slidesPerView: 3, // 3 items per slide for larger screens
-                },
+                640: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
               }}
-              className="mySwiper"
             >
               {data.spldoctors?.length > 0 ? (
                 data.spldoctors.map((doc, i) => (
@@ -160,7 +175,7 @@ const LocationDetails = () => {
             </Swiper>
           </section>
 
-          {/* Gallery */}
+          {/* Gallery Section */}
           <section ref={sections["Gallery"]} className="p-5 scroll-mt-40">
             <h2 className="text-xl font-bold mb-2">Gallery</h2>
             <Swiper navigation modules={[Navigation]} className="mySwiper">
@@ -191,9 +206,57 @@ const LocationDetails = () => {
             >
               Open in Google Maps
             </a>
+
+            {/* Contact Form */}
+            <div className="mt-6 bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  placeholder="Your Name"
+                  required
+                  className="w-full border border-gray-300 rounded px-4 py-2"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  placeholder="Your Email"
+                  required
+                  className="w-full border border-gray-300 rounded px-4 py-2"
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  placeholder="Phone Number"
+                  className="w-full border border-gray-300 rounded px-4 py-2"
+                />
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  placeholder="Your Message"
+                  rows={4}
+                  required
+                  className="w-full border border-gray-300 rounded px-4 py-2"
+                />
+                <button
+                  type="submit"
+                  className="w-full bg-pink-500 text-white py-2 px-4 rounded hover:bg-pink-600"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
           </section>
 
-          {/* Testimonial */}
+          {/* Testimonial Section */}
           <section ref={sections["Testimonial"]} className="p-5 scroll-mt-50">
             <h2 className="text-xl font-bold mb-2">
               {data?.testimonials?.heading || "Testimonials"}
@@ -237,7 +300,6 @@ const LocationDetails = () => {
               <p>No Testimonials Found</p>
             )}
           </section>
-
         </div>
       </div>
     </div>

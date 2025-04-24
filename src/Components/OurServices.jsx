@@ -37,12 +37,10 @@ const OurServices = () => {
     className="min-h-screen p-6 md:p-12 bg-cover bg-center bg-no-repeat bg-fixed  top-0"
     style={{ backgroundImage: `url(${BlogBg})` }} // ✅ Background image applied inline
   >
-  
-      {/* Title */}
-      <h1 className="text-black text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl font-[Belli] mb-12">
-        Our <span className="text-black">Blogs</span>
-      </h1>
 
+      <h1 className="font-[Belli] text-3xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl mt-5 p-7 text-black tracking-wide text-center">
+      Our <span className='text-[#1c97c8]'>Blogs</span> 
+        </h1>
       {/* Swiper Slider */}
       <Swiper
         spaceBetween={20}
