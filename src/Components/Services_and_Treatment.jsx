@@ -199,23 +199,14 @@ const ServicesAndTreatment = () => {
     ],
     payments: [
       {
-        title: "India",
+        title: "Payments",
         image: Clock,
         link: "/services/consulting",
-        innerBoxes: [
-          { title: "Egg Freezing", image: Clock, link: "/services/egg-freezing" },
-          { title: "IVF Process", image: Adice, link: "/services/ivf-process" },
-          { title: "Consultation", image: Yoh, link: "/services/consultation" },
-        ],
+        // innerBoxes: [
+        //   { title: "Payment", image: Clock, link: "/services/egg-freezing" },
+        // ],
       },
-      {
-        title: "International",
-        image: Adice,
-        innerBoxes: [
-          { title: "Diet Plans", image: Conselt, link: "/services/diet-plans" },
-          { title: "Fitness Advice", image: Tools, link: "/services/fitness-advice" },
-        ],
-      },
+
     ],
     procedures: [
       {
@@ -224,7 +215,6 @@ const ServicesAndTreatment = () => {
         link: "/FertilityProcedures",
         innerBoxes: [
           { title: "Fertility-Related Laparoscopic Procedures", image: Conselt, link: "/FertilityProcedures" },
-          // { title: "Fitness Advice", image: Tools, link: "/services/fitness-advice" },
         ],
       },
       {

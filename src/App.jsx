@@ -4,9 +4,12 @@ import Chatbot from "./Components/Chatbot";
 import Chatbotnew from "./Components/Chatbotnew";
 import CookiesComponent from "./Components/CookiesComponent";
 import ContactButton from "./Components/ContactButton";
-import ScrollTovTop from "./Components/ScrollTovTop";
+// import ScrollTovTop from "./Components/ScrollTovTop";
 import Lottie from "lottie-react";
 import Loading from "./Animations/Loading.json"
+import HomePopup from "./Components/Homepopup";
+import Breadcrumbs from "./Components/Breadcrumbs";
+import ScrollToTop from "./Components/ScrollTovTop";
 
 const Navbar = lazy(() => import("./Components/Navbar"));
 const AllRouter = lazy(() => import("./Allroutes/AllRouter"));
@@ -37,7 +40,10 @@ function App() {
   return (
     <div>
       <div className="sm:mt-45 mt-35">
-        <ScrollTovTop />
+        {/* <ScrollToTop /> */}
+        <Breadcrumbs />
+        <HomePopup />
+        <ScrollToTop />
         <Suspense fallback={<CrazyLoader />}>
           <Navbar />
         </Suspense>

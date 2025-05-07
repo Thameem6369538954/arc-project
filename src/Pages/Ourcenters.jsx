@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { locations } from "../Data/locationData";
+import { locations } from "../Data/locationData.js";
+import { Link } from "react-router-dom";
+import LocationDetails from "./LocationDetails.jsx";
 
 const ContactUs = () => {
   const [category, setCategory] = useState("All");
@@ -9,13 +11,21 @@ const ContactUs = () => {
   const [selectedLocation, setSelectedLocation] = useState(null);
 
   const navigate = useNavigate();
-  const categories = ["Tamil Nadu", "Other State", "International", "All"];
+  const categories = ["All","Tamil Nadu", "Other State", "International"];
 
-  const filteredLocations = locations.filter((location) =>
-    category === "All" ? true : location.category === category
+  // Remove duplicate locations by name
+  const filteredLocations = Array.from(
+    new Map(
+      locations
+        .filter((location) =>
+          category === "All" ? true : location.category === category
+        )
+        .map((location) => [location.name, location])
+    ).values()
   );
 
   const handleClick = (location) => {
+    console.table(location)
     navigate(`/LocationDetails/${location.name}`, { state: location });
   };
 
@@ -57,21 +67,17 @@ const ContactUs = () => {
             whileHover={{ scale: 1.05 }}
             className="p-6 border rounded-lg shadow-lg cursor-pointer hover:bg-blue-100"
           >
-            <h2 className="font-bold text-xl text-center">
-              {location.name}
-            </h2>
-            <p className="text-sm text-center mt-2">
-              {location.address}
-            </p>
+            <h2 className="font-bold text-xl text-center">{location.name}</h2>
+            <p className="text-sm text-center mt-2">{location.address}</p>
 
             {/* Buttons */}
-            <div className="flex justify-center  gap-6 mt-4">
-              <button
-                onClick={() => handleClick(location)}
-                className="bg-green-500 text-white px-6 py-2 rounded-full"
-              >
-                Know More
-              </button>
+            <div className="flex justify-center gap-6 mt-4">
+            <Link to={`/LocationDetails/${location.name}`}>
+  <button className="bg-green-500 text-white px-4 py-2 rounded-full">
+    View Details
+  </button>
+</Link>
+
               <button
                 onClick={() => openForm(location)}
                 className="bg-blue-500 text-white px-4 py-2 rounded-full"
