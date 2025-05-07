@@ -95,7 +95,7 @@ const teamMembers = [
   },
   {
     name: "Dr.Chandan",
-    role: "Chief Revenue Officer",
+    role: "EMBCOL PhD,PGD Biography,",
     description: "Dr. Chandan has completed his Masters from Bangalore University and Ph.D. from UK and Pursuing his Second Ph.D. Research....",
     qualification: "MBBS, MD (AM), MBA (HM), PGDACE (UK), ACTT (US), ACCAM (AMS)",
 

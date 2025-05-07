@@ -7,7 +7,7 @@ const Breadcrumbs = () => {
   const pathnames = location.pathname.split("/").filter((x) => x);
 
   return (
-    <nav className="absolute p-1 font-[choco] z-50">
+    <nav className="absolute p-5 font-[choco] z-50">
       <Link to="/" className="hover:underline">Home</Link>
       {pathnames.map((value, index) => {
         const to = "/" + pathnames.slice(0, index + 1).join("/");

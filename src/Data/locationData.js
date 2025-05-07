@@ -12,7 +12,10 @@ export const locations = [
     imgb: max,
     imgc: max,
     imgd: max,
-    gmap: max,
+    gmaa: max,
+    gmab: max,
+    gmac: max,
+    gmad: max,
     spldoctors: [
       {
         id: 1,
@@ -41,7 +44,28 @@ export const locations = [
         docImg: Docter,
         qualification: "mbbs",
         from: ""
-      }
+      },
+      {
+        id: 5,
+        docname: "Sandeep",
+        docImg: Docter,
+        qualification: "mbbs",
+        from: ""
+      },
+      {
+        id: 6,
+        docname: "Sandeep",
+        docImg: Docter,
+        qualification: "mbbs",
+        from: ""
+      },
+      {
+        id: 7,
+        docname: "Sandeep",
+        docImg: Docter,
+        qualification: "mbbs",
+        from: ""
+      },
     ],
     overview: [
       {
@@ -132,6 +156,27 @@ export const locations = [
           },
           {
             id: 4,
+            docname: "Sandeep",
+            docImg: Docter,
+            qualification: "mbbs",
+            from: ""
+          },
+          {
+            id: 5,
+            docname: "Sandeep",
+            docImg: Docter,
+            qualification: "mbbs",
+            from: ""
+          },
+          {
+            id: 6,
+            docname: "Sandeep",
+            docImg: Docter,
+            qualification: "mbbs",
+            from: ""
+          },
+          {
+            id: 7,
             docname: "Sandeep",
             docImg: Docter,
             qualification: "mbbs",

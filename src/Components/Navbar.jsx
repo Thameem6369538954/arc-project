@@ -84,7 +84,7 @@ const toggleSubDropdown = (subIndex) => {
     <div className="w-full fixed top-0 z-50 bg-[#fff8ef] shadow-md font-[choco]">
       <nav className="flex justify-between pa-5 items-center">
         <Link to="/" onClick={closeMenu}>
-          <img src={arclogo} alt="Logo" className="h-40 md:h-45 py-4 px-4" />
+          <img src={arclogo} alt="Logo" className="h-20 md:h-40 py-4 px-4" />
         </Link>
 
         {/* Desktop Menu */}

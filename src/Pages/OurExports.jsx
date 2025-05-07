@@ -10,6 +10,7 @@ const OurExperts = () => {
   const closePopup = () => setSelectedDoctor(null);
 
   return (
+    
     <div className="w-full bg-[#fff8ef] min-h-screen py-20 font-[choco]">
       <div className="max-w-8xl mx-auto px-5">
         <h2 className="text-5xl font-bold text-center text-[#1c97c8] font-[belli] mb-12">
@@ -44,10 +45,9 @@ const OurExperts = () => {
                 className="w-82 h-82 rounded-full object-cover border-4 border-[#1c97c8] mb-4"
               />
               <h3 className="text-3xl font-bold text-[#1c97c8]">{doctor.name}</h3>
-              <p className="text-gray-500 text-md mt-1 mb-2">
-                MBBS, MD (A&E), MBA (HHSM), PGDAEC (UK), ACTF (US), ACCAM (Aus)
-              </p>
-              <p className="text-md font-semibold text-gray-700">{doctor.specialty}</p>
+              <p className="text-md font-bold text-pink-400 p-1">{doctor.edu}</p>
+             
+              <p className="text-xl font-semibold text-[#1c97c8]">{doctor.specialty}</p>
 
               {doctor.isTop && (
                 <div className="absolute top-3 left-3 bg-yellow-500 text-white text-xs px-3 py-1 rounded-full flex items-center gap-1">
