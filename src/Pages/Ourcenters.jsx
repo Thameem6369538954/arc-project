@@ -1,31 +1,32 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { locations } from "../Data/locationData.js";
-import { Link } from "react-router-dom";
 import LocationDetails from "./LocationDetails.jsx";
 
 const ContactUs = () => {
   const [category, setCategory] = useState("All");
+  const [searchQuery, setSearchQuery] = useState("");
   const [showForm, setShowForm] = useState(false);
   const [selectedLocation, setSelectedLocation] = useState(null);
 
   const navigate = useNavigate();
-  const categories = ["All","Tamil Nadu", "Other State", "International"];
+  const categories = ["All", "Tamil Nadu", "Other State", "International"];
 
-  // Remove duplicate locations by name
+  // Filter locations based on category and search query
   const filteredLocations = Array.from(
     new Map(
       locations
         .filter((location) =>
-          category === "All" ? true : location.category === category
+          (category === "All" ? true : location.category === category) &&
+          location.name.toLowerCase().includes(searchQuery.toLowerCase())
         )
         .map((location) => [location.name, location])
     ).values()
   );
 
   const handleClick = (location) => {
-    console.table(location)
+    console.table(location);
     navigate(`/LocationDetails/${location.name}`, { state: location });
   };
 
@@ -42,7 +43,7 @@ const ContactUs = () => {
   return (
     <div className="p-5 mt-30 md:mt-25 w-full font-[choco] bg-[#fff8ef]">
       {/* Category Buttons */}
-      <div className="flex gap-4 mb-6 justify-center font-bold">
+      <div className="flex gap-4 mb-4 justify-center font-bold flex-wrap">
         {categories.map((cat, index) => (
           <button
             key={index}
@@ -56,38 +57,57 @@ const ContactUs = () => {
         ))}
       </div>
 
-      {/* Location Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
-        {filteredLocations.map((location, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            whileHover={{ scale: 1.05 }}
-            className="p-6 border rounded-lg shadow-lg cursor-pointer hover:bg-blue-100"
-          >
-            <h2 className="font-bold text-xl text-center">{location.name}</h2>
-            <p className="text-sm text-center mt-2">{location.address}</p>
-
-            {/* Buttons */}
-            <div className="flex justify-center gap-6 mt-4">
-            <Link to={`/LocationDetails/${location.name}`}>
-  <button className="bg-green-500 text-white px-4 py-2 rounded-full">
-    View Details
-  </button>
-</Link>
-
-              <button
-                onClick={() => openForm(location)}
-                className="bg-blue-500 text-white px-4 py-2 rounded-full"
-              >
-                Book Now
-              </button>
-            </div>
-          </motion.div>
-        ))}
+      {/* Search Input */}
+      <div className="flex justify-center mb-8">
+        <input
+          type="text"
+          placeholder="Search locations..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className="px-4 py-2 border rounded w-full max-w-md"
+        />
       </div>
+
+      {/* Location Cards */}
+      {/* Location Cards */}
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+  {filteredLocations.length === 0 ? (
+    <p className="text-center col-span-full text-red-500 font-semibold text-lg">
+      Sorry, {searchQuery} not found.
+    </p>
+  ) : (
+    filteredLocations.map((location, index) => (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+        whileHover={{ scale: 1.05 }}
+        className="p-6 border rounded-lg shadow-lg cursor-pointer hover:bg-blue-100"
+      >
+        <h2 className="font-bold text-xl text-center">{location.name}</h2>
+        <p className="text-sm text-center mt-2">{location.address}</p>
+
+        {/* Buttons */}
+        <div className="flex justify-center gap-6 mt-4">
+          <Link to={`/LocationDetails/${location.name}`}>
+            <button className="bg-green-500 text-white px-4 py-2 rounded-full">
+              View Details
+            </button>
+          </Link>
+
+          <button
+            onClick={() => openForm(location)}
+            className="bg-blue-500 text-white px-4 py-2 rounded-full"
+          >
+            Book Now
+          </button>
+        </div>
+      </motion.div>
+    ))
+  )}
+</div>
+
 
       {/* Booking Form Modal */}
       <AnimatePresence>

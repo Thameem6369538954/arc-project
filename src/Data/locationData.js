@@ -122,9 +122,129 @@ export const locations = [
     }
   }
 ,      
+  {
+    category: "All",
+    name: "Thiruvallur",
+    lang: "திருவள்ளூர்",
+    address: "Door.No, 3238, TNHB Rd, opposite to Darling electronics, Ma. Po. Si. Nagar, Kakkalur, Tiruvallur, Tamil Nadu 602001",
+    phonenumber: "9898787678",
+    imga: max,
+    imgb: max,
+    imgc: max,
+    imgd: max,
+    gmaa: max,
+    gmab: max,
+    gmac: max,
+    gmad: max,
+    spldoctors: [
+      {
+        id: 1,
+        docname: "thameem ansari",
+        docImg: Docter,
+        qualification: "mbbs",
+        from: ""
+      },
+      {
+        id: 2,
+        docname: "arun",
+        docImg: Docter,
+        qualification: "mbbs",
+        from: ""
+      },
+      {
+        id: 3,
+        docname: "Rahul",
+        docImg: Docter,
+        qualification: "mbbs",
+        from: ""
+      },
+      {
+        id: 4,
+        docname: "Sandeep",
+        docImg: Docter,
+        qualification: "mbbs",
+        from: ""
+      },
+      {
+        id: 5,
+        docname: "Sandeep",
+        docImg: Docter,
+        qualification: "mbbs",
+        from: ""
+      },
+      {
+        id: 6,
+        docname: "Sandeep",
+        docImg: Docter,
+        qualification: "mbbs",
+        from: ""
+      },
+      {
+        id: 7,
+        docname: "Sandeep",
+        docImg: Docter,
+        qualification: "mbbs",
+        from: ""
+      },
+    ],
+    overview: [
+      {
+        overviewtxt: "ASAS"
+      }
+    ],
+    services: [
+      {
+        sera: "Controlled Ovarian Stimulation",
+        serb: "Intrauterine Insemination",
+        serc: "In Vitro Fertilization(IVF) For FertilIity",
+        serd: "Fertility Preservation For Cancer Patients",
+        sere: "Preventing Miscarriages",
+        serf: "Unexplained Infertility",
+        serg: "Ovulation Induction",
+        serh: "Donor And Gestational Carrier",
+        seri: "The Healthiest Embryo"
+      }
+    ],
+    treatments: [
+      {
+        treata: "Extending the Biological Clock",
+        treatb: "Lifestyle And Conception Advice",
+        treatc: "Therapeutic Activity For Patients",
+        treatd: "Counselling",
+        treate: "Fertility Tools",
+        treatf: "Corporate Social Responsibility",
+        treatg: "Sexual Dysfunction Clinic",
+        treath: "Gynaecologic Surgery",
+        treati: "Stem Cell Banking",
+      }
+    ]
+,    
+    testimonials: {
+      heading: "What Our Patients Say......",
+      paragraph: "We are proud to share some heartwarming stories from our patients.",
+      items: [
+        {
+          heading: "Patient 1",
+          paragraph: "I feel better now...",
+          youtubeVideo: "https://www.youtube.com/embed/jUICJXBYXFw?si=C4CJCRmmdrEQWdhZ"
+        },
+        {
+          heading: "Patient 2",
+          paragraph: "Doctor is very kind...",
+          youtubeVideo: "https://www.youtube.com/embed/ZjC9G4HAFig?si=ErR6BQ5jzK5Zf7DQ"
+        },
+        {
+          heading: "Patient 3",
+          paragraph: "Great hospital experience...",
+          youtubeVideo: "https://www.youtube.com/embed/0wWeuGmA0TI?si=MjH123AsuOPLMZZZ"
+        }
+      ]
+    }
+  }
+,      
     { category: "All", 
         name: "DINDIGUL", 
-        lang:"vanakam da mapla",
+        lang:"திண்டுக்கல்",
         address: "1st floor, Bharathi Mission Hospital, 11, 91, NVGB Hall Rd, EB Colony, Dindigul - 624003",
         phonenumber: "9898787678",
         imga: max,
@@ -1771,7 +1891,7 @@ export const locations = [
     }
   ]
 }
-, category: "Tamil Nadu", name: "diu",lang:"திண்டுக்கல்", address: "1st floor, Bharathi Mission Hospital, 11, 91, NVGB HTamil Nadu Rd, EB Colony, Dindigul - 624003" },
+, category: "Tamil Nadu", name: "DINDIGUL",lang:"திண்டுக்கல்", address: "1st floor, Bharathi Mission Hospital, 11, 91, NVGB HTamil Nadu Rd, EB Colony, Dindigul - 624003" },
     { phonenumber: "9898787678",
         imga: max,
         imgb: max,
@@ -4437,6 +4557,127 @@ export const locations = [
   ]
 }
 , category: "International", name: "SRI LANKA", address: "#16, Joseph Lane, Bambalapitiya, Colombo - 04, Srilanka." },
+{
+  category: "Tamil Nadu",
+  name: "Thiruvallur",
+  lang: "திருவள்ளூர்",
+  address: "Door.No, 3238, TNHB Rd, opposite to Darling electronics, Ma. Po. Si. Nagar, Kakkalur, Tiruvallur, Tamil Nadu 602001",
+  phonenumber: "9898787678",
+  imga: max,
+  imgb: max,
+  imgc: max,
+  imgd: max,
+  gmaa: max,
+  gmab: max,
+  gmac: max,
+  gmad: max,
+  spldoctors: [
+    {
+      id: 1,
+      docname: "thameem ansari",
+      docImg: Docter,
+      qualification: "mbbs",
+      from: ""
+    },
+    {
+      id: 2,
+      docname: "arun",
+      docImg: Docter,
+      qualification: "mbbs",
+      from: ""
+    },
+    {
+      id: 3,
+      docname: "Rahul",
+      docImg: Docter,
+      qualification: "mbbs",
+      from: ""
+    },
+    {
+      id: 4,
+      docname: "Sandeep",
+      docImg: Docter,
+      qualification: "mbbs",
+      from: ""
+    },
+    {
+      id: 5,
+      docname: "Sandeep",
+      docImg: Docter,
+      qualification: "mbbs",
+      from: ""
+    },
+    {
+      id: 6,
+      docname: "Sandeep",
+      docImg: Docter,
+      qualification: "mbbs",
+      from: ""
+    },
+    {
+      id: 7,
+      docname: "Sandeep",
+      docImg: Docter,
+      qualification: "mbbs",
+      from: ""
+    },
+  ],
+  overview: [
+    {
+      overviewtxt: "ASAS"
+    }
+  ],
+  services: [
+    {
+      sera: "Controlled Ovarian Stimulation",
+      serb: "Intrauterine Insemination",
+      serc: "In Vitro Fertilization(IVF) For FertilIity",
+      serd: "Fertility Preservation For Cancer Patients",
+      sere: "Preventing Miscarriages",
+      serf: "Unexplained Infertility",
+      serg: "Ovulation Induction",
+      serh: "Donor And Gestational Carrier",
+      seri: "The Healthiest Embryo"
+    }
+  ],
+  treatments: [
+    {
+      treata: "Extending the Biological Clock",
+      treatb: "Lifestyle And Conception Advice",
+      treatc: "Therapeutic Activity For Patients",
+      treatd: "Counselling",
+      treate: "Fertility Tools",
+      treatf: "Corporate Social Responsibility",
+      treatg: "Sexual Dysfunction Clinic",
+      treath: "Gynaecologic Surgery",
+      treati: "Stem Cell Banking",
+    }
+  ]
+,    
+  testimonials: {
+    heading: "What Our Patients Say......",
+    paragraph: "We are proud to share some heartwarming stories from our patients.",
+    items: [
+      {
+        heading: "Patient 1",
+        paragraph: "I feel better now...",
+        youtubeVideo: "https://www.youtube.com/embed/jUICJXBYXFw?si=C4CJCRmmdrEQWdhZ"
+      },
+      {
+        heading: "Patient 2",
+        paragraph: "Doctor is very kind...",
+        youtubeVideo: "https://www.youtube.com/embed/ZjC9G4HAFig?si=ErR6BQ5jzK5Zf7DQ"
+      },
+      {
+        heading: "Patient 3",
+        paragraph: "Great hospital experience...",
+        youtubeVideo: "https://www.youtube.com/embed/0wWeuGmA0TI?si=MjH123AsuOPLMZZZ"
+      }
+    ]
+  }
+}
+,      
   ];
+  
   
   

@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
           {/* Left Section - Brand Info */}
           <div>
-            <img src={arclogo} className="w-36 h-36 mx-auto md:mx-0 p-3" alt="ARC Logo" />
+            <img src={arclogo} className="w-66  mx-auto md:mx-0 p-3" alt="ARC Logo" />
             <p className="text-sm mb-4 leading-relaxed">
               All content on this website is protected by copyright and may not be used without permission from ARC.
             </p>

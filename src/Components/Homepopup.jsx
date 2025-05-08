@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import Ar from "../Images/SL-100321-45940-59.jpg"; // Ensure this path is correct
+import Ar from "../Images/home.jpeg"; // Ensure this path is correct
 import paper from "../Animations/paper.json"
 import Lottie from "lottie-react";
 const HomePopup = () => {
