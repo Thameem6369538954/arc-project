@@ -8,11 +8,9 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 const LocationDetails = () => {
-  const [showForm, setShowForm] = useState(false);
-const toggleForm = () => setShowForm(!showForm);
-
   const { name } = useParams();
-  const [view, setView] = useState("services");
+  const [showForm, setShowForm] = useState(false);
+  const [view, setView] = useState('services');
 
   const overviewRef = useRef(null);
   const doctorsRef = useRef(null);
@@ -23,95 +21,164 @@ const toggleForm = () => setShowForm(!showForm);
     (loc) => loc.name.toLowerCase() === name.toLowerCase()
   );
 
+  const toggleForm = () => setShowForm((prev) => !prev);
+
   const scrollToSection = (ref) => {
     ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   if (!location) {
-    return <div className="p-6 text-red-500 text-center">No data found for {name}</div>;
+    return (
+      <div className="p-6 text-red-500 text-center">
+        No data found for <strong>{name}</strong>
+      </div>
+    );
   }
 
   return (
     <div className="relative font-[choco]">
-   
+      {/* Sticky Navigation */}
+      <nav className="sticky top-40 z-10 bg-white shadow-md border-b">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 p-2 sm:p-4 text-sm sm:text-base font-medium">
+          {[
+            { label: 'Overview', ref: overviewRef },
+            { label: 'Doctors', ref: doctorsRef },
+            { label: 'Services', ref: servicesRef },
+            { label: 'Testimonials', ref: testimonialsRef },
+          ].map(({ label, ref }) => (
+            <button
+              key={label}
+              onClick={() => scrollToSection(ref)}
+              className="text-pink-600 hover:underline focus:outline-none focus:ring-2 focus:ring-pink-400 rounded"
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+      </nav>
 
-      {/* Sticky Nav */}
-      <div className="sticky md:top-40 z-10 bg-white shadow-md border-b">
-  <div className="flex flex-wrap justify-center gap-4 sm:gap-6 p-2 sm:p-4 text-sm sm:text-base font-medium">
-    <button onClick={() => scrollToSection(overviewRef)} className="text-pink-600 hover:underline">
-      Overview
-    </button>
-    <button onClick={() => scrollToSection(doctorsRef)} className="text-pink-600 hover:underline">
-      Doctors
-    </button>
-    <button onClick={() => scrollToSection(servicesRef)} className="text-pink-600 hover:underline">
-      Services
-    </button>
-    <button onClick={() => scrollToSection(testimonialsRef)} className="text-pink-600 hover:underline">
-      Testimonials
-    </button>
-  </div>
-</div>
-
-
-      {/* Hero */}
-      <div className="relative h-[400px] bg-cover bg-center" style={{ backgroundImage: `url(${location.heroImage})` }}>
-        <div className="absolute inset-0 bg-gradient-to-tr from-[#be185d] via-[#f472b6] to-[#fbcfe8] flex flex-col items-center justify-center">
+      {/* Hero Section */}
+      <div
+        className="relative h-[400px] bg-cover bg-center"
+        style={{ backgroundImage: `url(${location.heroImage})` }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-tr from-[#be185d] via-[#f472b6] to-[#fbcfe8] flex flex-col items-center justify-center px-4 text-center">
           <h1 className="text-white text-4xl md:text-5xl font-[bebas]">{location.name}</h1>
-          <br />
-          <h1 className="text-white text-4xl md:text-5xl font-[new]">({location.lang})</h1>
-          <div className="text-center mt-6">
-  <button
-    onClick={toggleForm}
-    className="bg-pink-600 text-white px-6 py-2 rounded-full hover:bg-pink-700 transition"
-  >
-    {showForm ? "Close Appointment Form" : "Book an Appointment"}
-  </button>
-</div>
+          <h2 className="text-white text-4xl md:text-5xl font-[new] mt-2">({location.lang})</h2>
 
+          <button
+            onClick={toggleForm}
+            className="mt-6 bg-pink-600 text-white px-6 py-2 rounded-full hover:bg-pink-700 transition focus:outline-none focus:ring-2 focus:ring-pink-400"
+            aria-expanded={showForm}
+            aria-controls="appointment-form"
+          >
+            {showForm ? 'Close Appointment Form' : 'Book an Appointment'}
+          </button>
+
+          {showForm && (
+            <div
+              id="appointment-form"
+              className="fixed inset-0 flex items-center justify-center z-20 bg-black bg-opacity-50 p-4"
+            >
+              <div className="max-w-3xl w-full p-8 bg-white rounded-xl border border-pink-300 shadow-lg overflow-auto max-h-[70vh]">
+                <h2 className="text-3xl font-bold text-pink-600 mb-8 text-center">
+                  Book an Appointment
+                </h2>
+                <form className="space-y-6">
+                  {/* Name */}
+                  <div>
+                    <label htmlFor="name" className="block text-pink-600 font-semibold mb-2">
+                      Name
+                    </label>
+                    <input
+                      id="name"
+                      type="text"
+                      placeholder="Your Name"
+                      className="w-full rounded-lg px-4 py-3 border border-pink-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
+                      required
+                    />
+                  </div>
+
+                  {/* Email */}
+                  <div>
+                    <label htmlFor="email" className="block text-pink-600 font-semibold mb-2">
+                      Email
+                    </label>
+                    <input
+                      id="email"
+                      type="email"
+                      placeholder="you@example.com"
+                      className="w-full rounded-lg px-4 py-3 border border-pink-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
+                      required
+                    />
+                  </div>
+
+                  {/* Phone */}
+                  <div>
+                    <label htmlFor="phone" className="block text-pink-600 font-semibold mb-2">
+                      Phone Number
+                    </label>
+                    <input
+                      id="phone"
+                      type="tel"
+                      placeholder="9876543210"
+                      className="w-full rounded-lg px-4 py-3 border border-pink-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
+                      required
+                    />
+                  </div>
+
+                  {/* Date */}
+                  <div>
+                    <label htmlFor="date" className="block text-pink-600 font-semibold mb-2">
+                      Preferred Date
+                    </label>
+                    <input
+                      id="date"
+                      type="date"
+                      className="w-full rounded-lg px-4 py-3 border border-pink-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
+                      required
+                    />
+                  </div>
+
+                  {/* Message */}
+                  <div>
+                    <label htmlFor="message" className="block text-pink-600 font-semibold mb-2">
+                      Message
+                    </label>
+                    <textarea
+                      id="message"
+                      rows="4"
+                      placeholder="Any specific concern..."
+                      className="w-full rounded-lg px-4 py-3 border border-pink-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
+                    ></textarea>
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full bg-pink-600 hover:bg-pink-700 transition text-white font-semibold py-3 rounded-full"
+                  >
+                    Submit
+                  </button>
+                </form>
+              </div>
+            </div>
+          )}
         </div>
       </div>
-      {showForm && (
-  <div className="max-w-6xl mx-auto mt-6 p-6 bg-white shadow-md rounded-xl border border-gray-100">
-    <h2 className="text-xl font-bold text-pink-600 mb-4">Book an Appointment</h2>
-    <form className="space-y-4">
-      <div>
-        <label className="block text-gray-700 font-medium mb-1">Name</label>
-        <input type="text" className="w-full border border-gray-300 rounded px-3 py-2" placeholder="Your Name" />
-      </div>
-      <div>
-        <label className="block text-gray-700 font-medium mb-1">Email</label>
-        <input type="email" className="w-full border border-gray-300 rounded px-3 py-2" placeholder="you@example.com" />
-      </div>
-      <div>
-        <label className="block text-gray-700 font-medium mb-1">Phone Number</label>
-        <input type="tel" className="w-full border border-gray-300 rounded px-3 py-2" placeholder="9876543210" />
-      </div>
-      <div>
-        <label className="block text-gray-700 font-medium mb-1">Preferred Date</label>
-        <input type="date" className="w-full border border-gray-300 rounded px-3 py-2" />
-      </div>
-      <div>
-        <label className="block text-gray-700 font-medium mb-1">Message</label>
-        <textarea className="w-full border border-gray-300 rounded px-3 py-2" rows="3" placeholder="Any specific concern..."></textarea>
-      </div>
-      <button type="submit" className="bg-pink-600 text-white px-6 py-2 rounded-full hover:bg-pink-700 transition">
-        Submit
-      </button>
-    </form>
-  </div>
-)}
 
+      {/* Content Section */}
       <div className="p-6 md:p-10 max-w-6xl mx-auto space-y-12">
-
         {/* Info Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
-            { title: "Address", content: location.address },
-            { title: "Contact", content: location.phonenumber },
-            { title: "Language", content: location.lang }
+            { title: 'Address', content: location.address },
+            { title: 'Contact', content: location.phonenumber },
+            { title: 'Language', content: location.lang },
           ].map((item, idx) => (
-            <div key={idx} className="bg-white shadow-md hover:shadow-xl transition p-6 rounded-xl text-left border border-gray-100">
+            <div
+              key={idx}
+              className="bg-white shadow-md hover:shadow-xl transition p-6 rounded-xl border border-gray-100"
+            >
               <h2 className="text-lg font-semibold text-pink-500 mb-2">{item.title}</h2>
               <p className="text-gray-700">{item.content}</p>
             </div>
@@ -139,11 +206,13 @@ const toggleForm = () => setShowForm(!showForm);
           ))}
         </Swiper>
 
-        {/* Overview */}
+        {/* Overview Section */}
         <section ref={overviewRef}>
           <h2 className="text-2xl font-bold text-pink-600 mb-4">Overview</h2>
           {location.overview.map((item, i) => (
-            <p key={i} className="text-gray-800 mb-2 leading-relaxed">{item.overviewtxt}</p>
+            <p key={i} className="text-gray-800 mb-2 leading-relaxed">
+              {item.overviewtxt}
+            </p>
           ))}
         </section>
 
@@ -162,7 +231,11 @@ const toggleForm = () => setShowForm(!showForm);
             {location.spldoctors.map((doc) => (
               <SwiperSlide key={doc.id}>
                 <div className="bg-white p-4 rounded-xl shadow-md text-center hover:shadow-lg transition">
-                  <img src={doc.docImg} alt={doc.docname} className="w-24 h-24 mx-auto rounded-full object-cover mb-3 border-2 border-pink-300" />
+                  <img
+                    src={doc.docImg}
+                    alt={doc.docname}
+                    className="w-24 h-24 mx-auto rounded-full object-cover mb-3 border-2 border-pink-300"
+                  />
                   <h3 className="font-semibold text-lg">{doc.docname}</h3>
                   <p className="text-sm text-gray-500">{doc.qualification}</p>
                 </div>
@@ -173,75 +246,72 @@ const toggleForm = () => setShowForm(!showForm);
 
         {/* Services & Treatments */}
         <section ref={servicesRef}>
-          <div className="flex justify-center gap-4 mb-6">
+          <div className="flex justify-center gap-6 mb-6 text-lg font-semibold text-pink-600">
             <button
-              onClick={() => setView("services")}
-              className={`px-5 py-2 rounded-full font-medium transition ${view === "services" ? "bg-pink-600 text-white" : "bg-gray-200 text-gray-700"}`}
+              className={`px-4 py-2 rounded-full ${
+                view === 'services' ? 'bg-pink-600 text-white' : 'bg-pink-100 hover:bg-pink-200'
+              } transition`}
+              onClick={() => setView('services')}
             >
               Services
             </button>
             <button
-              onClick={() => setView("treatments")}
-              className={`px-5 py-2 rounded-full font-medium transition ${view === "treatments" ? "bg-pink-600 text-white" : "bg-gray-200 text-gray-700"}`}
+              className={`px-4 py-2 rounded-full ${
+                view === 'treatments' ? 'bg-pink-600 text-white' : 'bg-pink-100 hover:bg-pink-200'
+              } transition`}
+              onClick={() => setView('treatments')}
             >
               Treatments
             </button>
           </div>
 
-          {view === "services" && (
-            <div>
-              <h2 className="text-xl font-bold text-pink-600 mb-3">Services We Offer</h2>
-              <ul className="list-disc pl-6 space-y-2 text-gray-700 text-left">
-                {Object.values(location.services[0]).map((service, i) => (
-                  <li key={i}>{service}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {view === "treatments" && (
-            <div>
-              <h2 className="text-xl font-bold text-pink-600 mb-3">Treatments Available</h2>
-              <ul className="list-disc pl-6 space-y-2 text-gray-700 text-left">
-                {Object.values(location.treatments[0]).map((treat, i) => (
-                  <li key={i}>{treat}</li>
-                ))}
-              </ul>
-            </div>
+          {view === 'services' ? (
+            <ul className="list-disc list-inside space-y-2 text-gray-700">
+              {location.services.map((srv) => (
+                <li key={srv.id}>{srv.servicetxt}</li>
+              ))}
+            </ul>
+          ) : (
+            <ul className="list-disc list-inside space-y-2 text-gray-700">
+              {location.treatments.map((treat) => (
+                <li key={treat.id}>{treat.treatmenttxt}</li>
+              ))}
+            </ul>
           )}
         </section>
 
         {/* Testimonials */}
-        <section ref={testimonialsRef}>
-          <h2 className="text-2xl font-bold text-pink-600 mb-2">{location.testimonials.heading}</h2>
-          <p className="text-gray-600 mb-6">{location.testimonials.paragraph}</p>
-          <Swiper
-            modules={[Autoplay, Pagination]}
-            spaceBetween={30}
-            slidesPerView={1}
-            pagination={{ clickable: true }}
-            autoplay={{ delay: 4000 }}
-            loop
-            breakpoints={{ 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}
-          >
-            {location.testimonials.items.map((testi, i) => (
-              <SwiperSlide key={i}>
-                <div className="bg-white p-5 rounded-xl shadow-md hover:shadow-lg transition h-full flex flex-col justify-between">
-                  <h3 className="text-lg font-semibold text-pink-500 mb-2">{testi.heading}</h3>
-                  <p className="text-sm text-gray-700 mb-3">{testi.paragraph}</p>
-                  <div className="w-full aspect-video overflow-hidden rounded">
-                    <iframe
-                      src={testi.youtubeVideo}
-                      title={testi.heading}
-                      className="w-full h-full"
-                      allowFullScreen
-                    ></iframe>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </section>
+       <section ref={testimonialsRef}>
+  <h2 className="text-2xl font-bold text-pink-600 mb-6">Testimonials</h2>
+  {Array.isArray(location.testimonials) && location.testimonials.length > 0 ? (
+    <Swiper
+      modules={[Autoplay, Pagination]}
+      spaceBetween={20}
+      slidesPerView={1}
+      autoplay={{ delay: 3000 }}
+      loop
+      pagination={{ clickable: true }}
+      breakpoints={{ 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}
+    >
+      {location.testimonials.map((test) => (
+        <SwiperSlide key={test.id || test.testName}>
+          <div className="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-lg transition">
+            <img
+              src={test.testImg}
+              alt={test.testName}
+              className="w-20 h-20 rounded-full mx-auto mb-4 object-cover border-2 border-pink-300"
+            />
+            <h3 className="font-semibold text-lg mb-2">{test.testName}</h3>
+            <p className="text-gray-600 text-sm italic">{test.testDesc}</p>
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  ) : (
+    <p>No testimonials available.</p>
+  )}
+</section>
+
       </div>
     </div>
   );

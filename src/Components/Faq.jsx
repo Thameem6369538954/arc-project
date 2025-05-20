@@ -9,7 +9,7 @@ const faqs = [
     answer: (
       <div>
         <h3 className="text-lg font-semibold mb-2">Overview:</h3>
-        <p className="mb-2">
+        <p className="mb-2 text-xl">
         It is an assisted reproductive technology. In-vitro fertilization (IVF) is a process in which sperm and eggs are fertilized outside of the human body. It begins with manually removing eggs from ovaries and mixing them with sperm in a lab in order to achieve fertilization. Fertilization takes several days to complete, resulting in a fertilized egg, known as an embryo, which is then implanted within the uterus. Upon attachment of the embryo to the uterine wall, pregnancy begins.        </p>
        
       </div>
@@ -20,7 +20,7 @@ const faqs = [
     answer: (
       <div>
         <h3 className="text-lg font-semibold mb-2">When looking for an IVF doctor, seek for the following characteristics</h3>
-        <ul className="list-disc pl-5 space-y-1">
+        <ul className="list-disc pl-5 space-y-1 text-xl" >
           <li>Outstanding credentials</li>
           <li>Compassionate and caring</li>
           <li>Skilled personnel</li>
@@ -34,7 +34,7 @@ const faqs = [
   {
     question: " What is the best Age for IVF?",
     answer: (
-      <div>
+      <div className="text-xl">
         <p>Women in their 20s and 30s are the best candidates for IVF. When she reaches her mid-30s, her success rates begin to decrease gradually. Once a woman reaches the age of 40, her success rate for IVF significantly decreases.</p>
       </div>
     ),
@@ -43,9 +43,9 @@ const faqs = [
     question: "What is the Success rate of IVF?",
     answer: (
       <div>
-        <h3 className="text-lg font-semibold mb-2">Based on age, the average percentage of  successful live births per egg retrieval over the past few years were measured at:
+        <h3 className="text-lg font-semibold mb-2 text-xl">Based on age, the average percentage of  successful live births per egg retrieval over the past few years were measured at:
         </h3>
-        <ul>
+        <ul className="text-xl">
             <li>46.7% of those under the age of 35</li>
             <li>34.2% of those aged 35 to 37</li>
             <li>21.6 % of those aged 38 to 40.
@@ -69,7 +69,7 @@ const faqs = [
                                                 
                                             
         </h3>
-        <ul>
+        <ul className="text-xl">
             <li> Blockages in the fallopian tubes</li>
             <li>Endometriosis</li>
             <li>2 Genetic disease in either parent,
@@ -91,11 +91,10 @@ const faqs = [
     question: "What are the IVF risks &amp; how long is the IVF process?",
     answer: (
       <div>
-        <h3 className="text-lg font-semibold mb-2">IVF treatment involves several risks, including:
+        <h3 className="text-xl font-semibold mb-2">IVF treatment involves several risks, including:
         </h3>
-        <ul>
-            <li>-Ectopic pregnancy
-            </li>
+        <ul className="text-start text-xl">
+            <li>Ectopic pregnancy</li>
             <li>Egg retrieval complications</li>
             <li>Miscarriage
             </li>
@@ -106,7 +105,7 @@ const faqs = [
             <li>Premature delivery
             </li>
         </ul>
-        <h3 className="text-lg font-semibold mb-2">The full IVF process can take up to 7 weeks to finish. Depending on the healthcare practitioner and facility, the exact timing may differ
+        <h3 className="text-xl font-semibold mb-2">The full IVF process can take up to 7 weeks to finish. Depending on the healthcare practitioner and facility, the exact timing may differ
         </h3>
       </div>
     ),
@@ -145,7 +144,7 @@ const FAQ = () => {
                     className="w-full flex justify-between items-center p-4 bg-[#fff8ef] hover:bg-[#ffe4c4] transition duration-300"
                     onClick={() => toggleFAQ(index)}
                   >
-                    <span className=" font-[choco] text-1xl md:text-3xl ">{faq.question}</span>
+                    <span className=" font-[choco] text-1xl md:text-2xl ">{faq.question}</span>
                     <motion.div
                       animate={{ rotate: openIndex === index ? 180 : 0 }}
                       transition={{ duration: 0.3 }}

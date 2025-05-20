@@ -34,7 +34,7 @@ const HeaderA = () => {
     };
 
     return (
-        <div className="relative -mt-10 md:-mt-30" >
+        <div className="relative -mt-15 md:-mt-30" >
             {/* Header Section */}
             <motion.div
                 className="w-full md:min-h-[100vh]  mt-20 md:mt-5 lg:mt-5 md:min-h-[120vh] min-h-[110vh] bg-[#fff8ef] flex flex-col md:flex-row items-center justify-center p-5 md:p-10 relative text-center md:text-left"
@@ -44,14 +44,14 @@ const HeaderA = () => {
             >
                 <motion.img
                     src={Fart}
-                    className="absolute w-[50px] sm:w-[120px] md:w-[150px] sm:top-70  md:top-60 lg:top-40  top-130  right-5 sm:right-10 animate-bounce"
+                    className="absolute w-[50px] sm:w-[120px] md:w-[100px] sm:top-70  md:top-45 lg:top-40  top-130  right-5 sm:right-10 animate-bounce"
                     alt="Decoration"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1.2, delay: 0.3 }}
                 />
                 <motion.div
-                    className="w-full md:w-1/2 px-4"
+                    className="w-full md:w-1/2 px-4 leading-relaxed"
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -61,12 +61,12 @@ const HeaderA = () => {
                         <span className="text-[#1c97c8]">We take care of your dreams</span>{" "}
                         <span className="text-black">&</span> turn them into families
                     </h1>
-                    <p className="tracking-wide font-[choco] text-xl sm:text-2xl md:text-3xl lg:text-3xl p-3 ">
+                    <p className="tracking-wide font-[choco] text-xl sm:text-2xl md:text-xl lg:text-3xl p-3 ">
                         "Building bonds, creating love, and making dreams come true."
                     </p>
                     <motion.button
                         onClick={() => setIsFormOpen(true)}
-                        className="mt-5 px-6 py-4 sm:py-5 md:py-6 bg-[#1c97c8] font-[choco] text-1xl sm:text-3xl text-white rounded-lg shadow-lg transition-all"
+                        className="mt-5 px-6 py-4 sm:py-5 md:py-3 bg-[#1c97c8] font-[choco] text-1xl sm:text-2xl text-white rounded-lg shadow-lg transition-all"
                         whileHover={{
                             scale: 1.1,
                             backgroundColor: "#147a9d",

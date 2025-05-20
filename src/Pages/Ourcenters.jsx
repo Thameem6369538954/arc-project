@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate, Link } from "react-router-dom";
 import { locations } from "../Data/locationData.js";
@@ -9,26 +9,61 @@ const ContactUs = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [showForm, setShowForm] = useState(false);
   const [selectedLocation, setSelectedLocation] = useState(null);
+  const [userCoords, setUserCoords] = useState(null); // 🌍 Store user's location
 
   const navigate = useNavigate();
   const categories = ["All", "Tamil Nadu", "Other State", "International"];
 
-  // Filter locations based on category and search query
+  // 📍 Get user's current location
+  useEffect(() => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          setUserCoords({
+            lat: position.coords.latitude,
+            lon: position.coords.longitude,
+          });
+        },
+        (error) => {
+          console.error("Geolocation error:", error);
+        }
+      );
+    }
+  }, []);
+
+  // 🧮 Helper: Calculate distance between two lat/lon points
+  const getDistance = (lat1, lon1, lat2, lon2) => {
+    const toRad = (value) => (value * Math.PI) / 180;
+    const R = 6371; // Radius of Earth in km
+    const dLat = toRad(lat2 - lat1);
+    const dLon = toRad(lon2 - lon1);
+    const a =
+      Math.sin(dLat / 2) ** 2 +
+      Math.cos(toRad(lat1)) *
+        Math.cos(toRad(lat2)) *
+        Math.sin(dLon / 2) ** 2;
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    return R * c;
+  };
+
+  // 🧠 Filter and sort locations
   const filteredLocations = Array.from(
     new Map(
       locations
-        .filter((location) =>
-          (category === "All" ? true : location.category === category) &&
-          location.name.toLowerCase().includes(searchQuery.toLowerCase())
+        .filter(
+          (location) =>
+            (category === "All" ? true : location.category === category) &&
+            location.name.toLowerCase().includes(searchQuery.toLowerCase())
         )
-        .map((location) => [location.name, location])
+        .map((location) => [location.name, location]) // Remove duplicates
     ).values()
-  );
+  ).sort((a, b) => {
+    if (!userCoords || !a.latitude || !a.longitude || !b.latitude || !b.longitude) return 0;
 
-  const handleClick = (location) => {
-    console.table(location);
-    navigate(`/LocationDetails/${location.name}`, { state: location });
-  };
+    const distA = getDistance(userCoords.lat, userCoords.lon, a.latitude, a.longitude);
+    const distB = getDistance(userCoords.lat, userCoords.lon, b.latitude, b.longitude);
+    return distA - distB; // Closest comes first
+  });
 
   const openForm = (location) => {
     setSelectedLocation(location);
@@ -69,45 +104,42 @@ const ContactUs = () => {
       </div>
 
       {/* Location Cards */}
-      {/* Location Cards */}
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
-  {filteredLocations.length === 0 ? (
-    <p className="text-center col-span-full text-red-500 font-semibold text-lg">
-      Sorry, {searchQuery} not found.
-    </p>
-  ) : (
-    filteredLocations.map((location, index) => (
-      <motion.div
-        key={index}
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: index * 0.1 }}
-        whileHover={{ scale: 1.05 }}
-        className="p-6 border rounded-lg shadow-lg cursor-pointer hover:bg-blue-100"
-      >
-        <h2 className="font-bold text-xl text-center">{location.name}</h2>
-        <p className="text-sm text-center mt-2">{location.address}</p>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+        {filteredLocations.length === 0 ? (
+          <p className="text-center col-span-full text-red-500 font-semibold text-lg">
+            Sorry, {searchQuery} not found.
+          </p>
+        ) : (
+          filteredLocations.map((location, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ scale: 1.05 }}
+              className="p-6 border rounded-lg shadow-lg cursor-pointer hover:bg-blue-100"
+            >
+              <h2 className="font-bold text-xl text-center">{location.name}</h2>
+              <p className="text-sm text-center mt-2">{location.address}</p>
 
-        {/* Buttons */}
-        <div className="flex justify-center gap-6 mt-4">
-          <Link to={`/LocationDetails/${location.name}`}>
-            <button className="bg-green-500 text-white px-4 py-2 rounded-full">
-              View Details
-            </button>
-          </Link>
-
-          <button
-            onClick={() => openForm(location)}
-            className="bg-blue-500 text-white px-4 py-2 rounded-full"
-          >
-            Book Now
-          </button>
-        </div>
-      </motion.div>
-    ))
-  )}
-</div>
-
+              {/* Buttons */}
+              <div className="flex justify-center gap-6 mt-4">
+                <Link to={`/LocationDetails/${location.name}`}>
+                  <button className="bg-green-500 text-white px-4 py-2 rounded-full">
+                    View Details
+                  </button>
+                </Link>
+                <button
+                  onClick={() => openForm(location)}
+                  className="bg-blue-500 text-white px-4 py-2 rounded-full"
+                >
+                  Book Now
+                </button>
+              </div>
+            </motion.div>
+          ))
+        )}
+      </div>
 
       {/* Booking Form Modal */}
       <AnimatePresence>
@@ -128,7 +160,6 @@ const ContactUs = () => {
               <h2 className="text-xl font-bold mb-4 text-center">
                 Book Now - {selectedLocation?.name}
               </h2>
-
               <form
                 onSubmit={(e) => {
                   e.preventDefault();
@@ -162,7 +193,6 @@ const ContactUs = () => {
                   Submit Booking
                 </button>
               </form>
-
               <button
                 onClick={closeForm}
                 className="mt-4 text-sm text-gray-500 hover:underline block mx-auto"

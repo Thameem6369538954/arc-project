@@ -201,10 +201,10 @@ const ServicesAndTreatment = () => {
       {
         title: "Payments",
         image: Clock,
-        link: "/services/consulting",
-        // innerBoxes: [
-        //   { title: "Payment", image: Clock, link: "/services/egg-freezing" },
-        // ],
+        link: "/Payment",
+        innerBoxes: [
+          { title: "Payment", image: Clock, link: "/Payment" },
+        ],
       },
 
     ],

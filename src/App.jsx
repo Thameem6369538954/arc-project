@@ -39,9 +39,9 @@ function App() {
 
   return (
     <div>
-      <div className="sm:mt-45 mt-35">
+      <div className="sm:mt-35 mt-30">
         {/* <ScrollToTop /> */}
-        <Breadcrumbs />
+        {/* <Breadcrumbs /> */}
         <HomePopup />
         <ScrollToTop />
         <Suspense fallback={<CrazyLoader />}>

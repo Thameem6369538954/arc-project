@@ -6,7 +6,7 @@ export const locations = [
     category: "All",
     name: "MADURAI",
     lang: "மதுரை",
-    address: "No 21-C, 3rd Floor, Singarayar Main Road, Madurai - 625 001",
+    address: "No.21/5C , SNP Towers, Sivagangai Main Road , Madurai - 625 0207",
     phonenumber: "9898787678",
     imga: max,
     imgb: max,
@@ -121,7 +121,126 @@ export const locations = [
       ]
     }
   }
-,      
+,     
+{
+  category: "All",
+  name: "Kanchipuram ",
+  lang: "காஞ்சிபுரம்",
+  address: "Door.No.2,First Floor, Vallal Pachaiyappan St, near Reliance digital showroom, Ennaikaran, Kanchipuram, Tamil Nadu 631501",
+  phonenumber: "9898787678",
+  imga: max,
+  imgb: max,
+  imgc: max,
+  imgd: max,
+  gmaa: max,
+  gmab: max,
+  gmac: max,
+  gmad: max,
+  spldoctors: [
+    {
+      id: 1,
+      docname: "thameem ansari",
+      docImg: Docter,
+      qualification: "mbbs",
+      from: ""
+    },
+    {
+      id: 2,
+      docname: "arun",
+      docImg: Docter,
+      qualification: "mbbs",
+      from: ""
+    },
+    {
+      id: 3,
+      docname: "Rahul",
+      docImg: Docter,
+      qualification: "mbbs",
+      from: ""
+    },
+    {
+      id: 4,
+      docname: "Sandeep",
+      docImg: Docter,
+      qualification: "mbbs",
+      from: ""
+    },
+    {
+      id: 5,
+      docname: "Sandeep",
+      docImg: Docter,
+      qualification: "mbbs",
+      from: ""
+    },
+    {
+      id: 6,
+      docname: "Sandeep",
+      docImg: Docter,
+      qualification: "mbbs",
+      from: ""
+    },
+    {
+      id: 7,
+      docname: "Sandeep",
+      docImg: Docter,
+      qualification: "mbbs",
+      from: ""
+    },
+  ],
+  overview: [
+    {
+      overviewtxt: "ASAS"
+    }
+  ],
+  services: [
+    {
+      sera: "Controlled Ovarian Stimulation",
+      serb: "Intrauterine Insemination",
+      serc: "In Vitro Fertilization(IVF) For FertilIity",
+      serd: "Fertility Preservation For Cancer Patients",
+      sere: "Preventing Miscarriages",
+      serf: "Unexplained Infertility",
+      serg: "Ovulation Induction",
+      serh: "Donor And Gestational Carrier",
+      seri: "The Healthiest Embryo"
+    }
+  ],
+  treatments: [
+    {
+      treata: "Extending the Biological Clock",
+      treatb: "Lifestyle And Conception Advice",
+      treatc: "Therapeutic Activity For Patients",
+      treatd: "Counselling",
+      treate: "Fertility Tools",
+      treatf: "Corporate Social Responsibility",
+      treatg: "Sexual Dysfunction Clinic",
+      treath: "Gynaecologic Surgery",
+      treati: "Stem Cell Banking",
+    }
+  ]
+,    
+  testimonials: {
+    heading: "What Our Patients Say......",
+    paragraph: "We are proud to share some heartwarming stories from our patients.",
+    items: [
+      {
+        heading: "Patient 1",
+        paragraph: "I feel better now...",
+        youtubeVideo: "https://www.youtube.com/embed/jUICJXBYXFw?si=C4CJCRmmdrEQWdhZ"
+      },
+      {
+        heading: "Patient 2",
+        paragraph: "Doctor is very kind...",
+        youtubeVideo: "https://www.youtube.com/embed/ZjC9G4HAFig?si=ErR6BQ5jzK5Zf7DQ"
+      },
+      {
+        heading: "Patient 3",
+        paragraph: "Great hospital experience...",
+        youtubeVideo: "https://www.youtube.com/embed/0wWeuGmA0TI?si=MjH123AsuOPLMZZZ"
+      }
+    ]
+  }
+}, 
   {
     category: "All",
     name: "Thiruvallur",
@@ -1801,7 +1920,7 @@ export const locations = [
     }
   ]
 }
-, category: "Tamil Nadu", name: "MADURAI",lang:"hiiiiiiiiiiiiiiiiiiiii",  address: "No 21-C, 3rd Floor, Singarayar Main Road, Madurai - 625 001" },
+, category: "Tamil Nadu", name: "MADURAI",lang:"hiiiiiiiiiiiiiiiiiiiii",  address: "No.21/5C , SNP Towers, Sivagangai Main Road , Madurai - 625 0207" },
     { phonenumber: "9898787678",
         imga: max,
         imgb: max,
@@ -4021,84 +4140,84 @@ export const locations = [
     }
   ]
 }
-, category: "Chennai", name: "ANNA NAGAR", address: "Anna Nagar, Chennai - 600 040" },
+// , category: "Chennai", name: "ANNA NAGAR", address: "Anna Nagar, Chennai - 600 040" },
   
-    // { category: "All", name: "SRILANKA", address: "58 Jalan, 16 Joseph Lane, Colombo 20004, Sri Lanka" },
-    {phonenumber: "9898787678",
-        imga: max,
-        imgb: max,
-        imgc: max,
-        imgd: max,
-        gmap: max,
-        spldoctors: [
-          {
-            id: 1,
-            docname: "thameem ansari",
-            docImg: Docter,
-            qualification: "mbbs",
-            from: ""
-          },
-          {
-            id: 2,
-            docname: "arun",
-            docImg: Docter,
-            qualification: "mbbs",
-            from: ""
-          },
-          {
-            id: 3,
-            docname: "Rahul",
-            docImg: Docter,
-            qualification: "mbbs",
-            from: ""
-          },
-          {
-            id: 4,
-            docname: "Sandeep",
-            docImg: Docter,
-            qualification: "mbbs",
-            from: ""
-          },
-        ],
-        overview: [
-          {
-            overviewtxt: "dadfasdfsqedfasfdasdfasdfasdf"
-          }
-        ],
-        services: [
-          {
-           sera:"Controlled Ovarian Stimulation",
-                serb:"Intrauterine Insemination",
-                serc:"In Vitro Fertilization(IVF) For FertilIity ",
-                serd:"Fertility Preservation For Cancer Patients",
-                sere:"Preventing Miscarriages",
-                serf:"Unexplained Infertility",
-                serg:"Ovulation Induction",
-                serh:"Donor And Gestational Carrier",
-                seri:"The Healthiest Embryo",
-          }
-        ],
-       "testimonials": {
-  "heading": "What Our Patients Say......",
-  "paragraph": "We are proud to share some heartwarming stories from our patients.",
-  "items": [
-    {
-      "heading": "Patient 1",
-      "paragraph": "I feel better now...",
-      "youtubeVideo": "https://www.youtube.com/embed/jUICJXBYXFw?si=C4CJCRmmdrEQWdhZ"
-    },
-    {
-      "heading": "Patient 2",
-      "paragraph": "Doctor is very kind...",
-      "youtubeVideo": "https://www.youtube.com/embed/ZjC9G4HAFig?si=ErR6BQ5jzK5Zf7DQ"
-    },
-    {
-      "heading": "Patient 3",
-      "paragraph": "Great hospital experience...",
-      "youtubeVideo": "https://www.youtube.com/embed/0wWeuGmA0TI?si=MjH123AsuOPLMZZZ"
-    }
-  ]
-}
+//     // { category: "All", name: "SRILANKA", address: "58 Jalan, 16 Joseph Lane, Colombo 20004, Sri Lanka" },
+//     {phonenumber: "9898787678",
+//         imga: max,
+//         imgb: max,
+//         imgc: max,
+//         imgd: max,
+//         gmap: max,
+//         spldoctors: [
+//           {
+//             id: 1,
+//             docname: "thameem ansari",
+//             docImg: Docter,
+//             qualification: "mbbs",
+//             from: ""
+//           },
+//           {
+//             id: 2,
+//             docname: "arun",
+//             docImg: Docter,
+//             qualification: "mbbs",
+//             from: ""
+//           },
+//           {
+//             id: 3,
+//             docname: "Rahul",
+//             docImg: Docter,
+//             qualification: "mbbs",
+//             from: ""
+//           },
+//           {
+//             id: 4,
+//             docname: "Sandeep",
+//             docImg: Docter,
+//             qualification: "mbbs",
+//             from: ""
+//           },
+//         ],
+//         overview: [
+//           {
+//             overviewtxt: "dadfasdfsqedfasfdasdfasdfasdf"
+//           }
+//         ],
+//         services: [
+//           {
+//            sera:"Controlled Ovarian Stimulation",
+//                 serb:"Intrauterine Insemination",
+//                 serc:"In Vitro Fertilization(IVF) For FertilIity ",
+//                 serd:"Fertility Preservation For Cancer Patients",
+//                 sere:"Preventing Miscarriages",
+//                 serf:"Unexplained Infertility",
+//                 serg:"Ovulation Induction",
+//                 serh:"Donor And Gestational Carrier",
+//                 seri:"The Healthiest Embryo",
+//           }
+//         ],
+//        "testimonials": {
+//   "heading": "What Our Patients Say......",
+//   "paragraph": "We are proud to share some heartwarming stories from our patients.",
+//   "items": [
+//     {
+//       "heading": "Patient 1",
+//       "paragraph": "I feel better now...",
+//       "youtubeVideo": "https://www.youtube.com/embed/jUICJXBYXFw?si=C4CJCRmmdrEQWdhZ"
+//     },
+//     {
+//       "heading": "Patient 2",
+//       "paragraph": "Doctor is very kind...",
+//       "youtubeVideo": "https://www.youtube.com/embed/ZjC9G4HAFig?si=ErR6BQ5jzK5Zf7DQ"
+//     },
+//     {
+//       "heading": "Patient 3",
+//       "paragraph": "Great hospital experience...",
+//       "youtubeVideo": "https://www.youtube.com/embed/0wWeuGmA0TI?si=MjH123AsuOPLMZZZ"
+//     }
+//   ]
+// }
 , category: "Other State", name: "ANDHRA PRADESH", address: "Air By-Pass, Chittoor District, Tirupati Sub-District,Tirupati 517502" },
     {phonenumber: "9898787678",
         imga: max,
@@ -4478,6 +4597,158 @@ export const locations = [
       "youtubeVideo": "https://www.youtube.com/embed/0wWeuGmA0TI?si=MjH123AsuOPLMZZZ"
     }
   ]
+},
+category: "All", name: "Bangalore",lang:"ಬೆಂಗಳೂರು", address: "Door.No.7, 80 Ft Road, Near Hindustan Petroleum Corporation Limited, 4th Block, New Friends colony, Koramangala, Bengaluru, Karnataka 560095" },
+    {phonenumber: "9898787678",
+        imga: max,
+        imgb: max,
+        imgc: max,
+        imgd: max,
+        gmap: max,
+        spldoctors: [
+          {
+            id: 1,
+            docname: "thameem ansari",
+            docImg: Docter,
+            qualification: "mbbs",
+            from: ""
+          },
+          {
+            id: 2,
+            docname: "arun",
+            docImg: Docter,
+            qualification: "mbbs",
+            from: ""
+          },
+          {
+            id: 3,
+            docname: "Rahul",
+            docImg: Docter,
+            qualification: "mbbs",
+            from: ""
+          },
+          {
+            id: 4,
+            docname: "Sandeep",
+            docImg: Docter,
+            qualification: "mbbs",
+            from: ""
+          },
+        ],
+        overview: [
+          {
+            overviewtxt: "dadfasdfsqedfasfdasdfasdfasdf"
+          }
+        ],
+        services: [
+          {
+           sera:"Controlled Ovarian Stimulation",
+                serb:"Intrauterine Insemination",
+                serc:"In Vitro Fertilization(IVF) For FertilIity ",
+                serd:"Fertility Preservation For Cancer Patients",
+                sere:"Preventing Miscarriages",
+                serf:"Unexplained Infertility",
+                serg:"Ovulation Induction",
+                serh:"Donor And Gestational Carrier",
+                seri:"The Healthiest Embryo",
+          }
+        ],
+       "testimonials": {
+  "heading": "What Our Patients Say......",
+  "paragraph": "We are proud to share some heartwarming stories from our patients.",
+  "items": [
+    {
+      "heading": "Patient 1",
+      "paragraph": "I feel better now...",
+      "youtubeVideo": "https://www.youtube.com/embed/jUICJXBYXFw?si=C4CJCRmmdrEQWdhZ"
+    },
+    {
+      "heading": "Patient 2",
+      "paragraph": "Doctor is very kind...",
+      "youtubeVideo": "https://www.youtube.com/embed/ZjC9G4HAFig?si=ErR6BQ5jzK5Zf7DQ"
+    },
+    {
+      "heading": "Patient 3",
+      "paragraph": "Great hospital experience...",
+      "youtubeVideo": "https://www.youtube.com/embed/0wWeuGmA0TI?si=MjH123AsuOPLMZZZ"
+    }
+  ]
+},
+category: "Other State", name: "Bangalore",lang:"ಬೆಂಗಳೂರು", address: "Door.No.7, 80 Ft Road, Near Hindustan Petroleum Corporation Limited, 4th Block, New Friends colony, Koramangala, Bengaluru, Karnataka 560095" },
+    {phonenumber: "9898787678",
+        imga: max,
+        imgb: max,
+        imgc: max,
+        imgd: max,
+        gmap: max,
+        spldoctors: [
+          {
+            id: 1,
+            docname: "thameem ansari",
+            docImg: Docter,
+            qualification: "mbbs",
+            from: ""
+          },
+          {
+            id: 2,
+            docname: "arun",
+            docImg: Docter,
+            qualification: "mbbs",
+            from: ""
+          },
+          {
+            id: 3,
+            docname: "Rahul",
+            docImg: Docter,
+            qualification: "mbbs",
+            from: ""
+          },
+          {
+            id: 4,
+            docname: "Sandeep",
+            docImg: Docter,
+            qualification: "mbbs",
+            from: ""
+          },
+        ],
+        overview: [
+          {
+            overviewtxt: "dadfasdfsqedfasfdasdfasdfasdf"
+          }
+        ],
+        services: [
+          {
+           sera:"Controlled Ovarian Stimulation",
+                serb:"Intrauterine Insemination",
+                serc:"In Vitro Fertilization(IVF) For FertilIity ",
+                serd:"Fertility Preservation For Cancer Patients",
+                sere:"Preventing Miscarriages",
+                serf:"Unexplained Infertility",
+                serg:"Ovulation Induction",
+                serh:"Donor And Gestational Carrier",
+                seri:"The Healthiest Embryo",
+          }
+        ],
+       "testimonials": {
+  "heading": "What Our Patients Say......",
+  "paragraph": "We are proud to share some heartwarming stories from our patients.",
+  "items": [
+    {
+      "heading": "Patient 1",
+      "paragraph": "I feel better now...",
+      "youtubeVideo": "https://www.youtube.com/embed/jUICJXBYXFw?si=C4CJCRmmdrEQWdhZ"
+    },
+    {
+      "heading": "Patient 2",
+      "paragraph": "Doctor is very kind...",
+      "youtubeVideo": "https://www.youtube.com/embed/ZjC9G4HAFig?si=ErR6BQ5jzK5Zf7DQ"
+    },
+    {
+      "heading": "Patient 3",
+      "paragraph": "Great hospital experience...",
+      "youtubeVideo": "https://www.youtube.com/embed/0wWeuGmA0TI?si=MjH123AsuOPLMZZZ"
+    }
+  ]
 }
 , category: "All", name: "SRI LANKA", address: "#16, Joseph Lane, Bambalapitiya, Colombo - 04, Srilanka." },
   
@@ -4676,7 +4947,126 @@ export const locations = [
     ]
   }
 }
-,      
+,     
+{
+  category: "Tamil Nadu",
+  name: "Kanchipuram",
+  lang: "காஞ்சிபுரம்",
+  address: "Door.No.2,First Floor, Vallal Pachaiyappan St, near Reliance digital showroom, Ennaikaran, Kanchipuram, Tamil Nadu 631501",
+  phonenumber: "9898787678",
+  imga: max,
+  imgb: max,
+  imgc: max,
+  imgd: max,
+  gmaa: max,
+  gmab: max,
+  gmac: max,
+  gmad: max,
+  spldoctors: [
+    {
+      id: 1,
+      docname: "thameem ansari",
+      docImg: Docter,
+      qualification: "mbbs",
+      from: ""
+    },
+    {
+      id: 2,
+      docname: "arun",
+      docImg: Docter,
+      qualification: "mbbs",
+      from: ""
+    },
+    {
+      id: 3,
+      docname: "Rahul",
+      docImg: Docter,
+      qualification: "mbbs",
+      from: ""
+    },
+    {
+      id: 4,
+      docname: "Sandeep",
+      docImg: Docter,
+      qualification: "mbbs",
+      from: ""
+    },
+    {
+      id: 5,
+      docname: "Sandeep",
+      docImg: Docter,
+      qualification: "mbbs",
+      from: ""
+    },
+    {
+      id: 6,
+      docname: "Sandeep",
+      docImg: Docter,
+      qualification: "mbbs",
+      from: ""
+    },
+    {
+      id: 7,
+      docname: "Sandeep",
+      docImg: Docter,
+      qualification: "mbbs",
+      from: ""
+    },
+  ],
+  overview: [
+    {
+      overviewtxt: "ASAS"
+    }
+  ],
+  services: [
+    {
+      sera: "Controlled Ovarian Stimulation",
+      serb: "Intrauterine Insemination",
+      serc: "In Vitro Fertilization(IVF) For FertilIity",
+      serd: "Fertility Preservation For Cancer Patients",
+      sere: "Preventing Miscarriages",
+      serf: "Unexplained Infertility",
+      serg: "Ovulation Induction",
+      serh: "Donor And Gestational Carrier",
+      seri: "The Healthiest Embryo"
+    }
+  ],
+  treatments: [
+    {
+      treata: "Extending the Biological Clock",
+      treatb: "Lifestyle And Conception Advice",
+      treatc: "Therapeutic Activity For Patients",
+      treatd: "Counselling",
+      treate: "Fertility Tools",
+      treatf: "Corporate Social Responsibility",
+      treatg: "Sexual Dysfunction Clinic",
+      treath: "Gynaecologic Surgery",
+      treati: "Stem Cell Banking",
+    }
+  ]
+,    
+  testimonials: {
+    heading: "What Our Patients Say......",
+    paragraph: "We are proud to share some heartwarming stories from our patients.",
+    items: [
+      {
+        heading: "Patient 1",
+        paragraph: "I feel better now...",
+        youtubeVideo: "https://www.youtube.com/embed/jUICJXBYXFw?si=C4CJCRmmdrEQWdhZ"
+      },
+      {
+        heading: "Patient 2",
+        paragraph: "Doctor is very kind...",
+        youtubeVideo: "https://www.youtube.com/embed/ZjC9G4HAFig?si=ErR6BQ5jzK5Zf7DQ"
+      },
+      {
+        heading: "Patient 3",
+        paragraph: "Great hospital experience...",
+        youtubeVideo: "https://www.youtube.com/embed/0wWeuGmA0TI?si=MjH123AsuOPLMZZZ"
+      }
+    ]
+  }
+},  
   ];
   
   

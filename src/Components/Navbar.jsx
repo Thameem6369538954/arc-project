@@ -82,19 +82,19 @@ const toggleSubDropdown = (subIndex) => {
 
   return (
     <div className="w-full fixed top-0 z-50 bg-[#fff8ef] shadow-md font-[choco]">
-      <nav className="flex justify-between pa-5 items-center">
+      <nav className="flex lg:justify-around justify-between px-2 items-center">
         <Link to="/" onClick={closeMenu}>
-          <img src={arclogo} alt="Logo" className="h-20 md:h-40 py-4 px-4" />
+          <img src={arclogo} alt="Logo" className="h-20 md:h-35 py-4 px-4" />
         </Link>
 
         {/* Desktop Menu */}
-        <ul className="hidden lg:flex space-x-3 lg:space-x-5">
+        <ul className="hidden lg:flex space-x-3 lg:space-x-5 ">
           {menuItems.map((menu, index) => (
-            <li key={index} className="relative group">
+            <li key={index} className="relative group ">
               <Link
                 to={menu.link}
                 onClick={closeMenu}
-                className="hover:text-pink-500 px-2 py-2 flex items-center px-1 text-xl"
+                className="hover:text-pink-500 px-2 py-2 flex items-center px-1 text-xl  lg:text-sm xl:text-2xl  "
               >
                 {menu.title} {menu.submenu && <SlArrowDown className="ml-1" />}
               </Link>

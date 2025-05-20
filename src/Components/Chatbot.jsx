@@ -1,140 +1,227 @@
-import { useState, useEffect, useRef } from "react";
-import { FiSend, FiMessageCircle, FiX } from "react-icons/fi";
-import { motion } from "framer-motion";
+import React, { useState, useEffect, useRef } from "react";
+import { FiMessageCircle, FiX } from "react-icons/fi";
+
+const feedbackCategories = [
+  {
+    name: "1. Initial Experience",
+    questions: [
+      {
+        text: "What made you choose ARC Fertility Hospital for your treatment?",
+        options: [
+          "Reputation",
+          "Doctor Recommendation",
+          "Location Convenience",
+          "Affordable Treatment",
+          "Other",
+        ],
+      },
+      {
+        text: "How was your overall experience with the doctors and staff?",
+        options: ["Excellent", "Good", "Average", "Poor"],
+      },
+    ],
+  },
+  {
+    name: "2. Treatment Process",
+    questions: [
+      {
+        text: "Were the treatment options clearly explained to you?",
+        options: ["Yes, very clear", "Somewhat clear", "Not clear"],
+      },
+      {
+        text: "How comfortable were you during your treatment sessions?",
+        options: [
+          "Very comfortable",
+          "Comfortable",
+          "Uncomfortable",
+          "Very uncomfortable",
+        ],
+      },
+    ],
+  },
+  {
+    name: "3. Facilities & Amenities",
+    questions: [
+      {
+        text: "How would you rate the hospital facilities?",
+        options: ["Excellent", "Good", "Average", "Poor"],
+      },
+      {
+        text: "Were the amenities satisfactory?",
+        options: ["Yes", "No"],
+      },
+    ],
+  },
+  {
+    name: "4. Staff & Support",
+    questions: [
+      {
+        text: "How helpful was the support staff?",
+        options: ["Very helpful", "Helpful", "Not helpful"],
+      },
+      {
+        text: "Did you feel emotionally supported during your treatment?",
+        options: ["Yes", "No"],
+      },
+    ],
+  },
+  {
+    name: "5. Overall Satisfaction",
+    questions: [
+      {
+        text: "Overall, how satisfied are you with your experience at ARC Fertility Hospital?",
+        options: ["Very satisfied", "Satisfied", "Neutral", "Dissatisfied"],
+      },
+      {
+        text: "Would you recommend ARC Fertility Hospital to others?",
+        options: ["Definitely", "Maybe", "No"],
+      },
+    ],
+  },
+];
 
 const Chatbot = () => {
-  const [open, setOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { text: "Hi, Welcome to Arc Fertility ! How can I help you?", user: "bot" },
+    {
+      sender: "bot",
+      text: "Hello! I am the ARC Fertility Hospital feedback bot. Which category would you like to start with?",
+    },
   ]);
-  const [input, setInput] = useState("");
-  const [isTyping, setIsTyping] = useState(false);
+  const [currentCategoryIndex, setCurrentCategoryIndex] = useState(null);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const messagesEndRef = useRef(null);
 
-  const toggleChat = () => {
-    setOpen(!open);
+  useEffect(() => {
+    if (isOpen) {
+      messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [messages, isOpen]);
+
+  const handleCategorySelect = (index) => {
+    setCurrentCategoryIndex(index);
+    setCurrentQuestionIndex(0);
+    const categoryName = feedbackCategories[index].name;
+
+    setMessages((prev) => [
+      ...prev,
+      { sender: "user", text: categoryName },
+      {
+        sender: "bot",
+        text: feedbackCategories[index].questions[0].text,
+      },
+    ]);
   };
 
-  const sendMessage = () => {
-    if (input.trim() === "") return;
-    setMessages([...messages, { text: input, user: "user" }]);
-    setInput("");
-    setIsTyping(true);
+  const handleAnswerSubmit = (answer) => {
+    if (currentCategoryIndex === null) return;
 
-    setTimeout(() => {
-      let reply = "";
+    setMessages((prev) => [...prev, { sender: "user", text: answer }]);
 
-      if (input.toLowerCase().includes("services")) {
-        reply = "We provide IVF, IUI, and Fertility treatments.";
-      } else if (input.toLowerCase().includes("location")) {
-        reply = "We are located in Chennai, Tamil Nadu.";
-      } else if (input.toLowerCase().includes("thank you")) {
-        reply = "You're welcome! ";
-      } else {
-        reply = "I'm just a chatbot! Please contact our support.";
-      }
+    const currentCategory = feedbackCategories[currentCategoryIndex];
+    const nextQuestionIndex = currentQuestionIndex + 1;
 
+    if (nextQuestionIndex < currentCategory.questions.length) {
       setTimeout(() => {
-        setIsTyping(false);
-        setMessages((prev) => [...prev, { text: reply, user: "bot" }]);
-      }, 1200);
-    }, 1000);
-  };
-
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter") {
-      sendMessage();
+        setMessages((prev) => [
+          ...prev,
+          {
+            sender: "bot",
+            text: currentCategory.questions[nextQuestionIndex].text,
+          },
+        ]);
+        setCurrentQuestionIndex(nextQuestionIndex);
+      }, 500);
+    } else {
+      setTimeout(() => {
+        setMessages((prev) => [
+          ...prev,
+          {
+            sender: "bot",
+            text: `Thanks for completing the "${currentCategory.name}" category. Would you like to choose another?`,
+          },
+        ]);
+        setCurrentCategoryIndex(null);
+        setCurrentQuestionIndex(0);
+      }, 500);
     }
   };
 
-  useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages, isTyping]);
-
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
-    <div className="font-[choco]">
-      {/* Chatbot Icon */}
-      <motion.div
-        onClick={toggleChat}
-        className="fixed bottom-22 right-5 bg-pink-400 p-4 rounded-full cursor-pointer shadow-lg text-white text-2xl z-50"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-      >
-        {open ? <FiX /> : <FiMessageCircle />}
-      </motion.div>
-
-      {open && (
-        <motion.div
-          initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          exit={{ scale: 0, opacity: 0 }}
-          className="fixed bottom-40 right-5 sm:right-10 md:right-20 w-[90%] sm:w-96 bg-white shadow-xl rounded-lg p-4 z-50 max-w-[400px]"
+    <div className="fixed bottom-5 right-5 z-50">
+      {/* Floating chat button */}
+      {!isOpen && (
+        <button
+          onClick={() => setIsOpen(true)}
+          className="bg-pink-600 hover:bg-pink-700 text-white p-4 rounded-full shadow-lg"
         >
-          {/* Chat Messages */}
-          <div className="h-64 overflow-y-scroll mb-4 space-y-2 scrollbar-thin scrollbar-thumb-pink-400 relative">
-            {messages.map((msg, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className={`mb-3 ${msg.user === "user" ? "text-right" : "text-left"}`}
+          <FiMessageCircle size={24} />
+        </button>
+      )}
+
+      {/* Chat window */}
+      {isOpen && (
+        <div className="w-80 h-[550px] bg-white border border-pink-300 rounded-lg shadow-lg flex flex-col overflow-hidden">
+          {/* Header */}
+          <div className="bg-pink-600 text-white p-4 flex justify-between items-center">
+            <h2 className="font-semibold">ARC Feedback Bot</h2>
+            <button onClick={() => setIsOpen(false)}>
+              <FiX size={20} />
+            </button>
+          </div>
+
+          {/* Chat messages */}
+          <div className="flex-1 p-3 overflow-y-auto bg-white">
+            {messages.map((msg, idx) => (
+              <div
+                key={idx}
+                className={`mb-3 max-w-[80%] p-3 rounded-lg ${
+                  msg.sender === "bot"
+                    ? "bg-pink-50 text-pink-700 self-start"
+                    : "bg-pink-500 text-white self-end"
+                }`}
+                style={{ alignSelf: msg.sender === "bot" ? "flex-start" : "flex-end" }}
               >
-                <span
-                  className={`p-2 rounded-md inline-block ${
-                    msg.user === "user" ? "bg-pink-400 text-white" : "bg-gray-200"
-                  }`}
-                >
-                  {msg.text}
-                </span>
-              </motion.div>
+                {msg.text}
+              </div>
             ))}
-            {isTyping && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
-                className="text-left text-sm text-gray-500"
-              >
-                Typing...
-              </motion.div>
-            )}
             <div ref={messagesEndRef} />
           </div>
 
-          {/* Scroll to Bottom Button */}
-          <button
-            onClick={scrollToBottom}
-            className="bg-pink-400 text-white px-4 py-1 rounded-full text-sm mb-2 hover:bg-pink-500"
-          >
-            Scroll to Bottom
-          </button>
-
-          {/* Input Field */}
-          <div className="flex w-full">
-            <input
-              type="text"
-              className="flex-1 border p-2 rounded-l-md outline-none text-sm sm:text-base w-full"
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyDown={handleKeyDown}
-              placeholder="Type a message..."
-            />
-            <button
-              onClick={sendMessage}
-              className="bg-pink-400 text-white px-4 rounded-r-md"
-            >
-              <FiSend />
-            </button>
+          {/* Options */}
+          <div className="p-3 bg-white border-t flex flex-col gap-2 max-h-[160px] overflow-y-auto">
+            {currentCategoryIndex === null ? (
+              <>
+                <div className="text-pink-700 font-medium">Select a category:</div>
+                {feedbackCategories.map((cat, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => handleCategorySelect(idx)}
+                    className="bg-pink-100 hover:bg-pink-200 text-sm text-pink-800 rounded-md px-3 py-2"
+                  >
+                    {cat.name}
+                  </button>
+                ))}
+              </>
+            ) : (
+              feedbackCategories[currentCategoryIndex].questions[
+                currentQuestionIndex
+              ].options.map((option, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => handleAnswerSubmit(option)}
+                  className="bg-pink-100 hover:bg-pink-200 text-sm text-pink-800 rounded-md px-3 py-2"
+                >
+                  {option}
+                </button>
+              ))
+            )}
           </div>
-        </motion.div>
+        </div>
       )}
     </div>
   );
 };
 
 export default Chatbot;
+  
