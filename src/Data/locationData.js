@@ -69,35 +69,33 @@ export const locations = [
     ],
     overview: [
       {
-        overviewtxt: "ASAS"
+        overviewtxt: "ASASasasdasdasd"
       }
     ],
     services: [
-      {
-        sera: "Controlled Ovarian Stimulation",
-        serb: "Intrauterine Insemination",
-        serc: "In Vitro Fertilization(IVF) For FertilIity",
-        serd: "Fertility Preservation For Cancer Patients",
-        sere: "Preventing Miscarriages",
-        serf: "Unexplained Infertility",
-        serg: "Ovulation Induction",
-        serh: "Donor And Gestational Carrier",
-        seri: "The Healthiest Embryo"
-      }
-    ],
-    treatments: [
-      {
-        treata: "Extending the Biological Clock",
-        treatb: "Lifestyle And Conception Advice",
-        treatc: "Therapeutic Activity For Patients",
-        treatd: "Counselling",
-        treate: "Fertility Tools",
-        treatf: "Corporate Social Responsibility",
-        treatg: "Sexual Dysfunction Clinic",
-        treath: "Gynaecologic Surgery",
-        treati: "Stem Cell Banking",
-      }
-    ]
+  { name: "Controlled Ovarian Stimulation" },
+  { name: "Intrauterine Insemination" },
+  { name: "In Vitro Fertilization(IVF) For FertilIity" },
+  { name: "Fertility Preservation For Cancer Patients" },
+  { name: "Preventing Miscarriages" },
+  { name: "Unexplained Infertility" },
+  { name: "Ovulation Induction" },
+  { name: "Donor And Gestational Carrier" },
+  { name: "The Healthiest Embryo" }
+]
+,
+treatments: [
+  { name: "Extending the Biological Clock" },
+  { name: "Lifestyle And Conception Advice" },
+  { name: "Therapeutic Activity For Patients" },
+  { name: "Counselling" },
+  { name: "Fertility Tools" },
+  { name: "Corporate Social Responsibility" },
+  { name: "Sexual Dysfunction Clinic" },
+  { name: "Gynaecologic Surgery" },
+  { name: "Stem Cell Banking" }
+]
+
 ,    
     testimonials: {
       heading: "What Our Patients Say......",
@@ -192,32 +190,29 @@ export const locations = [
       overviewtxt: "ASAS"
     }
   ],
-  services: [
-    {
-      sera: "Controlled Ovarian Stimulation",
-      serb: "Intrauterine Insemination",
-      serc: "In Vitro Fertilization(IVF) For FertilIity",
-      serd: "Fertility Preservation For Cancer Patients",
-      sere: "Preventing Miscarriages",
-      serf: "Unexplained Infertility",
-      serg: "Ovulation Induction",
-      serh: "Donor And Gestational Carrier",
-      seri: "The Healthiest Embryo"
-    }
-  ],
-  treatments: [
-    {
-      treata: "Extending the Biological Clock",
-      treatb: "Lifestyle And Conception Advice",
-      treatc: "Therapeutic Activity For Patients",
-      treatd: "Counselling",
-      treate: "Fertility Tools",
-      treatf: "Corporate Social Responsibility",
-      treatg: "Sexual Dysfunction Clinic",
-      treath: "Gynaecologic Surgery",
-      treati: "Stem Cell Banking",
-    }
-  ]
+   services: [
+  { name: "Controlled Ovarian Stimulation" },
+  { name: "Intrauterine Insemination" },
+  { name: "In Vitro Fertilization(IVF) For FertilIity" },
+  { name: "Fertility Preservation For Cancer Patients" },
+  { name: "Preventing Miscarriages" },
+  { name: "Unexplained Infertility" },
+  { name: "Ovulation Induction" },
+  { name: "Donor And Gestational Carrier" },
+  { name: "The Healthiest Embryo" }
+]
+,
+treatments: [
+  { name: "Extending the Biological Clock" },
+  { name: "Lifestyle And Conception Advice" },
+  { name: "Therapeutic Activity For Patients" },
+  { name: "Counselling" },
+  { name: "Fertility Tools" },
+  { name: "Corporate Social Responsibility" },
+  { name: "Sexual Dysfunction Clinic" },
+  { name: "Gynaecologic Surgery" },
+  { name: "Stem Cell Banking" }
+]
 ,    
   testimonials: {
     heading: "What Our Patients Say......",
@@ -4898,32 +4893,29 @@ category: "Other State", name: "Bangalore",lang:"ಬೆಂಗಳೂರು", addr
       overviewtxt: "ASAS"
     }
   ],
-  services: [
-    {
-      sera: "Controlled Ovarian Stimulation",
-      serb: "Intrauterine Insemination",
-      serc: "In Vitro Fertilization(IVF) For FertilIity",
-      serd: "Fertility Preservation For Cancer Patients",
-      sere: "Preventing Miscarriages",
-      serf: "Unexplained Infertility",
-      serg: "Ovulation Induction",
-      serh: "Donor And Gestational Carrier",
-      seri: "The Healthiest Embryo"
-    }
-  ],
-  treatments: [
-    {
-      treata: "Extending the Biological Clock",
-      treatb: "Lifestyle And Conception Advice",
-      treatc: "Therapeutic Activity For Patients",
-      treatd: "Counselling",
-      treate: "Fertility Tools",
-      treatf: "Corporate Social Responsibility",
-      treatg: "Sexual Dysfunction Clinic",
-      treath: "Gynaecologic Surgery",
-      treati: "Stem Cell Banking",
-    }
-  ]
+   services: [
+  { name: "Controlled Ovarian Stimulation" },
+  { name: "Intrauterine Insemination" },
+  { name: "In Vitro Fertilization(IVF) For FertilIity" },
+  { name: "Fertility Preservation For Cancer Patients" },
+  { name: "Preventing Miscarriages" },
+  { name: "Unexplained Infertility" },
+  { name: "Ovulation Induction" },
+  { name: "Donor And Gestational Carrier" },
+  { name: "The Healthiest Embryo" }
+]
+,
+treatments: [
+  { name: "Extending the Biological Clock" },
+  { name: "Lifestyle And Conception Advice" },
+  { name: "Therapeutic Activity For Patients" },
+  { name: "Counselling" },
+  { name: "Fertility Tools" },
+  { name: "Corporate Social Responsibility" },
+  { name: "Sexual Dysfunction Clinic" },
+  { name: "Gynaecologic Surgery" },
+  { name: "Stem Cell Banking" }
+]
 ,    
   testimonials: {
     heading: "What Our Patients Say......",
@@ -5018,32 +5010,29 @@ category: "Other State", name: "Bangalore",lang:"ಬೆಂಗಳೂರು", addr
       overviewtxt: "ASAS"
     }
   ],
-  services: [
-    {
-      sera: "Controlled Ovarian Stimulation",
-      serb: "Intrauterine Insemination",
-      serc: "In Vitro Fertilization(IVF) For FertilIity",
-      serd: "Fertility Preservation For Cancer Patients",
-      sere: "Preventing Miscarriages",
-      serf: "Unexplained Infertility",
-      serg: "Ovulation Induction",
-      serh: "Donor And Gestational Carrier",
-      seri: "The Healthiest Embryo"
-    }
-  ],
-  treatments: [
-    {
-      treata: "Extending the Biological Clock",
-      treatb: "Lifestyle And Conception Advice",
-      treatc: "Therapeutic Activity For Patients",
-      treatd: "Counselling",
-      treate: "Fertility Tools",
-      treatf: "Corporate Social Responsibility",
-      treatg: "Sexual Dysfunction Clinic",
-      treath: "Gynaecologic Surgery",
-      treati: "Stem Cell Banking",
-    }
-  ]
+   services: [
+  { name: "Controlled Ovarian Stimulation" },
+  { name: "Intrauterine Insemination" },
+  { name: "In Vitro Fertilization(IVF) For FertilIity" },
+  { name: "Fertility Preservation For Cancer Patients" },
+  { name: "Preventing Miscarriages" },
+  { name: "Unexplained Infertility" },
+  { name: "Ovulation Induction" },
+  { name: "Donor And Gestational Carrier" },
+  { name: "The Healthiest Embryo" }
+]
+,
+treatments: [
+  { name: "Extending the Biological Clock" },
+  { name: "Lifestyle And Conception Advice" },
+  { name: "Therapeutic Activity For Patients" },
+  { name: "Counselling" },
+  { name: "Fertility Tools" },
+  { name: "Corporate Social Responsibility" },
+  { name: "Sexual Dysfunction Clinic" },
+  { name: "Gynaecologic Surgery" },
+  { name: "Stem Cell Banking" }
+]
 ,    
   testimonials: {
     heading: "What Our Patients Say......",

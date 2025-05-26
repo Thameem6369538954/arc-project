@@ -80,14 +80,14 @@ import PelvicLaparoscopy from "../Servicespage/PelvicLaparoscopy.jsx"
 import Dilation_and_Curretage from "../Servicespage/Dilation_and_Curretage.jsx"
 import Sperm_Semen from "../Servicespage/Sperm_Semen.jsx"
 import Egg_Oocyte_Embryo from "../Servicespage/Egg_Oocyte_Embryo.jsx"
-import Payment from "../Pages/Payment.jsx"
+import OurPackages from "../Pages/OurPackages.jsx"
 const AllRouter = () => {
   return (
     <div>
         <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/ARTProcedures' element={<ARTProcedures />} />
-            <Route path='/Payment' element={<Payment />} />
+            <Route path='/OurPackages' element={<OurPackages />} />
             <Route path='/Services_and_Treatment' element={<Services_and_Treatment />} />
             <Route path='/FertilityProcedures' element={<FertilityProcedures />} />
             <Route path='/About_arc' element={<About_arc />} />
