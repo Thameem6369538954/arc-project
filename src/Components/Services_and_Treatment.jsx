@@ -265,7 +265,7 @@ const ServicesAndTreatment = () => {
         </h1>
         {/* Tabs */}
         <div className="flex bg-black rounded-full w-fit font-[choco] font-bold p-1 m-5 gap-1 max-w-full overflow-x-auto sm:justify-center">
-  {["services", "treatments","procedures", "payments"].map((tab) => (
+  {["services", "treatments","procedures",].map((tab) => (
     <button
       key={tab}
       className={`px-6 py-2 text-sm rounded-full transition-all uppercase whitespace-nowrap ${

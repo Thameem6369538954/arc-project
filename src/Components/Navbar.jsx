@@ -92,7 +92,7 @@ const Navbar = () => {
               </Link>
 
               {menu.submenu && (
-                <ul className="absolute hidden group-hover:block bg-white shadow-md rounded-lg w-48 z-50 text-base">
+                <ul className="absolute hidden group-hover:block bg-white shadow-md rounded-lg w-40 z-50 text-base">
                   {menu.submenu.map((sub, subIndex) => (
                     <li key={subIndex} className="hover:bg-pink-100 p-3 relative group/submenu">
                       <Link
