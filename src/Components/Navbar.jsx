@@ -15,7 +15,7 @@ const menuItems = [
         title: "Team",
         link: "/OurTeam",
         submenu: [
-          { title: "Our Experts", link: "/OurExperts" },
+          { title: "Our Experts", link: "/OurExports" },
           { title: "Leadership Team", link: "/OurTeam" },
         ],
       },
@@ -76,7 +76,7 @@ const Navbar = () => {
     <div className="w-full fixed top-0 z-50 bg-[#fff8ef] shadow-md font-[choco]">
       <nav className="flex lg:justify-around justify-between px-2 items-center">
         <Link to="/" onClick={closeMenu}>
-          <img src={arclogo} alt="Logo" className="h-30 py-4 px-4" />
+          <img src={arclogo} alt="Logo" className="h-35 py-4 px-4" />
         </Link>
 
         {/* Desktop Menu */}
